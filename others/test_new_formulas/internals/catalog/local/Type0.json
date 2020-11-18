@@ -1,0 +1,26 @@
+{
+        "aggregation_rates": {
+            "telemetry": 5,
+            "transition": 3,
+            "command": 4,
+            "batch": 2
+        },
+        "service_times": {
+          "telemetry": 1.65,
+          "transition": 8.15,
+          "command": 0.815,
+          "batch": 3.3,
+          "reply": 8.15
+        },
+        "prob_command_generated": 1.0,
+        "scheduler_type": "SCHEDULER1",
+        "delay_upper_router": 0.3,
+        "delay_lower_router": 0.1,
+        "lan0":{
+          "type_lan":"0",
+          "amount": 1,
+          "sensor_Type0":5,
+          "sensor_Type1":1,
+          "actuator_Type0":1
+        }
+}
