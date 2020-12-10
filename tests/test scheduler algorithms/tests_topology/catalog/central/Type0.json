@@ -1,0 +1,21 @@
+{
+        "aggregation_rates": {
+            "telemetry": 5,
+            "transition": 1,
+            "command": 1,
+            "batch": 2
+        },
+        "service_times": {
+          "telemetry": 0.033,
+          "transition": 0.165,
+          "command": 0.0165,
+          "batch": 0.066,
+          "reply": 0.165
+        },
+        "cores":1,
+        "delay_upper_router": 0.3,
+        "delay_lower_router": 0.1,
+        "prob_command_generated": 0.1,
+        "delay_wan": 0.5,
+        "scheduler_type": "1"
+}
