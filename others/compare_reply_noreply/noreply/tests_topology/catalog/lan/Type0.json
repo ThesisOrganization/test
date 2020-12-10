@@ -1,0 +1,8 @@
+{
+        "service_times": {
+            "telemetry": 0.02,
+            "transition": 0.02,
+            "command": 0.01
+        },
+        "delay": 0.5
+}
