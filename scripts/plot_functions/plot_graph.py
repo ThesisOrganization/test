@@ -56,7 +56,8 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     #plt.yticks(yint) #serve per decidere che valori mettere sulle y
 
     if SAVE:
-        plt.savefig(PATH)
+        #plt.savefig(PATH, bbox_inches='tight', dpi=150)
+        plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
@@ -117,7 +118,7 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
     if SAVE:
-        plt.savefig(PATH)
+        plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
@@ -176,7 +177,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
     plt.tick_params(axis='both', labelsize=12)
 
     if SAVE:
-        plt.savefig(PATH)
+        plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
@@ -218,7 +219,7 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
     plt.tick_params(axis='both', labelsize=12)
 
     if SAVE:
-        plt.savefig(PATH)
+        plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
