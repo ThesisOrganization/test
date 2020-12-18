@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import argparse
 
 from collections.abc import Mapping
 
@@ -86,10 +87,23 @@ def compare_dicts(a, b):
     return warning_check_final
 
 
-simulator_file = "./tests_topology/tests/rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-seed_-1-timeout_none/simulation_results.json"
+parser=argparse.ArgumentParser(description="Test json outputs")
+parser.add_argument("results1",help="location of the first simulation results")
+parser.add_argument("results2",help="location of the second simulation results")
+args=parser.parse_args()
+
+
+simulator_file=args.results1
+compare_file=args.results2
+
+#simulator_file = "./tests_topology/tests/rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-seed_-1-timeout_none/simulation_results.json"
+
+
+#simulator_file = "./results1/simulation_results.json"
 fsimulator = open(simulator_file, "r")
 
-compare_file = "./tests_topology/tests/simulation_results.json"
+#compare_file = "./tests_topology/tests/simulation_results.json"
+#compare_file = "./results2/simulation_results.json"
 fcompare = open(compare_file, "r")
 
 simulator = json.load(fsimulator)
