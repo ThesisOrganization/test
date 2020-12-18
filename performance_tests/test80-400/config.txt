@@ -1,0 +1,2 @@
+central_type_and_additional_info  = Type-test_80_400,0.3,Type-test_80_400
+80 Type-test_80_400: 5 Type-test_80_400

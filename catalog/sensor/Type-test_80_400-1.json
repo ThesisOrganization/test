@@ -1,0 +1,7 @@
+{
+        "rate_sensors_telemetry": 0.000,
+        "rate_sensors_transition": 0.000025,
+        "measure_type": "0",
+        "job_type": "BATCH",
+        "cost": 1
+}
