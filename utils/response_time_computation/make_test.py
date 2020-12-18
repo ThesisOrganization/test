@@ -1,6 +1,6 @@
 import json
 
-path = "./simulation_results_with_wan.json"
+path = "./simulation_results_original.json"
 
 file_json = open(path, "r")
 json_data = json.load(file_json)
@@ -23,7 +23,7 @@ for element in json_data:
 
 
 
-out = "./robe.json"
+out = "./simulation_results.json"
 
 fout = open(out, "w")
 json.dump(json_data, fout)
