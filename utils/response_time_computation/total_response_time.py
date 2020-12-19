@@ -9,11 +9,6 @@ sys.setrecursionlimit(10**6)
 class Container:
     levels_to_add = 0 #0 -> all, 1-> regional + local, 2 -> local
 
-    def __init__(self):
-        self.data = None
-        self.sons = []
-        self.summable = True
-
     def compute_response(self):
         my_response = self.data
 
@@ -26,6 +21,20 @@ class Container:
             return my_response + max_response
         else:
             return max_response
+
+
+    def set_summable(self, summable):
+        self.summable = summable
+    
+    def set_data(self, data):
+        self.data = data
+
+    def add_son(self, son):
+        self.sons.append(son)
+
+    def __init__(self):
+        self.data = None
+        self.sons = []
 
 
 def get_data(node):
@@ -72,24 +81,29 @@ def setup_dict(json_data):
 
         if id_node not in dict_global:
             dict_global[id_node] = Container()
-            dict_global[id_node].to_add = get_summable(node)
+            #dict_global[id_node].summable = get_summable(node)
         
-        dict_global[id_node].data = get_data(node)
+        #dict_global[id_node].data = get_data(node)
+        dict_global[id_node].set_data(get_data(node))
+        dict_global[id_node].set_summable(get_summable(node))
 
         next_id = node["upper_node"]
 
         if next_id not in dict_global:
             dict_global[next_id] = Container()
 
-        dict_global[next_id].sons.append(dict_global[id_node])
+        #dict_global[next_id].sons.append(dict_global[id_node])
+        dict_global[next_id].add_son(dict_global[id_node])
 
     return dict_global
 
 
-def compute_total_response_time(path):
+def compute_total_response_time(path, levels=0):
     file_json = open(path, "r")
     json_data = json.load(file_json)
     
+    Container.levels_to_add = levels
+
     dict_global = setup_dict(json_data)
     
     return dict_global[0].compute_response()
@@ -99,7 +113,7 @@ def compute_total_response_time(path):
 path = "./simulation_results.json"
 
 
-results = compute_total_response_time(path)
+results = compute_total_response_time(path, 0)
 
 print(results)
 
