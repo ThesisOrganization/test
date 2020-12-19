@@ -60,7 +60,8 @@ def compute_response(container):
     #taking my response times
     ######################à
     if container.data["type"] == "wan":
-        my_response = (0.0, 0.0, 0.0, 0.0)
+        delay = container.data["delay"]
+        my_response = (delay, delay, delay, delay)
     elif container.data["type"] == "lan":
         telemetry_response = container.data["lan_out"]["telemetry"]["response_time"]
         transition_response = container.data["lan_out"]["transition"]["response_time"]

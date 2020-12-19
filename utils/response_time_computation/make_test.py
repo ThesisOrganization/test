@@ -13,7 +13,7 @@ for element in json_data:
         element["lan_in"]["command"]["response_time"] = 1.0
         element["lan_out"]["batch"]["response_time"] = 1.0
     elif element["type"] == "wan":
-        pass
+        element["delay"] = 1.0
     else:
         element["parameters"]["telemetry"]["response_time"] = 1.0
         element["parameters"]["transition"]["response_time"] = 1.0
