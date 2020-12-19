@@ -1,5 +1,6 @@
 from plot_functions.plot_graph import *
 from response_time_computation.total_response_time import compute_total_response_time
+from cost_computation.total_cost import compute_total_cost
 
 import json
 
@@ -50,6 +51,9 @@ response_time = compute_total_response_time("./test_simulation_results.json")
 
 print(response_time)
 
+cost = compute_total_cost("./test_simulation_results.json")
+
+print(cost)
 
 
 draw_scatterplot([1.0, 2.0, 2.0], [4.9, 3.0, 2.0], ["ciao", "robe", "ah"], "saldkal", "patate", "robe", 0.0, 5.0)
