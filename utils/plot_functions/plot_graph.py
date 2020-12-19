@@ -224,4 +224,39 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
         plt.show()
     plt.close()
 
+def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, colors=None, PATH=None):
+    ax = plt.subplot(111)
+    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    ax.yaxis.set_label_coords(-0.03, 1.02)
+
+    len_x = len(x_number_values)
+    len_y = len(y_number_values)
+
+    if len_x != len_y:
+        print("ERROR: len_x != len_y")
+        plt.close()
+        return
+
+    ax.scatter(x = x_number_values, y = y_number_values)
+    
+    if len(labels) != len_x:
+        print("ERROR: len(labels) != len_y")
+        plt.close()
+        return
+
+    for i in range(0, len_x):
+        x = x_number_values[i]
+        y = y_number_values[i]
+        ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
+    
+    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.xlabel(XLABEL, fontsize=12)
+    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+
+    if SAVE:
+        plt.savefig(PATH, bbox_inches='tight')
+    if PRINT:
+        plt.show()
+    plt.close()
+
 

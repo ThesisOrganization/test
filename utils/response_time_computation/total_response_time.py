@@ -106,14 +106,16 @@ def compute_total_response_time(path, levels=0):
 
     dict_global = setup_dict(json_data)
     
-    return dict_global[0].compute_response()
+    final_response_time = dict_global[0].compute_response()
+
+    return list(final_response_time)
 
 
 #path = "../tests_topology/tests/rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-seed_-1-timeout_none/simulation_results.json"
-path = "./simulation_results.json"
-
-
-results = compute_total_response_time(path, 0)
-
-print(results)
+#path = "./simulation_results.json"
+#
+#
+#results = compute_total_response_time(path, 0)
+#
+#print(results)
 

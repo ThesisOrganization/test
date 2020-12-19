@@ -1,4 +1,5 @@
 from plot_functions.plot_graph import *
+from response_time_computation.total_response_time import compute_total_response_time
 
 import json
 
@@ -43,3 +44,13 @@ draw_lines(mean, names, "Average of marks over time", "Exams", "Mean of marks", 
 #draw_lines(mean, names, "Average of marks over time", "Exams", "Mean of marks", 0, max(mean) + 1, COLOR_POINT="#ff00ff")
 
 draw_grouped_lines([mean, mean2], names, "rofefe", "examns", "mean", 0, max(mean) + 1, ["yellow", "blue"], PATH="file4.png")
+
+
+response_time = compute_total_response_time("./test_simulation_results.json")
+
+print(response_time)
+
+
+
+draw_scatterplot([1.0, 2.0, 2.0], [4.9, 3.0, 2.0], ["ciao", "robe", "ah"], "saldkal", "patate", "robe", 0.0, 5.0)
+
