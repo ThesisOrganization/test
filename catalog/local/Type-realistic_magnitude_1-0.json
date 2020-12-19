@@ -20,8 +20,8 @@
         "lan0":{
           "type_lan":"-realistic_magnitude_1-0",
           "amount": 1,
-          "sensor_Type-realistic_magnitude_1-0":5,
-          "sensor_Type-realistic_magnitude_1-1":1,
+          "sensor_Type-realistic_magnitude_1-telemetry-0":5,
+          "sensor_Type-realistic_magnitude_1-transition-0":1,
           "actuator_Type-realistic_magnitude_1-0":1
         },
         "cost": 92.3

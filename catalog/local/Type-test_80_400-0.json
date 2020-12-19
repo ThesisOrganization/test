@@ -21,8 +21,8 @@
         "lan0":{
           "type_lan":"-test_80_400-0",
           "amount": 1,
-          "sensor_Type-test_80_400-0":5,
-          "sensor_Type-test_80_400-1":1,
+          "sensor_Type-test_80_400-telemetry-0":5,
+          "sensor_Type-test_80_400-transition-0":1,
           "actuator_Type-test_80_400-0":1
         }
 }

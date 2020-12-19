@@ -2,3 +2,5 @@
 *.*~
 !.gitignore
 *.kdev4
+simulation_*
+analytical_model_computation

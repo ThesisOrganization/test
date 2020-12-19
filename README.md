@@ -5,6 +5,8 @@ In this repo you can find all the tests done with the simulator. Since we associ
 
 - `catalog`: A unique catalog for all the updated tests, contains the types of all elements.
 
+- `topologies`: This folder will contain all the topologies used for the tests.
+
 - `legacy_tests`: The oldest test in done with the simulator, many of them are not up to date with the simulator interals. Refeter to the readme in that folder for more info.
 
 - `performance tests`: Tests done to evaluate the model performance with several simulator configurations. They all use the global catalog.
