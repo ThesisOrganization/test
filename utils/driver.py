@@ -1,7 +1,7 @@
 from plot_functions.plot_graph import *
 from response_time_computation.total_response_time import compute_total_response_time
 from cost_computation.total_cost import compute_total_cost
-from data_extraction.take_groups import get_type_groups, select_simulation_groups
+from data_extraction.take_groups import get_groups, select_simulation_groups
 
 import json
 import jmespath
@@ -70,8 +70,7 @@ path = "./model_res.json"
 file_json = open(path, "r")
 json_data = json.load(file_json)
 
-elements = jmespath.search("[?(type == 'node' && node_type == 'regional')]", json_data)
-list_all = get_type_groups(elements)
+list_all = get_groups(json_data)
 
 path_sim = "./test_simulation_results.json"
 file_json_sim = open(path_sim, "r")

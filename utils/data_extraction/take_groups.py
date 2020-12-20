@@ -45,6 +45,27 @@ def select_simulation_groups(groups, simulation_data):
     return return_list
 
 
+def get_groups(json_data):
+    central_list = jmespath.search("[?(type == 'node' && node_type == 'central')]", json_data)
+    central_group = get_type_groups(central_list)
+
+    regionals_list = jmespath.search("[?(type == 'node' && node_type == 'regional')]", json_data)
+    regional_group = get_type_groups(regionals_list)
+
+    local_list = jmespath.search("[?(type == 'node' && node_type == 'local')]", json_data)
+    local_group = get_type_groups(local_list)
+
+    actuactor_list = jmespath.search("[?(type == 'actuator')]", json_data)
+    actuator_group = get_type_groups(actuactor_list)
+
+    lan_list = jmespath.search("[?(type == 'lan')]", json_data)
+    lan_group = get_type_groups(lan_list)
+
+    return central_group + regional_group + local_group + actuator_group + lan_group
+
+
+
+
 
 #path = "../model_res.json"
 #file_json = open(path, "r")
@@ -77,6 +98,32 @@ def select_simulation_groups(groups, simulation_data):
 #print(simulation_list[0][0]["lan_in"])
 #print(simulation_list[0][0]["lan_out"])
 ##print(simulation_list[0][0]["parameters"])
+
+
+#print(get_groups(json_data, simulation_data))
+#print(len(get_groups(json_data, simulation_data)))
+
+
+
+
+
+
+#path = "../model_res.json"
+#file_json = open(path, "r")
+#json_data = json.load(file_json)
+#
+#path_sim = "../test_simulation_results.json"
+#file_json_sim = open(path_sim, "r")
+#simulation_data = json.load(file_json_sim)
+#
+#groups = get_groups(json_data)
+#
+#
+#sim_groups = select_simulation_groups(groups, simulation_data)
+#
+#print(sim_groups)
+#print(len(sim_groups))
+
 
             
             
