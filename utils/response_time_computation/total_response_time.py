@@ -98,9 +98,7 @@ def setup_dict(json_data):
     return dict_global
 
 
-def compute_total_response_time(path, levels=0):
-    file_json = open(path, "r")
-    json_data = json.load(file_json)
+def compute_total_response_time(json_data, levels=0):
     
     Container.levels_to_add = levels
 
