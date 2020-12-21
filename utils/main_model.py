@@ -1,4 +1,5 @@
 import visualizations.utilization_factor_histograms as utilization_factor_histograms
+import visualizations.sim_model_utilization_factor_histograms as sim_model_utilization_factor_histograms
 import visualizations.mean_number_queue_histograms as mean_number_queue_histograms
 
 ############################
@@ -53,6 +54,8 @@ print(policies)
 utilization_factor_histograms.plot(files_list, policies, path_to_print)
 
 mean_number_queue_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
 
 
 ##################################

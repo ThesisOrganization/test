@@ -44,7 +44,7 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     plt.xticks(x_pos, names, rotation= '45')
 
 
-    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
@@ -113,7 +113,7 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
 
     ax.legend()
 
-    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
@@ -170,7 +170,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
 
     plt.xticks(x_pos, x_number_values, rotation= '45')
 
-    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
@@ -212,7 +212,7 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
 
     plt.xticks(x_pos, x_number_values, rotation= '45')
 
-    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
@@ -249,7 +249,7 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
         y = y_number_values[i]
         ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
     
-    plt.title(TITLE, fontsize=18, y=1.03)
+    plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
