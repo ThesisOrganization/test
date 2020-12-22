@@ -31,7 +31,20 @@ def get_type_groups(list_elements):
     return return_groups
 
 
-def select_simulation_groups(groups, simulation_data):
+#def select_simulation_groups(groups, simulation_data):
+#    return_list = []
+#    num_groups = len(groups)
+#    for i in range(0, num_groups):
+#        return_list.append([])
+#        num_element_in_group = len(groups[i])
+#        for j in range(0, num_element_in_group):
+#            element = groups[i][j]
+#            simulation_element = jmespath.search("[?id==`" + str(element["id"]) + "`]", simulation_data)
+#            return_list[i].append(simulation_element[0])
+#
+#    return return_list
+
+def select_simulation_groups_dict(groups, sim_dict):
     return_list = []
     num_groups = len(groups)
     for i in range(0, num_groups):
@@ -39,10 +52,52 @@ def select_simulation_groups(groups, simulation_data):
         num_element_in_group = len(groups[i])
         for j in range(0, num_element_in_group):
             element = groups[i][j]
-            simulation_element = jmespath.search("[?id==`" + str(element["id"]) + "`]", simulation_data)
-            return_list[i].append(simulation_element[0])
+            simulation_element = sim_dict[element["id"]]
+            #simulation_element = jmespath.search("[?id==`" + str(element["id"]) + "`]", simulation_data)
+            return_list[i].append(simulation_element)
 
     return return_list
+
+def create_dicts(sim_data):
+    n_central = {}
+    n_regionals = {}
+    n_locals = {}
+    n_lans = {}
+    n_actuators = {}
+    for element in sim_data:
+        if element["type"] == "node" and element["node_type"] == "central":
+            n_central[element["id"]] = element
+        elif element["type"] == "node" and element["node_type"] == "regional":
+            n_regionals[element["id"]] = element
+        elif element["type"] == "node" and element["node_type"] == "local":
+            n_locals[element["id"]] = element
+        elif element["type"] == "lan":
+            n_lans[element["id"]] = element
+        elif element["type"] == "actuator":
+            n_actuators[element["id"]] = element
+
+    return n_central, n_regionals, n_locals, n_lans, n_actuators
+
+
+def divide_types(json_data):
+    n_central = []
+    n_regionals = []
+    n_locals = []
+    n_lans = []
+    n_actuators = []
+    for element in json_data:
+        if element["type"] == "node" and element["node_type"] == "central":
+            n_central.append(element)
+        elif element["type"] == "node" and element["node_type"] == "regional":
+            n_regionals.append(element)
+        elif element["type"] == "node" and element["node_type"] == "local":
+            n_locals.append(element)
+        elif element["type"] == "lan":
+            n_lans.append(element)
+        elif element["type"] == "actuator":
+            n_actuators.append(element)
+
+    return n_central, n_regionals, n_locals, n_lans, n_actuators
 
 
 def get_groups(json_data):

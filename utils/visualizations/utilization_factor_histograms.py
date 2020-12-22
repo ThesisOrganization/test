@@ -1,5 +1,5 @@
 from plot_functions.plot_graph import *
-from data_extraction.take_groups import get_type_groups, select_simulation_groups
+from data_extraction.take_groups import get_type_groups, select_simulation_groups_dict, create_dicts, divide_types
 
 import json
 import jmespath
@@ -82,41 +82,40 @@ def plot(files_list, name_files, path_out):
             total_list_U = []
             names = []
 
-            central_list = jmespath.search("[?(type == 'node' && node_type == 'central')]", json_data)
+            central_list, regionals_list, local_list, lan_list, actuator_list = divide_types(json_data)
+            central_dict, regionals_dict, local_dict, lan_dict, actuator_dict = create_dicts(sim_data)
+
+
             central_group = get_type_groups(central_list)
-            sim_central_group = select_simulation_groups(central_group, sim_data)
+            sim_central_group = select_simulation_groups_dict(central_group, central_dict)
             U_central, name = group_node_computation(sim_central_group, "central")
             total_list_U += U_central
             names += name
             #print(U_central)
 
-            regionals_list = jmespath.search("[?(type == 'node' && node_type == 'regional')]", json_data)
             regional_group = get_type_groups(regionals_list)
-            sim_regional_group = select_simulation_groups(regional_group, sim_data)
+            sim_regional_group = select_simulation_groups_dict(regional_group, regionals_dict)
             U_regionals, name = group_node_computation(sim_regional_group, "regional")
             total_list_U += U_regionals
             names += name
             #print(U_regionals)
 
-            local_list = jmespath.search("[?(type == 'node' && node_type == 'local')]", json_data)
             local_group = get_type_groups(local_list)
-            sim_local_group = select_simulation_groups(local_group, sim_data)
+            sim_local_group = select_simulation_groups_dict(local_group, local_dict)
             U_locals, name = group_node_computation(sim_local_group, "local")
             total_list_U += U_locals
             names += name
             #print(U_locals)
 
-            actuactor_list = jmespath.search("[?(type == 'actuator')]", json_data)
-            actuator_group = get_type_groups(actuactor_list)
-            sim_actuator_group = select_simulation_groups(actuator_group, sim_data)
+            actuator_group = get_type_groups(actuator_list)
+            sim_actuator_group = select_simulation_groups_dict(actuator_group, actuator_dict)
             U_actuactor, name = group_node_computation(sim_actuator_group, "actuator")
             total_list_U += U_actuactor
             names += name
             #print(U_actuactor)
 
-            lan_list = jmespath.search("[?(type == 'lan')]", json_data)
             lan_group = get_type_groups(lan_list)
-            sim_lan_group = select_simulation_groups(lan_group, sim_data)
+            sim_lan_group = select_simulation_groups_dict(lan_group, lan_dict)
             U_lan, name = group_lan_computation(sim_lan_group, "lan")
             total_list_U += U_lan
             names += name

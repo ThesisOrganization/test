@@ -18,26 +18,49 @@ def group_node_computation(groups, model_groups, type_element):
         com = np.array(jmespath.search("[*].parameters.command.utilization_factor", group))
         bat = np.array(jmespath.search("[*].parameters.batch.utilization_factor", group))
 
-        total = tel + tra + com + bat
-        mean = np.mean(total)
+        tel_mean = np.mean(tel)
+        tra_mean = np.mean(tra)
+        com_mean = np.mean(com)
+        bat_mean = np.mean(bat)
+        total = np.array([tel_mean, tra_mean, com_mean, bat_mean])
+
 
         tel_model = np.array(jmespath.search("[*].parameters.telemetry.utilization_factor", model_groups[number]))
         tra_model = np.array(jmespath.search("[*].parameters.transition.utilization_factor", model_groups[number]))
         com_model = np.array(jmespath.search("[*].parameters.command.utilization_factor", model_groups[number]))
         bat_model = np.array(jmespath.search("[*].parameters.batch.utilization_factor", model_groups[number]))
 
-        model_total = tel_model + tra_model + com_model + bat_model
-        model_mean = np.mean(model_total)
+        tel_mean_model = np.mean(tel_model)
+        tra_mean_model = np.mean(tra_model)
+        com_mean_model = np.mean(com_model)
+        bat_mean_model = np.mean(bat_model)
 
+        total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #print(total_model)
 
-        diff_sim_model = np.absolute(mean - model_mean)
+        #print(total)
+        #print(total_model)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        max_sim_model = np.maximum(total, total_model)
 
+        #print(max_sim_model)
+
+        diff_sim_model = np.absolute(total - total_model)
+
+        #print(diff_sim_model)
+
+        division = np.nan_to_num(diff_sim_model / max_sim_model)
+
+        #print(division)
+        #print()
+        #input()
+
+        return_list_total_U.append(division)
         list_names.append(type_element + " type " + str(number))
         number += 1
+
+    #print(return_list_total_U)
 
     return return_list_total_U, list_names
 
@@ -51,49 +74,73 @@ def group_lan_computation(groups, model_groups, type_element):
         com = np.array(jmespath.search("[*].lan_in.command.utilization_factor", group))
         bat = np.array(jmespath.search("[*].lan_in.batch.utilization_factor", group))
 
-        total = tel + tra + com + bat
-        mean = np.mean(total)
+        #total = [tel, tra, com, bat]
+        #mean = np.mean(total)
+        tel_mean = np.mean(tel)
+        tra_mean = np.mean(tra)
+        com_mean = np.mean(com)
+        bat_mean = np.mean(bat)
+        total = np.array([tel_mean, tra_mean, com_mean, bat_mean])
+
 
         tel_model = np.array(jmespath.search("[*].lan_in.telemetry.utilization_factor", model_groups[number]))
         tra_model = np.array(jmespath.search("[*].lan_in.transition.utilization_factor", model_groups[number]))
         com_model = np.array(jmespath.search("[*].lan_in.command.utilization_factor", model_groups[number]))
         bat_model = np.array(jmespath.search("[*].lan_in.batch.utilization_factor", model_groups[number]))
 
-        model_total = tel_model + tra_model + com_model + bat_model 
-        model_mean = np.mean(model_total)
+        tel_mean_model = np.mean(tel_model)
+        tra_mean_model = np.mean(tra_model)
+        com_mean_model = np.mean(com_model)
+        bat_mean_model = np.mean(bat_model)
 
+        total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(mean, model_mean)
+        total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        diff_sim_model = np.absolute(mean - model_mean)
+        max_sim_model = np.maximum(total, total_model)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        diff_sim_model = np.absolute(total - total_model)
 
+        division = np.nan_to_num(diff_sim_model / max_sim_model)
+
+        return_list_total_U.append(division)
         list_names.append(type_element + "_in type " + str(number))
+
+
+
         
         tel = np.array(jmespath.search("[*].lan_out.telemetry.utilization_factor", group))
         tra = np.array(jmespath.search("[*].lan_out.transition.utilization_factor", group))
         com = np.array(jmespath.search("[*].lan_out.command.utilization_factor", group))
         bat = np.array(jmespath.search("[*].lan_out.batch.utilization_factor", group))
 
-        total = tel + tra + com + bat
-        mean = np.mean(total)
+        tel_mean = np.mean(tel)
+        tra_mean = np.mean(tra)
+        com_mean = np.mean(com)
+        bat_mean = np.mean(bat)
+        total = np.array([tel_mean, tra_mean, com_mean, bat_mean])
 
         tel_model = np.array(jmespath.search("[*].lan_out.telemetry.utilization_factor", model_groups[number]))
         tra_model = np.array(jmespath.search("[*].lan_out.transition.utilization_factor", model_groups[number]))
         com_model = np.array(jmespath.search("[*].lan_out.command.utilization_factor", model_groups[number]))
         bat_model = np.array(jmespath.search("[*].lan_out.batch.utilization_factor", model_groups[number]))
 
-        model_total = tel_model + tra_model + com_model + bat_model 
-        model_mean = np.mean(model_total)
+        tel_mean_model = np.mean(tel_model)
+        tra_mean_model = np.mean(tra_model)
+        com_mean_model = np.mean(com_model)
+        bat_mean_model = np.mean(bat_model)
 
+        total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(mean, model_mean)
+        total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        diff_sim_model = np.absolute(mean - model_mean)
+        max_sim_model = np.maximum(total, total_model)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        diff_sim_model = np.absolute(total - total_model)
 
+        division = np.nan_to_num(diff_sim_model / max_sim_model)
+
+        return_list_total_U.append(division)
         list_names.append(type_element + "_out type " + str(number))
         number += 1
 
@@ -103,7 +150,7 @@ def group_lan_computation(groups, model_groups, type_element):
 def plot(files_list, name_files, path_out):
     index_file = 0
 
-    directory_name = "sim_model_utilization_factor_histograms/"
+    directory_name = "sim_model_utilization_factor_cat_histograms/"
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
 
@@ -169,10 +216,11 @@ def plot(files_list, name_files, path_out):
         final_result = np.mean(array_np, axis=0)
 
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
+
         #max_value = np.amax(final_result)
         max_value = 1.0
         PERCENTAGE = 0.0
-        draw_histograms(list(final_result), names, "Utilization factor difference in percentage between model and simulation", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, PATH=path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1])
+        draw_grouped_histograms(np.transpose(final_result), names, "Sim vs Model Utilization factor", "Element Type", "% difference in U", 0.0, max_value + max_value*PERCENTAGE, ["Telemetry", "Transition", "Command", "Batch"], PATH=path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1])
 
 
         index_file += 1

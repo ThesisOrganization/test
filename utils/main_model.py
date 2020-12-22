@@ -1,6 +1,13 @@
 import visualizations.utilization_factor_histograms as utilization_factor_histograms
-import visualizations.sim_model_utilization_factor_histograms as sim_model_utilization_factor_histograms
 import visualizations.mean_number_queue_histograms as mean_number_queue_histograms
+import visualizations.response_time_histograms as response_time_histograms
+import visualizations.sim_model_utilization_factor_histograms as sim_model_utilization_factor_histograms
+import visualizations.sim_model_utilization_factor_cat_histograms as sim_model_utilization_factor_cat_histograms
+import visualizations.sim_model_response_time_histograms as sim_model_response_time_histograms
+import visualizations.sim_model_response_timeB_histograms as sim_model_response_timeB_histograms
+import visualizations.sim_model_arrival_rate_histograms as sim_model_arrival_rate_histograms
+import visualizations.sim_model_service_demand_histograms as sim_model_service_demand_histograms
+import visualizations.sim_model_R_vs_U as sim_model_R_vs_U
 
 ############################
 #UTILS
@@ -49,7 +56,6 @@ for policy in policy_list:
 
         index += 1
 
-print(policies)
 #plot charts
 utilization_factor_histograms.plot(files_list, policies, path_to_print)
 
@@ -57,6 +63,19 @@ mean_number_queue_histograms.plot(files_list, policies, path_to_print)
 
 sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
 
+sim_model_R_vs_U.plot(files_list, policies, path_to_print)
+
+response_time_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_arrival_rate_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_service_demand_histograms.plot(files_list, policies, path_to_print)
+
+sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
 
 ##################################
 #PREPARATION SECOND CHART

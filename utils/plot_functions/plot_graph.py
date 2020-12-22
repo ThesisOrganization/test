@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 SAVE = True
-PRINT = True
+PRINT = False
 
 ####################################
 #UTILS
@@ -239,15 +239,15 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
 
     ax.scatter(x = x_number_values, y = y_number_values)
     
-    if len(labels) != len_x:
-        print("ERROR: len(labels) != len_y")
-        plt.close()
-        return
+    #if len(labels) != len_x:
+    #    print("ERROR: len(labels) != len_y")
+    #    plt.close()
+    #    return
 
-    for i in range(0, len_x):
-        x = x_number_values[i]
-        y = y_number_values[i]
-        ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
+    #for i in range(0, len_x):
+    #    x = x_number_values[i]
+    #    y = y_number_values[i]
+    #    ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
     
     plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
