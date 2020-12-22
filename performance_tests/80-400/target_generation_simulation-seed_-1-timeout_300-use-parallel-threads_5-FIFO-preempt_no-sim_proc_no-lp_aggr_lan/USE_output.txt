@@ -1,0 +1,36 @@
+Script started on 2020-12-22 01:27:14+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/98" COLUMNS="237" LINES="63"]
+taken 4 parameters
+commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+***START SIMULATION***
+
+[36m
+Starting an execution with 5 THREADs, 881 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 256
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 0 set to CPU no 0
+Thread 4 set to CPU no 4
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095341211073495
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 300 seconds
+queue overflow for thread 0 at time 300009.000000: inserting event 256 over 256
+
+Script done on 2020-12-22 01:27:20+01:00 [COMMAND_EXIT_CODE="134"]

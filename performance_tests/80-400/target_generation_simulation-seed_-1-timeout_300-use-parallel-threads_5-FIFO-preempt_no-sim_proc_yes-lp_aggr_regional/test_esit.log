@@ -1,0 +1,141 @@
+BEGIN test 80-400:.............20/12/2020 - 20:39:54
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=5 --sched=FIFO --sim_processing --timeout=300 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_5-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_5-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+Script started on 2020-12-20 20:39:54+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+creating LP.txt
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_5-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 5 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+***START SIMULATION***
+
+[36m
+Starting an execution with 5 THREADs, 80 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 256
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 0 set to CPU no 0
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095340889287489
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 300 seconds
+[32m[1] Execution ended correctly
+[0m[32m[4] Execution ended correctly
+[0m[32m[3] Execution ended correctly
+[0m[32m[2] Execution ended correctly
+[0m[32m[0] Execution ended correctly
+[0mSimulation final report:
+Thread: 5	LP: 80
+
+===== SYSTEM-WIDE STATISTICS =====
+[36mTotal events....................................:     32600301
+Committed events................................:     32433707 (99.49%)
+Events executed and committed tot...............:      6033247
+Straggler events................................:        20012 (0.06%)
+Anti events.....................................:         5137 (0.02%)
+Useless events..................................:        47108 (0.14%)
+Silent events...................................:       119472 (0.37%)
+Silent events for GVT...........................:            0 (0.00%)
+
+Flushed events..................................:     32548620 (99.84%)
+Fetched operations..............................:     32485966 (99.65%)
+   Fetch succeed................................:     32485966 (100.00%)
+   Fetch failed.................................:            0 (0.00%)
+   Avg node traversed during fetch..............:        24.11
+
+Average time to process any event...............:      4509.60 clocks
+   Average time spent in standard execution.....:      4523.26 clocks
+   Average time spent in silent execution.......:       796.46 clocks (0.00%)
+Average time spent to fetch.....................:     15263.67 clocks (0.00%)
+   Average time in successfull fetch............:     15263.67 clocks (0.00%)
+   Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
+Average time spent to Enqueue...................:      1991.14 clocks (0.00%)
+
+Save Checkpoint operations.........................................:      3249205
+Restore Checkpoint operations......................................:        25149
+Rollback operations to resume LP state.............................:            0 (0.00%)
+Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (0.00%)
+Rollback ops to resume LP state and execute evt in future..........:            0 (0.00%)
+Rollback operations................................................:        25149
+AVG Rollbacked Events per Rollback.................................:         1.87
+AVG Reprocessed Events per Rollback................................:         4.75
+CheckOnGVT invocations.............................................:            0
+
+Save Checkpoint time............................:    735343.66 clocks (92.81%)
+Restore Checkpoint time.........................:    778623.35 clocks (98.27%)
+Rollback time...................................:    792327.24 clocks
+Checkpoint mem..................................:       988143 B
+Checkpoint recalculations.......................:            0
+Checkpoint period...............................:            0
+
+Event not flushed tot...........................:            0
+Exposition forward Time tot.....................: 232524208314 clocks
+Exposition forward Time per event...............:      7158.81 clocks
+Exposition silent Time tot......................:    212012694 clocks
+Exposition silent Time per event................:      1774.58 clocks
+
+Total resumable rollback executed...............:            0
+Avg events resume per rollback_resume...........:         -nan
+Avg clock resume per rollback resume............:         -nan clocks
+
+Total allocated space...........................: 34128 MB
+
+
+Total Clock.....................................: 3292273268580 clocks
+Event Processing................................: 147014257416 clocks (4.47%)
+Safe Processing.................................: 146919102776 clocks (4.46%)
+Frame Processing................................: 146706383095 clocks (4.46%)
+Rollback Processing.............................:  19926237862 clocks (0.61%)
+Checkpoint Saving...............................: 2389282308512 clocks (72.57%)
+Fetch Successful................................: 495855048428 clocks (15.06%)
+[0m
+Simulation ended (seconds):       300.06
+Simulation ended  (clocks): 658590041328
+Last gvt: 8962010.239877
+EventsPerSec:    108088.94
+EventsPerThreadPerSec:     21617.79
+[32mExecution ended correctly
+[0mScript done, file is USE_output.txt
+parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 1503.53 MEM 0 MAXMEM 35465044 STALE 0 MAXMEM_RSS 34957268
+<time name="ALL">1502890</time>
+
+Script done on 2020-12-20 20:44:58+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 20/12/2020 - 20:44:58

@@ -1,0 +1,166 @@
+BEGIN test 80-400:.............20/12/2020 - 15:14:45
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=40 --sched=FIFO --sim_processing --timeout=1000000 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_40-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_40-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+Script started on 2020-12-20 15:14:45+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+creating LP.txt
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_40-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 40 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 40 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 1000000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+TIME BARRIER 5858.264742
+TIME BARRIER 19015.864586
+TIME BARRIER 33528.908625
+TIME BARRIER 53553.151477
+TIME BARRIER 80918.934005
+TIME BARRIER 115881.746802
+TIME BARRIER 156629.556989
+TIME BARRIER 199398.981478
+TIME BARRIER 248299.381479
+TIME BARRIER 300034.100000
+TIME BARRIER 301049.100000
+TIME BARRIER 330519.338468
+TIME BARRIER 381686.738202
+TIME BARRIER 400295.100000
+TIME BARRIER 403009.100000
+TIME BARRIER 455645.730389
+TIME BARRIER 507848.310930
+TIME BARRIER 562013.092557
+TIME BARRIER 618573.772187
+TIME BARRIER 663699.171488
+TIME BARRIER 703282.100000
+TIME BARRIER 734098.593247
+TIME BARRIER 800236.100000
+TIME BARRIER 801868.100000
+TIME BARRIER 802316.100000
+TIME BARRIER 824243.415772
+TIME BARRIER 863029.656464
+TIME BARRIER 900622.100000
+TIME BARRIER 906547.793831
+TIME BARRIER 942331.059126
+TIME BARRIER 978966.734453
+TIME BARRIER 1001077.100000
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 1283.89 MEM 13684 MAXMEM 38309992 STALE 0 MAXMEM_RSS 36411580
+<time name="ALL">1281250</time>
+
+Script done on 2020-12-20 15:15:34+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 20/12/2020 - 15:15:34
