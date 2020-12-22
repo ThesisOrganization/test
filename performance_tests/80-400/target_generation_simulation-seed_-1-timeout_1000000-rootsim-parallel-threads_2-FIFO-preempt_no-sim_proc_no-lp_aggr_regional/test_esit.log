@@ -1,0 +1,241 @@
+BEGIN test 80-400:.............20/12/2020 - 14:42:56
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=2 --sched=FIFO --timeout=1000000 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_2-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_2-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+Script started on 2020-12-20 14:42:56+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+creating LP.txt
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_2-FIFO-preempt_no-sim_proc_no-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 2 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 2 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 1000000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+TIME BARRIER 3369.583017
+TIME BARRIER 7852.540236
+TIME BARRIER 14191.445026
+TIME BARRIER 22805.429712
+TIME BARRIER 33443.583081
+TIME BARRIER 45263.442613
+TIME BARRIER 58455.867306
+TIME BARRIER 66312.171895
+TIME BARRIER 75046.104611
+TIME BARRIER 86237.871563
+TIME BARRIER 96305.608210
+TIME BARRIER 105528.446689
+TIME BARRIER 115922.720878
+TIME BARRIER 126431.469061
+TIME BARRIER 136984.460064
+TIME BARRIER 147376.664266
+TIME BARRIER 158280.898169
+TIME BARRIER 168886.570119
+TIME BARRIER 179470.205002
+TIME BARRIER 190438.203613
+TIME BARRIER 200146.650398
+TIME BARRIER 208902.347700
+TIME BARRIER 217727.344396
+TIME BARRIER 227025.951534
+TIME BARRIER 233434.122543
+TIME BARRIER 239137.222862
+TIME BARRIER 246086.200952
+TIME BARRIER 253678.333785
+TIME BARRIER 261861.245396
+TIME BARRIER 269918.477398
+TIME BARRIER 280418.131244
+TIME BARRIER 291477.869171
+TIME BARRIER 300062.100000
+TIME BARRIER 301231.100000
+TIME BARRIER 307247.240974
+TIME BARRIER 319089.454609
+TIME BARRIER 329195.699457
+TIME BARRIER 337213.652065
+TIME BARRIER 345467.172776
+TIME BARRIER 354654.477766
+TIME BARRIER 364975.472132
+TIME BARRIER 375263.516868
+TIME BARRIER 384676.791277
+TIME BARRIER 393089.799321
+TIME BARRIER 400075.100000
+TIME BARRIER 401315.100000
+TIME BARRIER 405258.087193
+TIME BARRIER 414869.066406
+TIME BARRIER 425090.091685
+TIME BARRIER 435079.741573
+TIME BARRIER 445905.012031
+TIME BARRIER 455614.667790
+TIME BARRIER 465679.213697
+TIME BARRIER 473883.402536
+TIME BARRIER 480784.099046
+TIME BARRIER 487926.923623
+TIME BARRIER 495395.824564
+TIME BARRIER 503525.195978
+TIME BARRIER 512170.984174
+TIME BARRIER 521698.269806
+TIME BARRIER 527353.338164
+TIME BARRIER 534403.217239
+TIME BARRIER 541024.577408
+TIME BARRIER 547736.202746
+TIME BARRIER 553745.806217
+TIME BARRIER 559601.711682
+TIME BARRIER 565268.272060
+TIME BARRIER 570438.298336
+TIME BARRIER 575398.017755
+TIME BARRIER 582238.044273
+TIME BARRIER 595146.566519
+TIME BARRIER 605701.031492
+TIME BARRIER 616833.314638
+TIME BARRIER 628043.683086
+TIME BARRIER 639181.127621
+TIME BARRIER 651552.571126
+TIME BARRIER 664767.286759
+TIME BARRIER 678309.586242
+TIME BARRIER 692379.855236
+TIME BARRIER 702799.100000
+TIME BARRIER 714570.260018
+TIME BARRIER 727796.820430
+TIME BARRIER 741562.456848
+TIME BARRIER 755826.092754
+TIME BARRIER 769693.943546
+TIME BARRIER 784589.451067
+TIME BARRIER 799059.668575
+TIME BARRIER 803743.100000
+TIME BARRIER 817624.320059
+TIME BARRIER 831799.591525
+TIME BARRIER 845545.921620
+TIME BARRIER 859002.815051
+TIME BARRIER 872164.413273
+TIME BARRIER 885367.962265
+TIME BARRIER 896605.612595
+TIME BARRIER 902729.100000
+TIME BARRIER 907040.237183
+TIME BARRIER 918179.533148
+TIME BARRIER 929225.426877
+TIME BARRIER 938606.951234
+TIME BARRIER 948397.191333
+TIME BARRIER 958653.196336
+TIME BARRIER 967682.896097
+TIME BARRIER 976706.563028
+TIME BARRIER 986095.997881
+TIME BARRIER 995183.843150
+TIME BARRIER 1001777.100000
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 225.63 MEM 30964 MAXMEM 14334464 STALE 0 MAXMEM_RSS 14132040
+<time name="ALL">222920</time>
+
+Script done on 2020-12-20 14:44:50+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 20/12/2020 - 14:44:50

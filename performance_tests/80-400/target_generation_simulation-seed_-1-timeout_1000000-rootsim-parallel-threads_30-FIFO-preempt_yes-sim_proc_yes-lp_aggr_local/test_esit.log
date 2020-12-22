@@ -1,0 +1,97 @@
+BEGIN test 52 of 168 with topology 80-400:.............21/12/2020 - 18:43:19
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=30 --sched=FIFO --preempt --sim_processing --timeout=1000000 --lp_aggregation=local --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
+Script started on 2020-12-21 18:43:19+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local" folder.
+Executing model...
+Parallel execution with 30 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 30 used
+Number of Logical Processes: 481
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 1000000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+TIME BARRIER 139.178337
+TIME BARRIER 5286.637924
+TIME BARRIER 10619.204018
+TIME BARRIER 16367.780268
+TIME BARRIER 32678.516421
+TIME BARRIER 52704.563671
+TIME BARRIER 75053.939198
+TIME BARRIER 105747.920062
+TIME BARRIER 134722.315080
+TIME BARRIER 167931.946318
+TIME BARRIER 200013.000000
+TIME BARRIER 217583.366088
+TIME BARRIER 248793.283940
+TIME BARRIER 279615.022824
+TIME BARRIER 300036.100000
+TIME BARRIER 300279.100000
+TIME BARRIER 300986.100000
+TIME BARRIER 302988.100000
+TIME BARRIER 324954.398499
+TIME BARRIER 358859.224932
+TIME BARRIER 400084.100000
+TIME BARRIER 400394.100000
+TIME BARRIER 401469.100000
+TIME BARRIER 403723.100000
+TIME BARRIER 422961.719902
+TIME BARRIER 455412.575381
+TIME BARRIER 500015.000000
+TIME BARRIER 527591.737768
+TIME BARRIER 575981.086910
+TIME BARRIER 604095.917075
+TIME BARRIER 650209.525734
+TIME BARRIER 701756.100000
+TIME BARRIER 703765.100000
+TIME BARRIER 751109.530809
+TIME BARRIER 800077.017856
+TIME BARRIER 802652.100000
+TIME BARRIER 809741.786505
+TIME BARRIER 860583.533979
+TIME BARRIER 900566.100000
+TIME BARRIER 903170.100000
+TIME BARRIER 903725.100000
+TIME BARRIER 932862.115622
+TIME BARRIER 974079.072957
+TIME BARRIER 1002050.100000
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 1128.97 MEM 30304 MAXMEM 59447292 STALE 0 MAXMEM_RSS 56359968
+<time name="ALL">1126530</time>
+
+Script done on 2020-12-21 18:44:09+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 21/12/2020 - 18:44:09

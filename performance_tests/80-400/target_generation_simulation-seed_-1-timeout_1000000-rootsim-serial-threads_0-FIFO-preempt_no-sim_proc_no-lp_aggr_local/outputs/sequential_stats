@@ -1,0 +1,19 @@
+------------------------------------------------------------
+----------------------SERIAL STATISTICS---------------------
+------------------------------------------------------------
+
+SIMULATION STARTED AT ..... : 2020-12-20 15:17:51 
+SIMULATION FINISHED AT .... : 2020-12-20 15:18:01 
+TOTAL SIMULATION TIME ..... : 10.198 seconds 
+
+TOTAL LPs.................. : 481 
+TOTAL EXECUTED EVENTS ..... : 4610148 
+AVERAGE EVENT COST......... : 2.212 us
+AVERAGE EVENT COST (EMA)... : 0.00 us
+
+LAST COMMITTED GVT ........ : 967328.765098
+SIMULATION TIME SPEED...... : 106092.41 units per GVT
+AVERAGE MEMORY USAGE....... : 493.28 MB
+PEAK MEMORY USAGE.......... : 1.93 GB
+
+--------- SIMULATION CORRECTLY COMPLETED ----------

@@ -1,0 +1,80 @@
+BEGIN test 75 of 168 with topology 80-400:.............22/12/2020 - 00:59:16
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=20 --sched=FIFO --preempt --timeout=1000000 --lp_aggregation=lan --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
+Script started on 2020-12-22 01:00:00+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan" folder.
+Executing model...
+Parallel execution with 20 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 20 used
+Number of Logical Processes: 881
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 1000000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+TIME BARRIER 9.000000
+TIME BARRIER 9.000000
+TIME BARRIER 20022.217490
+TIME BARRIER 42231.654560
+TIME BARRIER 64806.443914
+TIME BARRIER 89580.921481
+TIME BARRIER 115742.106399
+TIME BARRIER 142656.533940
+TIME BARRIER 169126.558486
+TIME BARRIER 197995.765006
+TIME BARRIER 200068.000000
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 203896.035845
+TIME BARRIER 211384.193520
+TIME BARRIER 225198.834750
+TIME BARRIER 261206.574758
+TIME BARRIER 261206.574758
+TIME BARRIER 273375.978325
+TIME BARRIER 274139.123203
+TIME BARRIER 287941.950464
+TIME BARRIER 300146.100000
+TIME BARRIER 300228.100000
+TIME BARRIER 300301.100000
+TIME BARRIER 300332.100000
+TIME BARRIER 300398.100000
+TIME BARRIER 300489.100000
+TIME BARRIER 300923.100000
+MEM CPU 666.23 MEM 60083448 MAXMEM 60083448 STALE 0 MAXMEM_RSS 54017832
+<time name="ALL">665250</time>
+
+Script done on 2020-12-22 01:00:40+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 22/12/2020 - 01:00:40 with error code 143
+
+
+MAX RETRY (2) reached! SKIPPING

@@ -1,0 +1,60 @@
+BEGIN test 146 of 168 with topology 80-400:.............22/12/2020 - 01:26:04
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=2 --sched=FIFO --sim_processing --timeout=300 --lp_aggregation=lan --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan
+Script started on 2020-12-22 01:26:14+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan" folder.
+Executing model...
+Parallel execution with 2 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+***START SIMULATION***
+
+[36m
+Starting an execution with 2 THREADs, 881 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 256
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 0 set to CPU no 0
+Thread 1 set to CPU no 1
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095341211073495
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 300 seconds
+queue overflow for thread 0 at time 300009.000000: inserting event 256 over 256
+Script done, file is USE_output.txt
+USE has raised an error, aborting.
+Error during model simulation, aborting.
+FINISHED CPU 22.85 MEM 19240 MAXMEM 16881420 STALE 0 MAXMEM_RSS 16814704
+<time name="ALL">22570</time>
+
+Script done on 2020-12-22 01:26:24+01:00 [COMMAND_EXIT_CODE="134"]
+test 80-400 FAILED at 22/12/2020 - 01:26:24 with error code 134
+
+
+MAX RETRY (2) reached! SKIPPING

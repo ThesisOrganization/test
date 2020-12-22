@@ -1,0 +1,175 @@
+BEGIN test 80-400:.............20/12/2020 - 15:06:07
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=20 --sched=FIFO --sim_processing --timeout=1000000 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+Script started on 2020-12-20 15:06:07+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+creating LP.txt
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_20-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 20 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 20 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 1000000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+TIME BARRIER 11089.517288
+TIME BARRIER 29810.174227
+TIME BARRIER 58060.539150
+TIME BARRIER 93246.764468
+TIME BARRIER 140753.858408
+TIME BARRIER 190471.489115
+TIME BARRIER 245623.176552
+TIME BARRIER 300909.100000
+TIME BARRIER 360121.891127
+TIME BARRIER 402638.100000
+TIME BARRIER 425860.725456
+TIME BARRIER 452085.896258
+TIME BARRIER 479885.827551
+TIME BARRIER 510888.542012
+TIME BARRIER 540640.961547
+TIME BARRIER 556228.036568
+TIME BARRIER 577598.688916
+TIME BARRIER 602988.100000
+TIME BARRIER 629332.953934
+TIME BARRIER 656962.048801
+TIME BARRIER 680477.080727
+TIME BARRIER 698030.857281
+TIME BARRIER 710428.877172
+TIME BARRIER 730949.612548
+TIME BARRIER 747045.434994
+TIME BARRIER 762155.687649
+TIME BARRIER 774649.848102
+TIME BARRIER 777761.153328
+TIME BARRIER 793572.769958
+TIME BARRIER 804872.478287
+TIME BARRIER 830086.198195
+TIME BARRIER 850300.547151
+TIME BARRIER 869935.548958
+TIME BARRIER 889087.759657
+TIME BARRIER 902218.100000
+TIME BARRIER 916969.591204
+TIME BARRIER 939710.358007
+TIME BARRIER 959247.642545
+TIME BARRIER 979471.755137
+TIME BARRIER 999462.867991
+TIME BARRIER 1015627.563841
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 807.75 MEM 29900 MAXMEM 43241812 STALE 0 MAXMEM_RSS 42105152
+<time name="ALL">804990</time>
+
+Script done on 2020-12-20 15:06:57+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 20/12/2020 - 15:06:57

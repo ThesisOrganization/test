@@ -1,0 +1,135 @@
+BEGIN test 80-400:.............20/12/2020 - 20:22:32
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=2 --sched=FIFO --preempt --timeout=300 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
+Script started on 2020-12-20 20:22:32+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+creating LP.txt
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_2-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 2 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+***START SIMULATION***
+
+[36m
+Starting an execution with 2 THREADs, 80 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 256
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 0 set to CPU no 0
+Thread 1 set to CPU no 1
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095340889287489
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 300 seconds
+[32m[1] Execution ended correctly
+[0m[32m[0] Execution ended correctly
+[0mSimulation final report:
+Thread: 2	LP: 80
+
+===== SYSTEM-WIDE STATISTICS =====
+[36mTotal events....................................:     14355938
+Committed events................................:     14340118 (99.89%)
+Events executed and committed tot...............:      6636429
+Straggler events................................:         2314 (0.02%)
+Anti events.....................................:           65 (0.00%)
+Useless events..................................:         4840 (0.03%)
+Silent events...................................:        10972 (0.08%)
+Silent events for GVT...........................:            0 (0.00%)
+
+Flushed events..................................:     14356799 (100.01%)
+Fetched operations..............................:     14345031 (99.92%)
+   Fetch succeed................................:     14345031 (100.00%)
+   Fetch failed.................................:            0 (0.00%)
+   Avg node traversed during fetch..............:         5.52
+
+Average time to process any event...............:      3799.24 clocks
+   Average time spent in standard execution.....:      3801.40 clocks
+   Average time spent in silent execution.......:       968.03 clocks (0.00%)
+Average time spent to fetch.....................:      5552.42 clocks (0.00%)
+   Average time in successfull fetch............:      5552.42 clocks (0.00%)
+   Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
+Average time spent to Enqueue...................:      2461.13 clocks (0.00%)
+
+Save Checkpoint operations.........................................:      1434595
+Restore Checkpoint operations......................................:         2379
+Rollback operations to resume LP state.............................:            0 (0.00%)
+Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (0.00%)
+Rollback ops to resume LP state and execute evt in future..........:            0 (0.00%)
+Rollback operations................................................:         2379
+AVG Rollbacked Events per Rollback.................................:         2.03
+AVG Reprocessed Events per Rollback................................:         4.61
+CheckOnGVT invocations.............................................:            0
+
+Save Checkpoint time............................:    733531.82 clocks (94.73%)
+Restore Checkpoint time.........................:    759766.49 clocks (98.12%)
+Rollback time...................................:    774360.35 clocks
+Checkpoint mem..................................:       988118 B
+Checkpoint recalculations.......................:            0
+Checkpoint period...............................:            0
+
+Event not flushed tot...........................:            0
+Exposition forward Time tot.....................:  98463910888 clocks
+Exposition forward Time per event...............:      6864.00 clocks
+Exposition silent Time tot......................:     20874616 clocks
+Exposition silent Time per event................:      1902.54 clocks
+
+Total resumable rollback executed...............:            0
+Avg events resume per rollback_resume...........:         -nan
+Avg clock resume per rollback resume............:         -nan clocks
+
+Total allocated space...........................: 15470 MB
+
+
+Total Clock.....................................: 1316930690014 clocks
+Event Processing................................:  54541632358 clocks (4.14%)
+Safe Processing.................................:  54531011102 clocks (4.14%)
+Frame Processing................................:  54512916418 clocks (4.14%)
+Rollback Processing.............................:   1842203262 clocks (0.14%)
+Checkpoint Saving...............................: 1052321085584 clocks (79.91%)
+Fetch Successful................................:  79649705072 clocks (6.05%)
+[0m
+Simulation ended (seconds):       300.07
+Simulation ended  (clocks): 658599790648
+Last gvt: 3922603.752053
+EventsPerSec:     47789.40
+EventsPerThreadPerSec:     23894.70
+[32mExecution ended correctly
+[0mScript done, file is USE_output.txt
+parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 605.90 MEM 0 MAXMEM 15990340 STALE 0 MAXMEM_RSS 15849608
+<time name="ALL">605250</time>
+
+Script done on 2020-12-20 20:27:35+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 20/12/2020 - 20:27:35

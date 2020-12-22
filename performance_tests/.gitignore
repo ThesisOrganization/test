@@ -1,0 +1,12 @@
+*.bin
+*.json
+*simulation_rootsim
+*simulation_use
+*simulation_neurome
+*analytical_model_computation
+json*
+*lp_data
+!*LP.txt
+!*test_esit.log
+!*topology.txt
+!*outputs
