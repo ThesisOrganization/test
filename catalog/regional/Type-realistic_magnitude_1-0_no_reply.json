@@ -7,9 +7,9 @@
         },
         "service_times": {
           "telemetry": 0.33,
-          "transition": 0.0,
-          "command": 0.0,
-          "batch": 0.0,
+          "transition": 1.65,
+          "command": 0.165,
+          "batch": 0.66,
           "reply": 0.0
         },
         "cores":1,
@@ -19,5 +19,5 @@
         "cost_wan":0.3,
         "delay_upper_router": 0.3,
         "delay_lower_router": 0.1,
-        "cost": 143.3
+        "cost": 74.3
 }
