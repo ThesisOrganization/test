@@ -1,0 +1,10 @@
+{
+        "service_times": {
+            "telemetry": 0.033,
+            "transition": 0.165,
+            "command": 0.00,
+            "batch": 0.066
+        },
+        "disk_type": "3",
+        "cost": 200.3
+}

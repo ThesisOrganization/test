@@ -35,51 +35,55 @@ policy_list = ["FIFO", "RR"]
 preemption_list = ["preempt_yes", "preempt_no"]
 
 
-path_to_print = "../model_charts/"
+path_to_print_pre = "../model_charts/"
 
-##################################
-#PREPARATION FIRST CHART
-##############################
-
-files_list = []
-policies = []
-index = 0
-for policy in policy_list:
-    for preemption in preemption_list:
-        files_list.append([])
-
-        for seed in seed_list:
-            f_name = build_name_function(path_to_tests, scenarios[0], seed, policy, preemption)
-            files_list[index].append(f_name)
-        
-        policies.append( (policy, preemption) )
-
-        index += 1
-
-#plot charts
-utilization_factor_histograms.plot(files_list, policies, path_to_print)
-
-mean_number_queue_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_R_vs_U.plot(files_list, policies, path_to_print)
-
-response_time_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_arrival_rate_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_service_demand_histograms.plot(files_list, policies, path_to_print)
-
-sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
-
-##################################
-#PREPARATION SECOND CHART
-##############################
+for scenario in scenarios:
+    
+    path_to_print = path_to_print_pre + scenario
+    
+    ##################################
+    #PREPARATION FIRST CHART
+    ##############################
+    
+    files_list = []
+    policies = []
+    index = 0
+    for policy in policy_list:
+        for preemption in preemption_list:
+            files_list.append([])
+    
+            for seed in seed_list:
+                f_name = build_name_function(path_to_tests, scenario, seed, policy, preemption)
+                files_list[index].append(f_name)
+            
+            policies.append( (policy, preemption) )
+    
+            index += 1
+    
+    #plot charts
+    utilization_factor_histograms.plot(files_list, policies, path_to_print)
+    
+    mean_number_queue_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_R_vs_U.plot(files_list, policies, path_to_print)
+    
+    response_time_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_arrival_rate_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_service_demand_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
+    
+    ##################################
+    #PREPARATION SECOND CHART
+    ##############################
 
 
 
