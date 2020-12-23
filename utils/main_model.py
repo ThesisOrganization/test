@@ -7,7 +7,7 @@ import visualizations.sim_model_response_time_histograms as sim_model_response_t
 import visualizations.sim_model_response_timeB_histograms as sim_model_response_timeB_histograms
 import visualizations.sim_model_arrival_rate_histograms as sim_model_arrival_rate_histograms
 import visualizations.sim_model_service_demand_histograms as sim_model_service_demand_histograms
-import visualizations.sim_model_R_vs_U as sim_model_R_vs_U
+import visualizations.sim_model_N_vs_U as sim_model_N_vs_U
 
 ############################
 #UTILS
@@ -67,9 +67,11 @@ for scenario in scenarios:
     
     sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
     
-    sim_model_R_vs_U.plot(files_list, policies, path_to_print)
+    sim_model_N_vs_U.plot(files_list, policies, path_to_print)
     
     response_time_histograms.plot(files_list, policies, path_to_print)
+    
+    print("Metà")
     
     sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
     
