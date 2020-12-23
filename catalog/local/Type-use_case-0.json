@@ -20,7 +20,7 @@
         "lan0":{
           "type_lan":"-use_case-0",
           "amount": 1,
-          "sensor_Type-use_case-0":200
+          "sensor_Type-use_case-0":1
         },
         "cost": 92.3
 }
