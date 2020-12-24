@@ -19,5 +19,5 @@
         "cost_wan":0.3,
         "delay_upper_router": 0.3,
         "delay_lower_router": 0.1,
-        "cost": 143.3
+        "cost": 210.3
 }
