@@ -232,6 +232,48 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
         plt.show()
     plt.close()
 
+def draw_lines_scatterplot(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, COLOR_POINT=None, PATH=None):
+
+    ax = plt.subplot(111)
+    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    ax.yaxis.set_label_coords(-0.03, 1.02)
+    
+
+    len_x = len(x_number_values)
+    len_y = len(y_number_values)
+
+    if len_x != len_y:
+        print("ERROR: len_x != len_y")
+        plt.close()
+        return
+
+    #x_pos = range(0, len_x)
+    x_pos = np.arange(0.0, len_x, len_x*0.19)
+
+    if COLOR != None and COLOR_POINT != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, color=COLOR, marker = 'o', markerfacecolor = COLOR_POINT)
+    elif COLOR != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, color=COLOR, marker = 'o')
+    elif COLOR_POINT != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, marker = 'o', markerfacecolor = COLOR_POINT)
+    else:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7)
+
+    plt.xticks(x_pos)
+
+    plt.title(TITLE, fontsize=18, y=1.13)
+    plt.xlabel(XLABEL, fontsize=12)
+    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+
+    plt.tick_params(axis='both', labelsize=12)
+
+    if SAVE and PATH != None:
+        plt.savefig(PATH, bbox_inches='tight')
+    if PRINT:
+        plt.show()
+    plt.close()
+
+
 def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, colors=None, PATH=None):
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)

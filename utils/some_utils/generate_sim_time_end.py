@@ -1,7 +1,7 @@
 incr = 1000
 
 init_sim = 1000
-max_sim = 100000
+max_sim = 300000
 
 max_sim_taken = max_sim + incr
 

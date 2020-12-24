@@ -8,21 +8,21 @@ import os
 
 
 
-def get_parameters_lan(sim_data, data_before):
-    tel_out_sim = np.array(jmespath.search("[*].lan_out.telemetry.number_mean_queue", sim_data))
-    tra_out_sim = np.array(jmespath.search("[*].lan_out.transition.number_mean_queue", sim_data))
-    com_out_sim = np.array(jmespath.search("[*].lan_out.command.number_mean_queue", sim_data))
-    bat_out_sim = np.array(jmespath.search("[*].lan_out.batch.number_mean_queue", sim_data))
+def get_parameters_lan(sim_data, data_before, string_to_search):
+    tel_out_sim = np.array(jmespath.search("[*].lan_out.telemetry." + string_to_search, sim_data))
+    tra_out_sim = np.array(jmespath.search("[*].lan_out.transition." + string_to_search, sim_data))
+    com_out_sim = np.array(jmespath.search("[*].lan_out.command." + string_to_search, sim_data))
+    bat_out_sim = np.array(jmespath.search("[*].lan_out.batch." + string_to_search, sim_data))
     
     tel_out_sim = tel_out_sim[tel_out_sim>0.0]
     tra_out_sim = tra_out_sim[tra_out_sim>0.0]
     com_out_sim = com_out_sim[com_out_sim>0.0]
     bat_out_sim = bat_out_sim[bat_out_sim>0.0]
 
-    tel_out_before = np.array(jmespath.search("[*].lan_out.telemetry.number_mean_queue", data_before))
-    tra_out_before = np.array(jmespath.search("[*].lan_out.transition.number_mean_queue", data_before))
-    com_out_before = np.array(jmespath.search("[*].lan_out.command.number_mean_queue", data_before))
-    bat_out_before = np.array(jmespath.search("[*].lan_out.batch.number_mean_queue", data_before))
+    tel_out_before = np.array(jmespath.search("[*].lan_out.telemetry." + string_to_search, data_before))
+    tra_out_before = np.array(jmespath.search("[*].lan_out.transition." + string_to_search, data_before))
+    com_out_before = np.array(jmespath.search("[*].lan_out.command." + string_to_search, data_before))
+    bat_out_before = np.array(jmespath.search("[*].lan_out.batch." + string_to_search, data_before))
 
     tel_out_before = tel_out_before[tel_out_before>0.0]
     tra_out_before = tra_out_before[tra_out_before>0.0]
@@ -75,20 +75,20 @@ def get_parameters_lan(sim_data, data_before):
     out_mean = np.mean(np.array(mean_list_final))
 
 
-    tel_in_sim = np.array(jmespath.search("[*].lan_in.telemetry.number_mean_queue", sim_data))
-    tra_in_sim = np.array(jmespath.search("[*].lan_in.transition.number_mean_queue", sim_data))
-    com_in_sim = np.array(jmespath.search("[*].lan_in.command.number_mean_queue", sim_data))
-    bat_in_sim = np.array(jmespath.search("[*].lan_in.batch.number_mean_queue", sim_data))
+    tel_in_sim = np.array(jmespath.search("[*].lan_in.telemetry." + string_to_search, sim_data))
+    tra_in_sim = np.array(jmespath.search("[*].lan_in.transition." + string_to_search, sim_data))
+    com_in_sim = np.array(jmespath.search("[*].lan_in.command." + string_to_search, sim_data))
+    bat_in_sim = np.array(jmespath.search("[*].lan_in.batch." + string_to_search, sim_data))
 
     tel_in_sim = tel_in_sim[tel_in_sim>0.0]
     tra_in_sim = tra_in_sim[tra_in_sim>0.0]
     com_in_sim = com_in_sim[com_in_sim>0.0]
     bat_in_sim = bat_in_sim[bat_in_sim>0.0]
 
-    tel_in_before = np.array(jmespath.search("[*].lan_in.telemetry.number_mean_queue", data_before))
-    tra_in_before = np.array(jmespath.search("[*].lan_in.transition.number_mean_queue", data_before))
-    com_in_before = np.array(jmespath.search("[*].lan_in.command.number_mean_queue", data_before))
-    bat_in_before = np.array(jmespath.search("[*].lan_in.batch.number_mean_queue", data_before))
+    tel_in_before = np.array(jmespath.search("[*].lan_in.telemetry." + string_to_search, data_before))
+    tra_in_before = np.array(jmespath.search("[*].lan_in.transition." + string_to_search, data_before))
+    com_in_before = np.array(jmespath.search("[*].lan_in.command." + string_to_search, data_before))
+    bat_in_before = np.array(jmespath.search("[*].lan_in.batch." + string_to_search, data_before))
 
     tel_in_before = tel_in_before[tel_in_before>0.0]
     tra_in_before = tra_in_before[tra_in_before>0.0]
@@ -148,11 +148,11 @@ def get_parameters_lan(sim_data, data_before):
 
     return [np.mean(np.array(mean_list_final_again))]
 
-def get_parameters(sim_data, data_before):
-    tel_sim = np.array(jmespath.search("[*].parameters.telemetry.number_mean_queue", sim_data))
-    tra_sim = np.array(jmespath.search("[*].parameters.transition.number_mean_queue", sim_data))
-    com_sim = np.array(jmespath.search("[*].parameters.command.number_mean_queue", sim_data))
-    bat_sim = np.array(jmespath.search("[*].parameters.batch.number_mean_queue", sim_data))
+def get_parameters(sim_data, data_before, string_to_search):
+    tel_sim = np.array(jmespath.search("[*].parameters.telemetry." + string_to_search, sim_data))
+    tra_sim = np.array(jmespath.search("[*].parameters.transition." + string_to_search, sim_data))
+    com_sim = np.array(jmespath.search("[*].parameters.command." + string_to_search, sim_data))
+    bat_sim = np.array(jmespath.search("[*].parameters.batch." + string_to_search, sim_data))
 
 
     tel_sim = tel_sim[tel_sim>0.0]
@@ -160,10 +160,10 @@ def get_parameters(sim_data, data_before):
     com_sim = com_sim[com_sim>0.0]
     bat_sim = bat_sim[bat_sim>0.0]
 
-    tel_before = np.array(jmespath.search("[*].parameters.telemetry.number_mean_queue", data_before))
-    tra_before = np.array(jmespath.search("[*].parameters.transition.number_mean_queue", data_before))
-    com_before = np.array(jmespath.search("[*].parameters.command.number_mean_queue", data_before))
-    bat_before = np.array(jmespath.search("[*].parameters.batch.number_mean_queue", data_before))
+    tel_before = np.array(jmespath.search("[*].parameters.telemetry." + string_to_search, data_before))
+    tra_before = np.array(jmespath.search("[*].parameters.transition." + string_to_search, data_before))
+    com_before = np.array(jmespath.search("[*].parameters.command." + string_to_search, data_before))
+    bat_before = np.array(jmespath.search("[*].parameters.batch." + string_to_search, data_before))
 
     tel_before = tel_before[tel_before>0.0]
     tra_before = tra_before[tra_before>0.0]
@@ -223,15 +223,15 @@ def get_parameters(sim_data, data_before):
     return [mean]
 
 
-def difference(sim_data, data_before):
+def difference(sim_data, data_before, string_to_search):
 
     central_list, regionals_list, local_list, lan_list, actuator_list = divide_types(sim_data)
     central_before_list, regionals_before_list, local_before_list, lan_before_list, actuator_before_list = divide_types(data_before)
     
     mean_list = []
 
-    mean_list += get_parameters(central_list + regionals_list + local_list + actuator_list, central_before_list + regionals_before_list + local_before_list + actuator_before_list)
-    mean_list += get_parameters_lan(lan_list, lan_before_list)
+    mean_list += get_parameters(central_list + regionals_list + local_list + actuator_list, central_before_list + regionals_before_list + local_before_list + actuator_before_list, string_to_search)
+    mean_list += get_parameters_lan(lan_list, lan_before_list, string_to_search)
     
     mean = np.mean(np.array(mean_list))
 
@@ -239,7 +239,7 @@ def difference(sim_data, data_before):
 
 
 
-def plot(files_list, sim_time_end_list, path_out):
+def plot(files_list, sim_time_end_list, path_out, string_to_search):
     index_file = 0
 
     directory_name = "convergence/"
@@ -264,13 +264,13 @@ def plot(files_list, sim_time_end_list, path_out):
         sim_data = json.load(file_json)
         file_json.close()
 
-        mean = difference(sim_data, data_before)
+        mean = difference(sim_data, data_before, string_to_search)
         mean_list.append(mean)
 
         data_before = sim_data
 
     #print(mean_list)
     
-    draw_lines(mean_list, list(map(str, sim_time_end_list[1:])), "Convergence", "Simulation time", "Diff", 0.0, 0.3, PATH=path_out + directory_name + "convergence")
+    draw_lines_scatterplot(mean_list, list(map(str, sim_time_end_list[1:])), "Convergence", "Simulation time", "Diff", 0.0, 0.3, PATH=path_out + directory_name + string_to_search + "_convergence")
 
             
