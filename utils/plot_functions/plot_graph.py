@@ -22,7 +22,7 @@ def max_groupes(grouped_values):
 ######################################
 
 #altezza istogrammi, nomi istrogrammi, titolo png, label x, label y, valore minimo y, valore massimo y
-def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, PATH=None):
+def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, PATH=None, ISLABEL=True, ISSCIE=True):
 
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)
@@ -43,8 +43,12 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
         plt.bar(x_pos, values, width = 0.5)
     plt.xticks(x_pos, names, rotation= '45')
     
-    for i, y in enumerate(values):
-        plt.text(i, y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
+    if ISLABEL:
+        for i, y in enumerate(values):
+            if ISSCIE:
+                plt.text(i, y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
+            else:
+                plt.text(i, y + 0.02*YTOP, f"{y:.1f}", ha='center', fontweight='bold')
 
 
     plt.title(TITLE, fontsize=18, y=1.13)

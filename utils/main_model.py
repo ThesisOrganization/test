@@ -11,6 +11,9 @@ import visualizations.sim_model_N_vs_U as sim_model_N_vs_U
 
 import visualizations.convergence as convergence
 
+import visualizations.cost_performance as cost_performance
+from response_time_computation.total_response_time import compute_total_response_time
+from cost_computation.total_cost import compute_total_cost
 
 ############################
 #UTILS
@@ -37,7 +40,8 @@ path_to_tests = "../model_tests/"
 scenarios = ["2-4-8-16/"]
 
 #seed_list = ["1996", "2006"]
-seed_list = ["1492"]
+#seed_list = ["1492", "1789", "1984", "2006", "2077"]
+seed_list = ["1996"]
 policy_list = ["FIFO", "RR"]
 preemption_list = ["preempt_no", "preempt_yes"]
 
@@ -94,31 +98,48 @@ for scenario in scenarios:
     
     sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
     
-    ##################################
-    #PREPARATION SECOND CHART
-    ##############################
+##################################
+#PREPARATION SECOND CHART
+##############################
 
-    scenarios = ["2-4-8-16_convergence/"]
+scenarios = ["2-4-8-16_convergence/"]
 
-    files_list = []
-    for sim_time_end in sim_time_end_list:
-        scenario = scenarios[0]
-        preemption = preemption_list[0]
-        seed = seed_list[0]
-        policy = policy_list[0]
+files_list = []
+for sim_time_end in sim_time_end_list:
+    scenario = scenarios[0]
+    preemption = preemption_list[0]
+    seed = seed_list[0]
+    policy = policy_list[0]
 
-        path_to_print = path_to_print_pre + scenarios[0]
+    path_to_print = path_to_print_pre + scenarios[0]
+    
+    f_name = build_name_function(path_to_tests, scenario, seed, policy, preemption, sim_time_end)
+    files_list.append(f_name)
+
+convergence.plot(files_list, sim_time_end_list, path_to_print, "response_time")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "number_mean_queue")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "utilization_factor")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "lambda_in")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "service_demand")
+
+
+scenarios = ["2-4-8-16/", "2-4-8-16_balanced/", "2-4-8-16_multicore/", "2-4-8-16_powerfull/"]
+names_scenarios = ["unbalanced", "balanced", "multicore", "powerfull"]
+
+
+for policy in policy_list:
+    for preemption in preemption_list:
+        files_list = []
+        for scenario in scenarios:
+            #preemption = preemption_list[0]
+            seed = seed_list[0]
+            #policy = policy_list[0]
         
-        f_name = build_name_function(path_to_tests, scenario, seed, policy, preemption, sim_time_end)
-        files_list.append(f_name)
-
-    convergence.plot(files_list, sim_time_end_list, path_to_print, "response_time")
-    convergence.plot(files_list, sim_time_end_list, path_to_print, "number_mean_queue")
-    convergence.plot(files_list, sim_time_end_list, path_to_print, "utilization_factor")
-    convergence.plot(files_list, sim_time_end_list, path_to_print, "lambda_in")
-    convergence.plot(files_list, sim_time_end_list, path_to_print, "service_demand")
-
-
+            f_name = build_name_function(path_to_tests, scenario, seed, policy, preemption)
+            
+            files_list.append(f_name)
+        
+        cost_performance.plot(files_list, path_to_print_pre + "cost_performance/" + policy + "_" + preemption + "/", compute_total_response_time, compute_total_cost, names_scenarios)
 
 
 
