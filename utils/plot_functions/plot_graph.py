@@ -42,6 +42,9 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     else:
         plt.bar(x_pos, values, width = 0.5)
     plt.xticks(x_pos, names, rotation= '45')
+    
+    for i, y in enumerate(values):
+        plt.text(i, y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
 
 
     plt.title(TITLE, fontsize=18, y=1.13)
@@ -97,11 +100,16 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
             print("ERROR: grouped_values != len_names")
             plt.close()
             return
+
+        #width_list = [WIDTH]*len_names
         if colors != None:
             plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i], color=colors[i])
         else:
             plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i])
 
+        #for j, y in enumerate(grouped_values[i]):
+        #    positions = x_pos + WIDTH*i
+        #    plt.text(positions[j], y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
 
     if num_histo_per_group % 2 == 0:
         number = num_histo_per_group/2 * WIDTH - WIDTH/2
