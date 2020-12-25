@@ -1,6 +1,10 @@
 import visualizations.utilization_factor_histograms as utilization_factor_histograms
+import visualizations.utilization_factor_cat_histograms as utilization_factor_cat_histograms
 import visualizations.mean_number_queue_histograms as mean_number_queue_histograms
+import visualizations.mean_number_queue_cat_histograms as mean_number_queue_cat_histograms
 import visualizations.response_time_histograms as response_time_histograms
+import visualizations.arrival_rate_histograms as arrival_rate_histograms
+
 import visualizations.sim_model_utilization_factor_histograms as sim_model_utilization_factor_histograms
 import visualizations.sim_model_utilization_factor_cat_histograms as sim_model_utilization_factor_cat_histograms
 import visualizations.sim_model_response_time_histograms as sim_model_response_time_histograms
@@ -78,15 +82,21 @@ for scenario in scenarios:
 
     utilization_factor_histograms.plot(files_list, policies, path_to_print)
     
+    utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
+    
     mean_number_queue_histograms.plot(files_list, policies, path_to_print)
     
+    mean_number_queue_cat_histograms.plot(files_list, policies, path_to_print)
+    
+    response_time_histograms.plot(files_list, policies, path_to_print)
+
+    arrival_rate_histograms.plot(files_list, policies, path_to_print)
+    
+    print("Sim model Comparison")
+
     sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
     
     sim_model_N_vs_U.plot(files_list, policies, path_to_print)
-    
-    response_time_histograms.plot(files_list, policies, path_to_print)
-    
-    print("Metà")
     
     sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
     
