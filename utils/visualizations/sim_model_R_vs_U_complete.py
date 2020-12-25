@@ -11,7 +11,7 @@ import os
 def plot(files_list, name_files, path_out):
     index_file = 0
 
-    directory_name = "sim_model_N_over_U_complete/"
+    directory_name = "sim_model_R_over_U_complete/"
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
 
@@ -49,8 +49,8 @@ def plot(files_list, name_files, path_out):
                 sim_element = sim_data_sorted[i]
 
                 if sim_element["type"] != "lan":
-                    value_sim = np.array(jmespath.search("parameters.*.number_mean_queue", sim_element))
-                    value_model = np.array(jmespath.search("parameters.*.number_mean_queue", model_element))
+                    value_sim = np.array(jmespath.search("parameters.*.response_time", sim_element))
+                    value_model = np.array(jmespath.search("parameters.*.response_time", model_element))
                     diff = np.absolute(value_sim - value_model)
 
                     #max_b = np.maximum(value_model, value_sim)
@@ -68,8 +68,8 @@ def plot(files_list, name_files, path_out):
 
 
                 else:
-                    value_sim = np.array(jmespath.search("*.*.number_mean_queue", sim_element))
-                    value_model = np.array(jmespath.search("*.*.number_mean_queue", model_element))
+                    value_sim = np.array(jmespath.search("*.*.response_time", sim_element))
+                    value_model = np.array(jmespath.search("*.*.response_time", model_element))
                     diff = np.absolute(value_sim - value_model)
                     
                     #max_b = np.maximum(value_model, value_sim)
@@ -115,7 +115,7 @@ def plot(files_list, name_files, path_out):
         PERCENTAGE = 0.1
 
         #list_data_to_plot.append((list(final_result), list(final_result_x), [], "Scatterplot utilization factor and difference in percentage for N between model and simulation", "U", "Diff(N_m - N_s)", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
-        list_data_to_plot.append((list(final_result), list(final_result_x), ["Telemetry", "Transition", "Command", "Batch"], "Scatterplot utilization factor and difference in percentage for N between model and simulation", "U", "Diff(N_m - N_s)", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((list(final_result), list(final_result_x), ["Telemetry", "Transition", "Command", "Batch"], "Scatterplot utilization factor and difference in percentage for R between model and simulation", "U", "Diff(R_m - R_s)", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1

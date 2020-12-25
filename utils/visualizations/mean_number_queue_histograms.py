@@ -131,7 +131,7 @@ def plot(files_list, name_files, path_out):
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
         max_value = np.amax(final_result)
         PERCENTAGE = 0.1
-        list_data_to_plot.append((list(final_result), names, "Mean number of jobs", "Element Type", "N", 0.0, max_value + max_value*PERCENTAGE, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((list(final_result), names, "Mean number of jobs", "Element Type", "N", 0.0, max_value + max_value*PERCENTAGE, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1], False))
 
 
         index_file += 1
@@ -143,8 +143,8 @@ def plot(files_list, name_files, path_out):
 
 
     for data in list_data_to_plot:
-        p0, p1, p2, p3, p4, p5, p6, p7 = data
-        draw_histograms(p0, p1, p2, p3, p4, p5, max_value, PATH=p7)
+        p0, p1, p2, p3, p4, p5, p6, p7, p8 = data
+        draw_histograms(p0, p1, p2, p3, p4, p5, max_value, PATH=p7, ISSCIE=p8)
         
 
 

@@ -13,6 +13,8 @@ import visualizations.sim_model_arrival_rate_histograms as sim_model_arrival_rat
 import visualizations.sim_model_service_demand_histograms as sim_model_service_demand_histograms
 import visualizations.sim_model_N_vs_U as sim_model_N_vs_U
 import visualizations.sim_model_N_vs_U_complete as sim_model_N_vs_U_complete
+import visualizations.sim_model_N_vs_U_sum as sim_model_N_vs_U_sum
+import visualizations.sim_model_R_vs_U_complete as sim_model_R_vs_U_complete
 
 import visualizations.convergence as convergence
 
@@ -81,35 +83,39 @@ for scenario in scenarios:
     
     #plot charts
 
-    #utilization_factor_histograms.plot(files_list, policies, path_to_print)
-    #
-    #utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
-    #
-    #mean_number_queue_histograms.plot(files_list, policies, path_to_print)
-    #
-    #mean_number_queue_cat_histograms.plot(files_list, policies, path_to_print)
-    #
-    #response_time_histograms.plot(files_list, policies, path_to_print)
+    utilization_factor_histograms.plot(files_list, policies, path_to_print)
+    
+    utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
+    
+    mean_number_queue_histograms.plot(files_list, policies, path_to_print)
+    
+    mean_number_queue_cat_histograms.plot(files_list, policies, path_to_print)
+    
+    response_time_histograms.plot(files_list, policies, path_to_print)
 
-    #arrival_rate_histograms.plot(files_list, policies, path_to_print)
-    #
-    #print("Sim model Comparison")
+    arrival_rate_histograms.plot(files_list, policies, path_to_print)
+    
+    print("Sim model Comparison")
 
-    #sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
-    #
+    sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
+    
     sim_model_N_vs_U.plot(files_list, policies, path_to_print)
 
     sim_model_N_vs_U_complete.plot(files_list, policies, path_to_print)
-    #
-    #sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
-    #
-    #sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
-    #
-    #sim_model_arrival_rate_histograms.plot(files_list, policies, path_to_print)
-    #
-    #sim_model_service_demand_histograms.plot(files_list, policies, path_to_print)
-    #
-    #sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_N_vs_U_sum.plot(files_list, policies, path_to_print)
+    
+    sim_model_R_vs_U_complete.plot(files_list, policies, path_to_print)
+    
+    sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_arrival_rate_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_service_demand_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_utilization_factor_cat_histograms.plot(files_list, policies, path_to_print)
     
 ##################################
 #PREPARATION SECOND CHART
@@ -129,11 +135,11 @@ for sim_time_end in sim_time_end_list:
     f_name = build_name_function(path_to_tests, scenario, seed, policy, preemption, sim_time_end)
     files_list.append(f_name)
 
-#convergence.plot(files_list, sim_time_end_list, path_to_print, "response_time")
-#convergence.plot(files_list, sim_time_end_list, path_to_print, "number_mean_queue")
-#convergence.plot(files_list, sim_time_end_list, path_to_print, "utilization_factor")
-#convergence.plot(files_list, sim_time_end_list, path_to_print, "lambda_in")
-#convergence.plot(files_list, sim_time_end_list, path_to_print, "service_demand")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "response_time")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "number_mean_queue")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "utilization_factor")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "lambda_in")
+convergence.plot(files_list, sim_time_end_list, path_to_print, "service_demand")
 
 
 scenarios = ["2-4-8-16/", "2-4-8-16_balanced/", "2-4-8-16_multicore/", "2-4-8-16_powerfull/"]
@@ -152,7 +158,7 @@ for policy in policy_list:
             
             files_list.append(f_name)
         
-        #cost_performance.plot(files_list, path_to_print_pre + "cost_performance/" + policy + "_" + preemption + "/", compute_total_response_time, compute_total_cost, names_scenarios)
+        cost_performance.plot(files_list, path_to_print_pre + "cost_performance/" + policy + "_" + preemption + "/", compute_total_response_time, compute_total_cost, names_scenarios)
 
 
 

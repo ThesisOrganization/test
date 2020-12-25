@@ -42,7 +42,7 @@ def group_node_computation(groups, model_groups, type_element):
         #print(total)
         #print(total_model)
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         #print(max_sim_model)
 
@@ -50,7 +50,8 @@ def group_node_computation(groups, model_groups, type_element):
 
         #print(diff_sim_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         #print(division)
         #print()
@@ -97,11 +98,12 @@ def group_lan_computation(groups, model_groups, type_element):
 
         total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         diff_sim_model = np.absolute(total - total_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         return_list_total_U.append(division)
         list_names.append(type_element + "_in type " + str(number))
@@ -134,11 +136,12 @@ def group_lan_computation(groups, model_groups, type_element):
 
         total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         diff_sim_model = np.absolute(total - total_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         return_list_total_U.append(division)
         list_names.append(type_element + "_out type " + str(number))

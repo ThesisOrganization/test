@@ -30,11 +30,12 @@ def group_node_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + " type " + str(number))
         number += 1
@@ -63,11 +64,12 @@ def group_lan_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + "_in type " + str(number))
         
@@ -88,11 +90,12 @@ def group_lan_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + "_out type " + str(number))
         number += 1

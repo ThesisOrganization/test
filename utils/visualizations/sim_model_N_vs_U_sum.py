@@ -7,11 +7,13 @@ import numpy as np
 import os
 
 
+def mapping(element):
+    return np.sum(element)
 
 def plot(files_list, name_files, path_out):
     index_file = 0
 
-    directory_name = "sim_model_N_over_U_complete/"
+    directory_name = "sim_model_N_over_U_sum/"
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
 
@@ -49,8 +51,8 @@ def plot(files_list, name_files, path_out):
                 sim_element = sim_data_sorted[i]
 
                 if sim_element["type"] != "lan":
-                    value_sim = np.array(jmespath.search("parameters.*.number_mean_queue", sim_element))
-                    value_model = np.array(jmespath.search("parameters.*.number_mean_queue", model_element))
+                    value_sim = np.sum(np.array(jmespath.search("parameters.*.number_mean_queue", sim_element)))
+                    value_model = np.sum(np.array(jmespath.search("parameters.*.number_mean_queue", model_element)))
                     diff = np.absolute(value_sim - value_model)
 
                     #max_b = np.maximum(value_model, value_sim)
@@ -62,14 +64,20 @@ def plot(files_list, name_files, path_out):
                     
                     u_sim = np.array(jmespath.search("parameters.*.utilization_factor", sim_element))
                     u_tot = np.sum(u_sim)
-                    u_array = np.empty(4)
-                    u_array.fill(u_tot)
-                    U_list.append(u_array)
+                    #u_array = np.empty(4)
+                    #u_array.fill(u_tot)
+                    U_list.append(u_tot)
 
 
                 else:
                     value_sim = np.array(jmespath.search("*.*.number_mean_queue", sim_element))
                     value_model = np.array(jmespath.search("*.*.number_mean_queue", model_element))
+                    
+                    convert = np.vectorize(mapping, signature="(n)->()")
+                    
+                    value_sim = convert(value_sim)
+                    value_model = convert(value_model)
+
                     diff = np.absolute(value_sim - value_model)
                     
                     #max_b = np.maximum(value_model, value_sim)
@@ -83,14 +91,14 @@ def plot(files_list, name_files, path_out):
                     
                     u_sim = np.array(jmespath.search("*.*.utilization_factor", sim_element))
                     u_tot = np.sum(u_sim[0])
-                    u_array = np.empty(4)
-                    u_array.fill(u_tot)
-                    U_list.append(u_array)
+                    #u_array = np.empty(4)
+                    #u_array.fill(u_tot)
+                    U_list.append(u_tot)
 
                     u_tot = np.sum(u_sim[1])
-                    u_array = np.empty(4)
-                    u_array.fill(u_tot)
-                    U_list.append(u_array)
+                    #u_array = np.empty(4)
+                    #u_array.fill(u_tot)
+                    U_list.append(u_tot)
 
 
 
@@ -128,8 +136,8 @@ def plot(files_list, name_files, path_out):
 
     for data in list_data_to_plot:
         p0, p1, p2, p3, p4, p5, p6, p7, p8 = data
-        #draw_scatterplot(p0, p1, p2, p3, p4, p5, p6, max_value, PATH=p8)
-        draw_classes_scatterplot(p0, p1, p2, p3, p4, p5, p6, max_value, PATH=p8)
+        draw_scatterplot(p0, p1, p2, p3, p4, p5, p6, max_value, PATH=p8)
+        #draw_classes_scatterplot(p0, p1, p2, p3, p4, p5, p6, max_value, PATH=p8)
 
         
 
