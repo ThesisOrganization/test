@@ -315,8 +315,8 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
 
 
 def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, colors=None, PATH=None):
-    #MARKERS = ["o", "+", "x", "s"]
-    MARKERS = None
+    MARKERS = ["o", "+", "x", "s"]
+    #MARKERS = None
 
 
     ax = plt.subplot(111)
