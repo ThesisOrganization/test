@@ -327,7 +327,7 @@ def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XL
     num_classes = len(y_number_values)
     if num_classes != len(x_number_values):
         print("num_classes != len(x_number_values)")
-        plot.close()
+        plt.close()
         return
     
     if len(labels) != num_classes:
