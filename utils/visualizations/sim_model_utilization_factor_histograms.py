@@ -30,11 +30,12 @@ def group_node_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + " type " + str(number))
         number += 1
@@ -63,11 +64,12 @@ def group_lan_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + "_in type " + str(number))
         
@@ -88,11 +90,12 @@ def group_lan_computation(groups, model_groups, type_element):
         model_mean = np.mean(model_total)
 
 
-        max_sim_model = np.maximum(mean, model_mean)
+        #max_sim_model = np.maximum(mean, model_mean)
 
         diff_sim_model = np.absolute(mean - model_mean)
 
-        return_list_total_U.append(diff_sim_model / max_sim_model)
+        #return_list_total_U.append(diff_sim_model / max_sim_model)
+        return_list_total_U.append(diff_sim_model / model_mean)
 
         list_names.append(type_element + "_out type " + str(number))
         number += 1
@@ -106,6 +109,8 @@ def plot(files_list, name_files, path_out):
     directory_name = "sim_model_utilization_factor_histograms/"
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
+
+    list_data_to_plot = []
 
     for list_policy_files in files_list:
         results_value_seeds = []
@@ -170,12 +175,22 @@ def plot(files_list, name_files, path_out):
 
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
         #max_value = np.amax(final_result)
-        max_value = 1.0
-        PERCENTAGE = 0.0
-        draw_histograms(list(final_result), names, "Utilization factor difference in percentage between model and simulation", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, PATH=path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1])
+        max_value = np.amax(final_result)
+        PERCENTAGE = 0.1
+        list_data_to_plot.append((list(final_result), names, "Utilization factor difference in percentage between model and simulation", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1
+    
+    max_value = 0
+    for data in list_data_to_plot:
+        if max_value < data[6]:
+            max_value = data[6]
+
+
+    for data in list_data_to_plot:
+        p0, p1, p2, p3, p4, p5, p6, p7 = data
+        draw_histograms(p0, p1, p2, p3, p4, p5, max_value, PATH=p7)
 
         
 

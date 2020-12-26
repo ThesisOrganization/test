@@ -65,6 +65,8 @@ def plot(files_list, name_files, path_out):
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
 
+    list_data_to_plot = []
+
     for list_policy_files in files_list:
         results_value_seeds = []
         names = None
@@ -127,13 +129,22 @@ def plot(files_list, name_files, path_out):
         final_result = np.mean(array_np, axis=0)
 
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
-        max_value = 15.0
-        PERCENTAGE = 0.0
-        draw_histograms(list(final_result), names, "Mean number of jobs", "Element Type", "N", 0.0, max_value + max_value*PERCENTAGE, PATH=path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1])
+        max_value = np.amax(final_result)
+        PERCENTAGE = 0.1
+        list_data_to_plot.append((list(final_result), names, "Mean number of jobs", "Element Type", "N", 0.0, max_value + max_value*PERCENTAGE, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1], False))
 
 
         index_file += 1
+    
+    max_value = 0
+    for data in list_data_to_plot:
+        if max_value < data[6]:
+            max_value = data[6]
 
+
+    for data in list_data_to_plot:
+        p0, p1, p2, p3, p4, p5, p6, p7, p8 = data
+        draw_histograms(p0, p1, p2, p3, p4, p5, max_value, PATH=p7, ISSCIE=p8)
         
 
 

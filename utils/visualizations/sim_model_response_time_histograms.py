@@ -42,7 +42,7 @@ def group_node_computation(groups, model_groups, type_element):
         #print(total)
         #print(total_model)
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         #print(max_sim_model)
 
@@ -50,7 +50,8 @@ def group_node_computation(groups, model_groups, type_element):
 
         #print(diff_sim_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         #print(division)
         #print()
@@ -97,11 +98,12 @@ def group_lan_computation(groups, model_groups, type_element):
 
         total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         diff_sim_model = np.absolute(total - total_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         return_list_total_U.append(division)
         list_names.append(type_element + "_in type " + str(number))
@@ -134,11 +136,12 @@ def group_lan_computation(groups, model_groups, type_element):
 
         total_model = np.array([tel_mean_model, tra_mean_model, com_mean_model, bat_mean_model])
 
-        max_sim_model = np.maximum(total, total_model)
+        #max_sim_model = np.maximum(total, total_model)
 
         diff_sim_model = np.absolute(total - total_model)
 
-        division = np.nan_to_num(diff_sim_model / max_sim_model)
+        #division = np.nan_to_num(diff_sim_model / max_sim_model)
+        division = np.nan_to_num(diff_sim_model / total_model)
 
         return_list_total_U.append(division)
         list_names.append(type_element + "_out type " + str(number))
@@ -153,6 +156,8 @@ def plot(files_list, name_files, path_out):
     directory_name = "sim_model_response_time_histograms/"
     if not os.path.exists(path_out + directory_name):
         os.makedirs(path_out + directory_name)
+
+    list_data_to_plot = []
 
     for list_policy_files in files_list:
         results_value_seeds = []
@@ -218,12 +223,22 @@ def plot(files_list, name_files, path_out):
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
 
         #max_value = np.amax(final_result)
-        max_value = 1.0
-        PERCENTAGE = 0.0
-        draw_grouped_histograms(np.transpose(final_result), names, "Sim vs Model Response time", "Element Type", "% difference in RA", 0.0, max_value + max_value*PERCENTAGE, ["Telemetry", "Transition", "Command", "Batch"], PATH=path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1])
+        max_value = np.amax(final_result)
+        PERCENTAGE = 0.1
+        list_data_to_plot.append((np.transpose(final_result), names, "Sim vs Model Response time", "Element Type", "% difference in RA", 0.0, max_value + max_value*PERCENTAGE, ["Telemetry", "Transition", "Command", "Batch"], path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1
+    
+    max_value = 0
+    for data in list_data_to_plot:
+        if max_value < data[6]:
+            max_value = data[6]
+
+
+    for data in list_data_to_plot:
+        p0, p1, p2, p3, p4, p5, p6, p7, p8 = data
+        draw_grouped_histograms(p0, p1, p2, p3, p4, p5, max_value, p7, PATH=p8)
 
         
 
