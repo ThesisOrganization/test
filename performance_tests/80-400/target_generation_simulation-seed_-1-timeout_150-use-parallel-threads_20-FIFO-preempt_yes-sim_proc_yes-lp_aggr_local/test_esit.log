@@ -1,0 +1,79 @@
+BEGIN test 24 of 48 with topology 80-400:.............28/12/2020 - 17:07:25
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=20 --sched=FIFO --preempt --sim_processing --timeout=150 --lp_aggregation=local --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_150-use-parallel-threads_20-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_150-use-parallel-threads_20-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
+Script started on 2020-12-28 17:07:59+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="51"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_150-use-parallel-threads_20-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local" folder.
+Executing model...
+Parallel execution with 20 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
+***START SIMULATION***
+
+[36m
+Starting an execution with 20 THREADs, 481 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 5 set to CPU no 5
+Thread 6 set to CPU no 6
+Thread 7 set to CPU no 7
+Thread 8 set to CPU no 8
+Thread 9 set to CPU no 9
+Thread 10 set to CPU no 10
+Thread 11 set to CPU no 11
+Thread 12 set to CPU no 12
+Thread 13 set to CPU no 13
+Thread 14 set to CPU no 14
+Thread 15 set to CPU no 15
+Thread 16 set to CPU no 16
+Thread 17 set to CPU no 17
+Thread 18 set to CPU no 18
+Thread 19 set to CPU no 19
+Thread 0 set to CPU no 0
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095341077619041
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 150 seconds
+[FATAL ERROR] [FATAL ERROR] Error in Memory Allocation, aborting...Error in Memory Allocation, aborting...[FATAL ERROR] [31m[2] Execution ended for an error
+(0) Unable to acquire memory for checkpointing the current state (memory exhausted?)[FATAL ERROR] (0) Unable to acquire memory for checkpointing the current state (memory exhausted?)[0m[31m[10] Execution ended for an error
+[FATAL ERROR] [0m[31m[14] Execution ended for an error
+Error in Memory Allocation, aborting...[FATAL ERROR] (0) Unable to acquire memory for checkpointing the current state (memory exhausted?)bash: line 1: 21787 Segmentation fault      ./simulation_use 20 481 150
+Script done, file is USE_output.txt
+USE has raised an error, aborting.
+Error during model simulation, aborting.
+
+Script done on 2020-12-28 17:08:33+01:00 [COMMAND_EXIT_CODE="139"]
+test 80-400 FAILED at 28/12/2020 - 17:08:33 with error code 139
+
+
+MAX RETRY (2) reached! SKIPPING

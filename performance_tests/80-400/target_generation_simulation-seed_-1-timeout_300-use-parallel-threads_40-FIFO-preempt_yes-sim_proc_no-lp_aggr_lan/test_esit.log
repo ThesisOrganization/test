@@ -1,7 +1,7 @@
-BEGIN test 167 of 168 with topology 80-400:.............22/12/2020 - 01:31:21
+BEGIN test 83 of 84 with topology 80-400:.............28/12/2020 - 13:49:22
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=40 --sched=FIFO --preempt --timeout=300 --lp_aggregation=lan --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_40-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
 results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_40-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
-Script started on 2020-12-22 01:31:30+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Script started on 2020-12-28 13:52:10+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="50"]
 Starting generator...
 Done.
 Setting up folders for binary files...
@@ -18,7 +18,7 @@ Executing model...
 Parallel execution with 40 threads.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
 ***START SIMULATION***
 
 [36m
@@ -29,7 +29,7 @@ Starting an execution with 40 THREADs, 881 LPs :
 	- EVTS/LP BEFORE CLEAN CKP 1000
 	- ON_GVT PERIOD 4294967295
 	- REPORT prints enabled.
-	- THR_POOL_SIZE 256
+	- THR_POOL_SIZE 1024
 	- PREEMPT_COUNTER enabled.
 	- LONG_JMP enabled.
 	- HANDLE_INTERRUPT enabled.
@@ -72,29 +72,25 @@ Thread 35 set to CPU no 35
 Thread 36 set to CPU no 36
 Thread 37 set to CPU no 37
 Thread 38 set to CPU no 38
-Thread 0 set to CPU no 0
 Thread 39 set to CPU no 39
+Thread 0 set to CPU no 0
 LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095341211073495
+master seed is 3247095341077619041
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
 CALLING SLEEPING THREAD
 The process will last 300 seconds
-queue overflow for thread 4 at time 300013.000000: inserting event 256 over 256
-queue overflow for thread 2 at time 300012.000000: inserting event 256 over 256
-queue overflow for thread 27 at time 300014.000000: inserting event 256 over 256
-Script done, file is USE_output.txt
-USE has raised an error, aborting.
-Error during model simulation, aborting.
-FINISHED CPU 176.21 MEM 0 MAXMEM 18154976 STALE 0 MAXMEM_RSS 16622084
-<time name="ALL">175800</time>
 
-Script done on 2020-12-22 01:31:40+01:00 [COMMAND_EXIT_CODE="134"]
-test 80-400 FAILED at 22/12/2020 - 01:31:40 with error code 134
+Session terminated.
+MEM CPU 6048.18 MEM 60393520 MAXMEM 60393520 STALE 0 MAXMEM_RSS 58971724
+<time name="ALL">6048830</time>
+
+Script done on 2020-12-28 13:55:04+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 28/12/2020 - 13:55:04 with error code 143
 
 
 MAX RETRY (2) reached! SKIPPING

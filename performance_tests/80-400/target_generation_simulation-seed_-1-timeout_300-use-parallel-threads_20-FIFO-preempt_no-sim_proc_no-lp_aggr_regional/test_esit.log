@@ -1,7 +1,7 @@
-BEGIN test 101 of 168 with topology 80-400:.............22/12/2020 - 01:10:45
+BEGIN test 17 of 84 with topology 80-400:.............28/12/2020 - 11:13:11
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=20 --sched=FIFO --timeout=300 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_20-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
 results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_20-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
-Script started on 2020-12-22 01:10:56+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Script started on 2020-12-28 11:13:21+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="51"]
 Starting generator...
 Done.
 Setting up folders for binary files...
@@ -19,7 +19,7 @@ Executing model...
 Parallel execution with 20 threads.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
 ***START SIMULATION***
 
 [36m
@@ -30,7 +30,7 @@ Starting an execution with 20 THREADs, 80 LPs :
 	- EVTS/LP BEFORE CLEAN CKP 1000
 	- ON_GVT PERIOD 4294967295
 	- REPORT prints enabled.
-	- THR_POOL_SIZE 256
+	- THR_POOL_SIZE 1024
 	- PREEMPT_COUNTER enabled.
 	- LONG_JMP enabled.
 	- HANDLE_INTERRUPT enabled.
@@ -53,13 +53,13 @@ Thread 15 set to CPU no 15
 Thread 16 set to CPU no 16
 Thread 17 set to CPU no 17
 Thread 18 set to CPU no 18
-Thread 19 set to CPU no 19
 Thread 0 set to CPU no 0
+Thread 19 set to CPU no 19
 LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095341211073495
+master seed is 3247095341077619041
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
@@ -67,11 +67,11 @@ CALLING SLEEPING THREAD
 The process will last 300 seconds
 
 Session terminated.
-MEM CPU 128.48 MEM 61178188 MAXMEM 61178188 STALE 0 MAXMEM_RSS 60090088
-<time name="ALL">129490</time>
+MEM CPU 135.71 MEM 61162840 MAXMEM 61162840 STALE 0 MAXMEM_RSS 60055556
+<time name="ALL">136640</time>
 
-Script done on 2020-12-22 01:11:06+01:00 [COMMAND_EXIT_CODE="143"]
-test 80-400 FAILED at 22/12/2020 - 01:11:06 with error code 143
+Script done on 2020-12-28 11:13:32+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 28/12/2020 - 11:13:32 with error code 143
 
 
 MAX RETRY (2) reached! SKIPPING

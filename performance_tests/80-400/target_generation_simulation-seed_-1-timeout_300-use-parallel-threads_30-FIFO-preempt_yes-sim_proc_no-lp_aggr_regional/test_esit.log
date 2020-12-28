@@ -1,7 +1,7 @@
-BEGIN test 107 of 168 with topology 80-400:.............22/12/2020 - 01:12:41
+BEGIN test 23 of 84 with topology 80-400:.............28/12/2020 - 11:15:19
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=30 --sched=FIFO --preempt --timeout=300 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
 results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
-Script started on 2020-12-22 01:12:50+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Script started on 2020-12-28 11:15:29+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="51"]
 Starting generator...
 Done.
 Setting up folders for binary files...
@@ -19,7 +19,7 @@ Executing model...
 Parallel execution with 30 threads.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
 ***START SIMULATION***
 
 [36m
@@ -30,7 +30,7 @@ Starting an execution with 30 THREADs, 80 LPs :
 	- EVTS/LP BEFORE CLEAN CKP 1000
 	- ON_GVT PERIOD 4294967295
 	- REPORT prints enabled.
-	- THR_POOL_SIZE 256
+	- THR_POOL_SIZE 1024
 	- PREEMPT_COUNTER enabled.
 	- LONG_JMP enabled.
 	- HANDLE_INTERRUPT enabled.
@@ -69,7 +69,7 @@ LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095341211073495
+master seed is 3247095341077619041
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
@@ -77,11 +77,11 @@ CALLING SLEEPING THREAD
 The process will last 300 seconds
 
 Session terminated.
-MEM CPU 165.98 MEM 60405584 MAXMEM 60405584 STALE 0 MAXMEM_RSS 58889552
-<time name="ALL">167670</time>
+MEM CPU 173.01 MEM 60553696 MAXMEM 60553696 STALE 0 MAXMEM_RSS 58922332
+<time name="ALL">174690</time>
 
-Script done on 2020-12-22 01:13:00+01:00 [COMMAND_EXIT_CODE="143"]
-test 80-400 FAILED at 22/12/2020 - 01:13:00 with error code 143
+Script done on 2020-12-28 11:15:39+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 28/12/2020 - 11:15:39 with error code 143
 
 
 MAX RETRY (2) reached! SKIPPING

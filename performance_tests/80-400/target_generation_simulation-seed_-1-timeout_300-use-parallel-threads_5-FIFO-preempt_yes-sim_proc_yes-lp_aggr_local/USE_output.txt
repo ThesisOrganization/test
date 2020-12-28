@@ -1,6 +1,6 @@
-Script started on 2020-12-22 01:19:43+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/98" COLUMNS="237" LINES="63"]
+Script started on 2020-12-28 10:57:48+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/6" COLUMNS="190" LINES="51"]
 taken 4 parameters
-commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
 ***START SIMULATION***
 
 [36m
@@ -25,12 +25,13 @@ LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095341211073495
+master seed is 3247095341077619041
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
 CALLING SLEEPING THREAD
 The process will last 300 seconds
-queue overflow for thread 1 at time 300009.000000: inserting event 256 over 256
+queue overflow for thread 4 at time 300009.000000: inserting event 256 over 256
+bash: line 1:  8259 Aborted                 ./simulation_use 5 481 300
 
-Script done on 2020-12-22 01:19:51+01:00 [COMMAND_EXIT_CODE="134"]
+Script done on 2020-12-28 10:57:56+01:00 [COMMAND_EXIT_CODE="0"]

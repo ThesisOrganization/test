@@ -1,7 +1,7 @@
-BEGIN test 121 of 168 with topology 80-400:.............22/12/2020 - 01:18:43
+BEGIN test 37 of 84 with topology 80-400:.............28/12/2020 - 10:57:17
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=5 --sched=FIFO --timeout=300 --lp_aggregation=local --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_5-FIFO-preempt_no-sim_proc_no-lp_aggr_local
 results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_300-use-parallel-threads_5-FIFO-preempt_no-sim_proc_no-lp_aggr_local
-Script started on 2020-12-22 01:18:52+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Script started on 2020-12-28 10:57:17+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/2" COLUMNS="190" LINES="51"]
 Starting generator...
 Done.
 Setting up folders for binary files...
@@ -18,7 +18,7 @@ Executing model...
 Parallel execution with 5 threads.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: a5b632e2c6df264a7c8ae149a2b9eb15919cb327
+commit hash: f92b47f3e71f40446daf297d46fa51563b69c0ac
 ***START SIMULATION***
 
 [36m
@@ -34,31 +34,34 @@ Starting an execution with 5 THREADs, 481 LPs :
 	- LONG_JMP enabled.
 	- HANDLE_INTERRUPT enabled.
 
-[0mThread 2 set to CPU no 2
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
 Thread 3 set to CPU no 3
-Thread 0 set to CPU no 0
 Thread 4 set to CPU no 4
-Thread 1 set to CPU no 1
+Thread 0 set to CPU no 0
 LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095341211073495
+master seed is 3247095341077619041
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
 CALLING SLEEPING THREAD
 The process will last 300 seconds
-queue overflow for thread 2 at time 300011.000000: inserting event 256 over 256
-queue overflow for thread 4 at time 300009.000000: inserting event 256 over 256
+queue overflow for thread 0 at time 300009.000000: inserting event 256 over 256
+queue overflow for thread 4 at time 300010.000000: inserting event 256 over 256
+bash: line 1:  4174 Aborted                 ./simulation_use 5 481 300
 Script done, file is USE_output.txt
-USE has raised an error, aborting.
-Error during model simulation, aborting.
-FINISHED CPU 36.61 MEM 19240 MAXMEM 21911508 STALE 0 MAXMEM_RSS 21804504
-<time name="ALL">36490</time>
+parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 40.54 MEM 25884 MAXMEM 22158472 STALE 0 MAXMEM_RSS 21994672
+<time name="ALL">40240</time>
 
-Script done on 2020-12-22 01:19:00+01:00 [COMMAND_EXIT_CODE="134"]
-test 80-400 FAILED at 22/12/2020 - 01:19:00 with error code 134
-
-
-MAX RETRY (2) reached! SKIPPING
+Script done on 2020-12-28 10:57:27+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 28/12/2020 - 10:57:27

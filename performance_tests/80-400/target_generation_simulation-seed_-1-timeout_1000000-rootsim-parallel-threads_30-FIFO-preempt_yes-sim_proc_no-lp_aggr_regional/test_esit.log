@@ -1,7 +1,7 @@
-BEGIN test 23 of 168 with topology 80-400:.............22/12/2020 - 00:27:50
+BEGIN test 23 of 168 with topology 80-400:.............26/12/2020 - 13:05:37
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=30 --sched=FIFO --preempt --timeout=1000000 --lp_aggregation=regional --threads-less-than-lps --redir_compilation_messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
 results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_1000000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_regional
-Script started on 2020-12-22 00:28:08+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="237" LINES="63"]
+Script started on 2020-12-26 13:05:56+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/2" COLUMNS="190" LINES="50"]
 Starting generator...
 Done.
 Setting up folders for binary files...
@@ -117,24 +117,24 @@ Initializing an additional area
 Initializing an additional area
 Initializing an additional area
 Initializing an additional area
-TIME BARRIER 2201.218492
-TIME BARRIER 4038.858176
-TIME BARRIER 6438.082523
-TIME BARRIER 10844.927187
-TIME BARRIER 18294.468492
-TIME BARRIER 26483.410755
-TIME BARRIER 36660.631489
-TIME BARRIER 46974.026441
-TIME BARRIER 58859.354195
-TIME BARRIER 71797.843518
-TIME BARRIER 85906.435785
-TIME BARRIER 94096.413546
-TIME BARRIER 101679.000000
-MEM CPU 324.26 MEM 60145620 MAXMEM 60145620 STALE 0 MAXMEM_RSS 58565132
-<time name="ALL">323320</time>
+TIME BARRIER 2153.353252
+TIME BARRIER 4567.237563
+TIME BARRIER 9720.835996
+TIME BARRIER 15942.467584
+TIME BARRIER 24293.786761
+TIME BARRIER 34126.845392
+TIME BARRIER 45083.117270
+TIME BARRIER 57757.976545
+TIME BARRIER 70368.445244
+TIME BARRIER 83063.434591
+TIME BARRIER 99285.674560
+TIME BARRIER 109252.264622
+TIME BARRIER 117278.873623
+MEM CPU 329.79 MEM 60256780 MAXMEM 60256780 STALE 0 MAXMEM_RSS 58569860
+<time name="ALL">330310</time>
 
-Script done on 2020-12-22 00:28:26+01:00 [COMMAND_EXIT_CODE="143"]
-test 80-400 FAILED at 22/12/2020 - 00:28:26 with error code 143
+Script done on 2020-12-26 13:06:14+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 26/12/2020 - 13:06:14 with error code 143
 
 
 MAX RETRY (2) reached! SKIPPING
