@@ -1,2 +1,2 @@
-central_type_and_additional_info  = Type-realistic_magnitude_1-0,0.3,Type-realistic_magnitude_1-0
+central_type_and_additional_info  = Type-realistic_magnitude_1-0,0.3,Type-test_80_400_realistic-0
 80 Type-realistic_magnitude_1-0: 5 Type-realistic_magnitude_1-0

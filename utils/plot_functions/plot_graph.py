@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 SAVE = True
-PRINT = True
+PRINT = False
 
 ####################################
 #UTILS
@@ -22,7 +22,7 @@ def max_groupes(grouped_values):
 ######################################
 
 #altezza istogrammi, nomi istrogrammi, titolo png, label x, label y, valore minimo y, valore massimo y
-def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, PATH=None):
+def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, PATH=None, ISLABEL=True, ISSCIE=True):
 
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)
@@ -42,6 +42,13 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     else:
         plt.bar(x_pos, values, width = 0.5)
     plt.xticks(x_pos, names, rotation= '45')
+    
+    if ISLABEL:
+        for i, y in enumerate(values):
+            if ISSCIE:
+                plt.text(i, y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
+            else:
+                plt.text(i, y + 0.02*YTOP, f"{y:.1f}", ha='center', fontweight='bold')
 
 
     plt.title(TITLE, fontsize=18, y=1.13)
@@ -55,7 +62,7 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     #    yint.append(int(each))
     #plt.yticks(yint) #serve per decidere che valori mettere sulle y
 
-    if SAVE:
+    if SAVE and PATH != None:
         #plt.savefig(PATH, bbox_inches='tight', dpi=150)
         plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
@@ -97,11 +104,16 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
             print("ERROR: grouped_values != len_names")
             plt.close()
             return
+
+        #width_list = [WIDTH]*len_names
         if colors != None:
             plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i], color=colors[i])
         else:
             plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i])
 
+        #for j, y in enumerate(grouped_values[i]):
+        #    positions = x_pos + WIDTH*i
+        #    plt.text(positions[j], y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
 
     if num_histo_per_group % 2 == 0:
         number = num_histo_per_group/2 * WIDTH - WIDTH/2
@@ -117,7 +129,7 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
-    if SAVE:
+    if SAVE and PATH != None:
         plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
@@ -176,7 +188,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
 
     plt.tick_params(axis='both', labelsize=12)
 
-    if SAVE:
+    if SAVE and PATH != None:
         plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
@@ -218,11 +230,53 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
 
     plt.tick_params(axis='both', labelsize=12)
 
-    if SAVE:
+    if SAVE and PATH != None:
         plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
+
+def draw_lines_scatterplot(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, COLOR_POINT=None, PATH=None):
+
+    ax = plt.subplot(111)
+    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    ax.yaxis.set_label_coords(-0.03, 1.02)
+    
+
+    len_x = len(x_number_values)
+    len_y = len(y_number_values)
+
+    if len_x != len_y:
+        print("ERROR: len_x != len_y")
+        plt.close()
+        return
+
+    #x_pos = range(0, len_x)
+    x_pos = np.arange(0.0, len_x, len_x*0.19)
+
+    if COLOR != None and COLOR_POINT != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, color=COLOR, marker = 'o', markerfacecolor = COLOR_POINT)
+    elif COLOR != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, color=COLOR, marker = 'o')
+    elif COLOR_POINT != None:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7, marker = 'o', markerfacecolor = COLOR_POINT)
+    else:
+        plt.plot(x_number_values, y_number_values, '.-b', linewidth=1, markersize=7)
+
+    plt.xticks(x_pos)
+
+    plt.title(TITLE, fontsize=18, y=1.13)
+    plt.xlabel(XLABEL, fontsize=12)
+    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+
+    plt.tick_params(axis='both', labelsize=12)
+
+    if SAVE and PATH != None:
+        plt.savefig(PATH, bbox_inches='tight')
+    if PRINT:
+        plt.show()
+    plt.close()
+
 
 def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, colors=None, PATH=None):
     ax = plt.subplot(111)
@@ -239,24 +293,80 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
 
     ax.scatter(x = x_number_values, y = y_number_values)
     
-    if len(labels) != len_x:
-        print("ERROR: len(labels) != len_y")
-        plt.close()
-        return
+    #if len(labels) != len_x:
+    #    print("ERROR: len(labels) != len_y")
+    #    plt.close()
+    #    return
 
-    for i in range(0, len_x):
-        x = x_number_values[i]
-        y = y_number_values[i]
-        ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
+    #for i in range(0, len_x):
+    #    x = x_number_values[i]
+    #    y = y_number_values[i]
+    #    ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
     
     plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
 
-    if SAVE:
+    if SAVE and PATH != None:
         plt.savefig(PATH, bbox_inches='tight')
     if PRINT:
         plt.show()
     plt.close()
 
 
+def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, colors=None, PATH=None):
+    MARKERS = ["o", "+", "x", "s"]
+    #MARKERS = None
+
+
+    ax = plt.subplot(111)
+    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    ax.yaxis.set_label_coords(-0.03, 1.02)
+
+
+    num_classes = len(y_number_values)
+    if num_classes != len(x_number_values):
+        print("num_classes != len(x_number_values)")
+        plt.close()
+        return
+    
+    if len(labels) != num_classes:
+        print("len(labels) != num_classes")
+        plt.close()
+        return
+
+    for i in range(0, num_classes):
+        len_x = len(x_number_values[i])
+        len_y = len(y_number_values[i])
+
+        if len_x != len_y:
+            print("ERROR: len_x != len_y")
+            plt.close()
+            return
+        
+        if MARKERS == None:
+            ax.scatter(x = x_number_values[i], y = y_number_values[i], label=labels[i], alpha=0.8)
+        else:
+            ax.scatter(x = x_number_values[i], y = y_number_values[i], marker=MARKERS[i], label=labels[i], alpha=0.8)
+    
+    #if len(labels) != len_x:
+    #    print("ERROR: len(labels) != len_y")
+    #    plt.close()
+    #    return
+
+    #for i in range(0, len_x):
+    #    x = x_number_values[i]
+    #    y = y_number_values[i]
+    #    ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
+    
+    ax.legend()
+
+    plt.title(TITLE, fontsize=18, y=1.13)
+    plt.xlabel(XLABEL, fontsize=12)
+    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+
+    if SAVE and PATH != None:
+        plt.savefig(PATH, bbox_inches='tight')
+    if PRINT:
+        plt.show()
+    plt.close()

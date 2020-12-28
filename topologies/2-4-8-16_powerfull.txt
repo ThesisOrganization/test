@@ -1,0 +1,5 @@
+central_type_and_additional_info  = Type-realistic_magnitude_1-0,0.3,Type-realistic_magnitude_1-0
+1 Type-realistic_magnitude_1-0: 2 Type-realistic_magnitude_1-0
+1 Type-realistic_magnitude_1-0: 4 Type-realistic_magnitude_1-0
+1 Type-realistic_magnitude_1-1_powerfull: 8 Type-realistic_magnitude_1-0
+1 Type-realistic_magnitude_1-2_powerfull: 16 Type-realistic_magnitude_1-0
