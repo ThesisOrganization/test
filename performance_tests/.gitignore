@@ -10,3 +10,4 @@ json*
 !*test_esit.log
 !*topology.txt
 !*outputs
+!*sim_config.json
