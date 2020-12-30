@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+               7                 7             25542             23740                 0                 0                 1          6.903962              2321                 0                 0   
+              58                58             23503             21660                 0                 0                 0          7.391482              2562                 0                 0   
+              59                59             27197             22402                 8                 2              2909          7.363790              1978               777                 0   
+              68                68             23511             21500                 0                 0                 0          8.520395              2390                 0                 0   

@@ -1,0 +1,435 @@
+BEGIN test 5 of 24 with topology 80-400:.............29/12/2020 - 19:23:16
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim serial --sched=FIFO --timeout=300 --lp-aggregation=local --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local
+results path: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local
+Script started on 2020-12-29 19:23:16+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting optimzation...
+Getting serial trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 481
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Getting parallel trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Parallel execution with 40 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 40 used
+Number of Logical Processes: 481
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+TIME BARRIER 9.000000
+TIME BARRIER 9.000000
+TIME BARRIER 62035.199194
+TIME BARRIER 146870.838983
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Executing optimization...
+R 25.76331993470131 checkpoint period 40 threads 481
+-q rootsim --sched=FIFO --run-complete --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local serial --checkpoint-period=40 --timeout=300
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c -o simulation_rootsim.o
+[01m[Ksimulation.c:[m[K In function ‘[01m[KProcessEvent_light[m[K’:
+[01m[Ksimulation.c:145:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void ProcessEvent(unsigned int me, simtime_t now, unsigned int event_type, void *content, [01;35m[Kint size[m[K, lp_state * state)
+                                                                                           [01;35m[K~~~~^~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/finish_event/finish_functions.c -o simulation_functions/finish_event/finish_functions_rootsim.o
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_reply[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:51:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_reply([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, int sender, double delay, double busy_time_transition, double waiting_time_transition, double order_shift){
+                        [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_command[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:71:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_command([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, int id_selected_actuator, double delay_down, double order_shift){
+                          [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kget_id_random_actuator[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:98:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static int get_id_random_actuator([01;35m[Kunsigned int id_device[m[K, device_state  * state){
+                                   [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kupdate_metrics[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:123:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcore[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void update_metrics(simtime_t now, queue_state * queue_state, job_info * info, [01;35m[Kint core[m[K){
+                                                                                       [01;35m[K~~~~^~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kschedule_next_job[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:168:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kservice_rates[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void schedule_next_job(unsigned int id_device, simtime_t now, queue_state * queue_state, [01;35m[Kdouble * service_rates[m[K, lan_direction direction, events_type event_to_trigger, unsigned int id_lp, int core){
+                                                                                                 [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_to_up_node[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:217:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_to_up_node([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, double delay, job_info * info, double order_shift){
+                             [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksimulate_computation[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:273:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void simulate_computation([01;35m[Kdouble time[m[K){
+                                  [01;35m[K~~~~~~~^~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/arrive_event/arrive_functions.c -o simulation_functions/arrive_event/arrive_functions_rootsim.o
+[01m[Ksimulation_functions/arrive_event/arrive_functions.c:[m[K In function ‘[01m[Karrive_wan[m[K’:
+[01m[Ksimulation_functions/arrive_event/arrive_functions.c:154:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void arrive_wan([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, job_info* info){
+                 [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/init_event/init_functions.c -o simulation_functions/init_event/init_functions_rootsim.o
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_node[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:106:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_node([01;35m[Kunsigned int id_device[m[K, device_state* state){
+                [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_lan[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:235:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_lan([01;35m[Kunsigned int id_device[m[K, device_state * state){
+               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_wan[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:280:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_wan([01;35m[Kunsigned int id_device[m[K, device_state * state){
+               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/priority_queue.c -o ../utils/priority_queue/priority_queue_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/heap/heap.c -o ../utils/priority_queue/heap/heap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/parser.c -o ../utils/partop/parser_rootsim.o
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/topology.c -o ../utils/partop/topology_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/priority_scheduler.c -o ../utils/priority_scheduler/priority_scheduler_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/queue_quick_sort.c -o ../utils/priority_scheduler/queue_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_protocol.c -o simulation_functions/setup_protocol/setup_protocol_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_recv_functions.c -o simulation_functions/setup_protocol/setup_recv_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_send_functions.c -o simulation_functions/setup_protocol/setup_send_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap.c -o ../utils/idmap/idmap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap_quick_sort.c -o ../utils/idmap/idmap_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/message/message.c -o ../utils/message/message_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/common_functions.c -o simulation_functions/common_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/binaryParse.c -o ../utils/partop/binaryParse_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/scheduling_algorithms.c -o ../utils/priority_scheduler/scheduling_algorithms_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=0 -DSIM_PROCESSING=0 -DSIM_PROCESSING_MULTIPLIER=0 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c -o simulation_rootsim
+Compiling  simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c...
+[01m[Ksimulation.c:[m[K In function ‘[01m[KProcessEvent_light[m[K’:
+[01m[Ksimulation.c:145:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void ProcessEvent(unsigned int me, simtime_t now, unsigned int event_type, void *content, [01;35m[Kint size[m[K, lp_state * state)
+                                                                                           [01;35m[K~~~~^~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_reply[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:51:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_reply([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, int sender, double delay, double busy_time_transition, double waiting_time_transition, double order_shift){
+                        [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_command[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:71:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_command([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, int id_selected_actuator, double delay_down, double order_shift){
+                          [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kget_id_random_actuator[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:98:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static int get_id_random_actuator([01;35m[Kunsigned int id_device[m[K, device_state  * state){
+                                   [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kupdate_metrics[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:123:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcore[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void update_metrics(simtime_t now, queue_state * queue_state, job_info * info, [01;35m[Kint core[m[K){
+                                                                                       [01;35m[K~~~~^~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kschedule_next_job[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:168:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kservice_rates[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void schedule_next_job(unsigned int id_device, simtime_t now, queue_state * queue_state, [01;35m[Kdouble * service_rates[m[K, lan_direction direction, events_type event_to_trigger, unsigned int id_lp, int core){
+                                                                                                 [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_to_up_node[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:217:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void send_to_up_node([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, double delay, job_info * info, double order_shift){
+                             [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksimulate_computation[m[K’:
+[01m[Ksimulation_functions/finish_event/finish_functions.c:273:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ static void simulate_computation([01;35m[Kdouble time[m[K){
+                                  [01;35m[K~~~~~~~^~~~[m[K
+[01m[Ksimulation_functions/arrive_event/arrive_functions.c:[m[K In function ‘[01m[Karrive_wan[m[K’:
+[01m[Ksimulation_functions/arrive_event/arrive_functions.c:154:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void arrive_wan([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, job_info* info){
+                 [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_node[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:106:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_node([01;35m[Kunsigned int id_device[m[K, device_state* state){
+                [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_lan[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:235:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_lan([01;35m[Kunsigned int id_device[m[K, device_state * state){
+               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_wan[m[K’:
+[01m[Ksimulation_functions/init_event/init_functions.c:280:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ void init_wan([01;35m[Kunsigned int id_device[m[K, device_state * state){
+               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+Linking...
+process done
+mkdir -p /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local ; mv simulation_rootsim /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local/simulation_rootsim
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_local" folder.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 481
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 40
+Snapshot Reconstruction Type: full
+Halt Simulation After: 0
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 300105.000000
+TIME BARRIER: 402071.000000
+TIME BARRIER: 702624.100000
+TIME BARRIER: 903393.000000
+TIME BARRIER: 1100587.000000
+TIME BARRIER: 1232689.751273
+TIME BARRIER: 1403608.000000
+TIME BARRIER: 1603644.000000
+TIME BARRIER: 1849461.054388
+TIME BARRIER: 2125995.151012
+TIME BARRIER: 2445322.698135
+TIME BARRIER: 2788297.531170
+TIME BARRIER: 3146241.676177
+TIME BARRIER: 3509531.213181
+TIME BARRIER: 3867813.128488
+TIME BARRIER: 4200099.462659
+TIME BARRIER: 4500211.000000
+TIME BARRIER: 4799576.277958
+TIME BARRIER: 5071994.025371
+TIME BARRIER: 5358956.302463
+TIME BARRIER: 5648849.106140
+TIME BARRIER: 5952753.682436
+TIME BARRIER: 6251246.524207
+TIME BARRIER: 6561744.610589
+TIME BARRIER: 6883708.538530
+TIME BARRIER: 7200211.000000
+TIME BARRIER: 7513899.520477
+TIME BARRIER: 7842532.574736
+TIME BARRIER: 8184486.531922
+TIME BARRIER: 8514918.102708
+TIME BARRIER: 8863896.233216
+TIME BARRIER: 9200432.100000
+TIME BARRIER: 9546890.410277
+TIME BARRIER: 9892726.574294
+TIME BARRIER: 10240222.702389
+TIME BARRIER: 10600220.000000
+TIME BARRIER: 10957108.661768
+TIME BARRIER: 11303776.736758
+TIME BARRIER: 11667442.503325
+TIME BARRIER: 12026599.387212
+TIME BARRIER: 12400243.741009
+TIME BARRIER: 12775335.887006
+TIME BARRIER: 13146173.676363
+TIME BARRIER: 13519086.248662
+TIME BARRIER: 13899079.052078
+TIME BARRIER: 14272711.977145
+TIME BARRIER: 14650270.698997
+TIME BARRIER: 15032328.063379
+TIME BARRIER: 15420459.653774
+TIME BARRIER: 15805757.531187
+TIME BARRIER: 16194012.825066
+TIME BARRIER: 16588769.790417
+TIME BARRIER: 16984347.214048
+TIME BARRIER: 17373217.580076
+TIME BARRIER: 17763586.245325
+TIME BARRIER: 18159155.674618
+TIME BARRIER: 18550471.892443
+TIME BARRIER: 18944633.297512
+TIME BARRIER: 19342233.535734
+TIME BARRIER: 19736622.817617
+TIME BARRIER: 20132065.591808
+TIME BARRIER: 20536228.751190
+TIME BARRIER: 20937803.068334
+TIME BARRIER: 21340380.960720
+TIME BARRIER: 21738736.975507
+TIME BARRIER: 22135668.181332
+TIME BARRIER: 22538876.649657
+TIME BARRIER: 22936332.894127
+TIME BARRIER: 23335436.409693
+TIME BARRIER: 23735895.800111
+TIME BARRIER: 24137285.701589
+TIME BARRIER: 24541358.647707
+TIME BARRIER: 24942063.443134
+TIME BARRIER: 25344859.315929
+TIME BARRIER: 25747845.093308
+TIME BARRIER: 26150666.536870
+TIME BARRIER: 26552922.557765
+TIME BARRIER: 26950679.953619
+TIME BARRIER: 27350980.210372
+TIME BARRIER: 27752940.960635
+TIME BARRIER: 28155382.690090
+TIME BARRIER: 28559459.348447
+TIME BARRIER: 28960548.909214
+TIME BARRIER: 29365136.975810
+TIME BARRIER: 29768567.550954
+TIME BARRIER: 30167920.617270
+TIME BARRIER: 30573358.043147
+TIME BARRIER: 30977053.281450
+TIME BARRIER: 31382262.363223
+TIME BARRIER: 31785282.048037
+TIME BARRIER: 32187902.065397
+TIME BARRIER: 32548101.725109
+TIME BARRIER: 32800204.000000
+TIME BARRIER: 33015885.962742
+TIME BARRIER: 33203398.000000
+TIME BARRIER: 33522538.646690
+TIME BARRIER: 33922854.075105
+TIME BARRIER: 34321423.579818
+TIME BARRIER: 34719229.373650
+TIME BARRIER: 35113222.406758
+TIME BARRIER: 35512010.400924
+TIME BARRIER: 35910003.169802
+TIME BARRIER: 36311121.165284
+TIME BARRIER: 36727503.031067
+TIME BARRIER: 37143994.498495
+TIME BARRIER: 37561448.507347
+TIME BARRIER: 37983553.540234
+TIME BARRIER: 38403222.141207
+TIME BARRIER: 38826047.852836
+TIME BARRIER: 39246238.579969
+TIME BARRIER: 39664787.872846
+TIME BARRIER: 40086515.587131
+TIME BARRIER: 40508960.196711
+TIME BARRIER: 40932345.363900
+TIME BARRIER: 41354780.343918
+TIME BARRIER: 41778115.162018
+TIME BARRIER: 42203686.100000
+TIME BARRIER: 42628330.287306
+TIME BARRIER: 43057095.261643
+TIME BARRIER: 43484318.952898
+TIME BARRIER: 43912301.400587
+TIME BARRIER: 44342766.690325
+TIME BARRIER: 44768809.863847
+TIME BARRIER: 45191624.270301
+TIME BARRIER: 45612171.052533
+TIME BARRIER: 46036022.765406
+TIME BARRIER: 46457886.826136
+TIME BARRIER: 46881931.129230
+TIME BARRIER: 47305894.660520
+TIME BARRIER: 47733415.878255
+TIME BARRIER: 48164952.736621
+TIME BARRIER: 48595108.112622
+TIME BARRIER: 49018959.393935
+TIME BARRIER: 49447779.700851
+TIME BARRIER: 49876538.454326
+TIME BARRIER: 50303242.610494
+TIME BARRIER: 50732891.685446
+TIME BARRIER: 51158502.276808
+TIME BARRIER: 51585828.697470
+TIME BARRIER: 52012097.773829
+TIME BARRIER: 52442627.106801
+TIME BARRIER: 52874074.269392
+TIME BARRIER: 53303699.854465
+TIME BARRIER: 53732555.420636
+TIME BARRIER: 54164762.061132
+TIME BARRIER: 54594118.688462
+TIME BARRIER: 55027023.098194
+TIME BARRIER: 55457728.132438
+TIME BARRIER: 55888946.958641
+TIME BARRIER: 56316282.324821
+TIME BARRIER: 56742890.737787
+TIME BARRIER: 57167767.256572
+TIME BARRIER: 57592629.201410
+TIME BARRIER: 58014787.043517
+TIME BARRIER: 58438676.789772
+TIME BARRIER: 58866292.777229
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 285.50 MEM 0 MAXMEM 14021272 STALE 0 MAXMEM_RSS 12189860
+<time name="ALL">277800</time>
+
+Script done on 2020-12-29 19:26:46+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 29/12/2020 - 19:26:46
