@@ -1,3 +1,3 @@
 #          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
-              68                68              5939              4851                18                 4               900         13.337262              3871              1000                 0   
-              69                69              5883              4851                14                 4               911          7.947136              4136               902                 0   
+              68                68              7002              6187                 7                 1               504         10.314624              4262               637                 0   
+              69                69              6674              5997                 2                 1               293         13.763111              3945              1016                 0   

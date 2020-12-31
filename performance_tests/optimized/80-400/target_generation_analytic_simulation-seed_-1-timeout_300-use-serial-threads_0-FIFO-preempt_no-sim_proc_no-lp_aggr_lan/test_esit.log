@@ -1,7 +1,7 @@
-BEGIN test 21 of 24 with topology 80-400:.............29/12/2020 - 20:48:21
+BEGIN test 21 of 24 with topology 80-400:.............30/12/2020 - 17:47:25
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use serial --sched=FIFO --timeout=300 --lp-aggregation=lan --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-use-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_lan
 results path: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-use-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_lan
-Script started on 2020-12-29 20:48:21+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2020-12-30 17:47:25+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="-1" LINES="-1"]
 /home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
 Starting generator...
 Done.
@@ -47,7 +47,7 @@ Executing model...
 Serial execution.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: 2704d299da29a31c04305de505cd770f837708f6
+commit hash: 50f5908b92d0fb8510d9a6bd86f9b54b5270a44a
 ***START SIMULATION***
 
 [36m
@@ -68,7 +68,7 @@ LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095340411253065
+master seed is 3247095341599845102
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
@@ -79,30 +79,30 @@ The process will last 10 seconds
 Thread: 1	LP: 881
 
 ===== SYSTEM-WIDE STATISTICS =====
-[36mTotal events....................................:       466828
-Committed events................................:       466828 (100.00%)
-Events executed and committed tot...............:       466828
+[36mTotal events....................................:      1002573
+Committed events................................:      1002573 (100.00%)
+Events executed and committed tot...............:      1002573
 Straggler events................................:            0 (0.00%)
 Anti events.....................................:            0 (0.00%)
 Useless events..................................:            0 (0.00%)
 Silent events...................................:            0 (0.00%)
 Silent events for GVT...........................:            0 (-nan%)
 
-Flushed events..................................:       470911 (100.87%)
-Fetched operations..............................:       466828 (100.00%)
-   Fetch succeed................................:       466828 (100.00%)
+Flushed events..................................:      1006659 (100.41%)
+Fetched operations..............................:      1002573 (100.00%)
+   Fetch succeed................................:      1002573 (100.00%)
    Fetch failed.................................:            0 (0.00%)
    Avg node traversed during fetch..............:         1.00
 
-Average time to process any event...............:     14474.16 clocks
-   Average time spent in standard execution.....:     14474.16 clocks
+Average time to process any event...............:      4900.94 clocks
+   Average time spent in standard execution.....:      4900.94 clocks
    Average time spent in silent execution.......:         -nan clocks (0.00%)
-Average time spent to fetch.....................:     15912.21 clocks (0.00%)
-   Average time in successfull fetch............:     15912.21 clocks (0.00%)
+Average time spent to fetch.....................:      7991.36 clocks (0.00%)
+   Average time in successfull fetch............:      7991.36 clocks (0.00%)
    Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
-Average time spent to Enqueue...................:     10335.12 clocks (0.00%)
+Average time spent to Enqueue...................:      5208.73 clocks (0.00%)
 
-Save Checkpoint operations.........................................:         9795
+Save Checkpoint operations.........................................:        20499
 Restore Checkpoint operations......................................:            0
 Rollback operations to resume LP state.............................:            0 (-nan%)
 Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (-nan%)
@@ -112,16 +112,16 @@ AVG Rollbacked Events per Rollback.................................:         -na
 AVG Reprocessed Events per Rollback................................:         -nan
 CheckOnGVT invocations.............................................:            0
 
-Save Checkpoint time............................:    222842.97 clocks (-nan%)
+Save Checkpoint time............................:    124338.80 clocks (-nan%)
 Restore Checkpoint time.........................:         -nan clocks (-nan%)
 Rollback time...................................:         -nan clocks
-Checkpoint mem..................................:       117059 B
+Checkpoint mem..................................:       122157 B
 Checkpoint recalculations.......................:            0
 Checkpoint period...............................:            0
 
 Event not flushed tot...........................:            0
-Exposition forward Time tot.....................:  11768392502 clocks
-Exposition forward Time per event...............:     25209.27 clocks
+Exposition forward Time tot.....................:  10358995420 clocks
+Exposition forward Time per event...............:     10332.41 clocks
 Exposition silent Time tot......................:            0 clocks
 Exposition silent Time per event................:         -nan clocks
 
@@ -129,22 +129,22 @@ Total resumable rollback executed...............:            0
 Avg events resume per rollback_resume...........:         -nan
 Avg clock resume per rollback resume............:         -nan clocks
 
-Total allocated space...........................: 6388 MB
+Total allocated space...........................: 6524 MB
 
 
-Total Clock.....................................:  21976560032 clocks
-Event Processing................................:   6756944886 clocks (30.75%)
-Safe Processing.................................:   6756944886 clocks (30.75%)
-Frame Processing................................:   6769696624 clocks (30.80%)
+Total Clock.....................................:  21981574966 clocks
+Event Processing................................:   4913551260 clocks (22.35%)
+Safe Processing.................................:   4913551260 clocks (22.35%)
+Frame Processing................................:   4917868989 clocks (22.37%)
 Rollback Processing.............................: 9223372036854775808 clocks (-nan%)
-Checkpoint Saving...............................:   2182746870 clocks (9.93%)
-Fetch Successful................................:   7428266916 clocks (33.80%)
+Checkpoint Saving...............................:   2548821044 clocks (11.60%)
+Fetch Successful................................:   8011919260 clocks (36.45%)
 [0m
-Simulation ended (seconds):        11.72
-Simulation ended  (clocks): 25714339124
-Last gvt: 26476.221579
-EventsPerSec:     39845.34
-EventsPerThreadPerSec:     39845.34
+Simulation ended (seconds):        10.98
+Simulation ended  (clocks): 24110481602
+Last gvt: 56662.404515
+EventsPerSec:     91267.46
+EventsPerThreadPerSec:     91267.46
 [32mExecution ended correctly
 [0mScript done, file is USE_output.txt
 Getting parallel trace...
@@ -158,7 +158,7 @@ Executing model...
 Parallel execution with 40 threads.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: 2704d299da29a31c04305de505cd770f837708f6
+commit hash: 50f5908b92d0fb8510d9a6bd86f9b54b5270a44a
 ***START SIMULATION***
 
 [36m
@@ -212,128 +212,128 @@ Thread 35 set to CPU no 35
 Thread 36 set to CPU no 36
 Thread 37 set to CPU no 37
 Thread 38 set to CPU no 38
+Thread 39 set to CPU no 39
 Thread 0 set to CPU no 0
 LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095340411253065
+master seed is 3247095341599845102
 Numerical_init finished
 Nodes_init finished
-Thread 39 set to CPU no 39
 EXECUTED ALL INIT EVENTS
 CALLING SLEEPING THREAD
 The process will last 10 seconds
-[32m[32] Execution ended correctly
-[0m[32m[11] Execution ended correctly
-[0m[32m[29] Execution ended correctly
-[0m[32m[12] Execution ended correctly
-[0m[32m[15] Execution ended correctly
-[0m[32m[22] Execution ended correctly
-[0m[32m[19] Execution ended correctly
-[0m[32m[18] Execution ended correctly
-[0m[32m[38] Execution ended correctly
+[32m[37] Execution ended correctly
+[0m[32m[25] Execution ended correctly
+[0m[32m[9] Execution ended correctly
+[0m[32m[13] Execution ended correctly
 [0m[32m[28] Execution ended correctly
-[0m[32m[30] Execution ended correctly
+[0m[32m[29] Execution ended correctly
+[0m[32m[7] Execution ended correctly
+[0m[32m[35] Execution ended correctly
+[0m[32m[31] Execution ended correctly
 [0m[32m[10] Execution ended correctly
-[0m[32m[1] Execution ended correctly
-[0m[32m[2] Execution ended correctly
-[0m[32m[4] Execution ended correctly
 [0m[32m[5] Execution ended correctly
-[0m[32m[39] Execution ended correctly
-[0m[32m[34] Execution ended correctly
-[0m[32m[17] Execution ended correctly
-[0m[32m[6] Execution ended correctly
-[0m[32m[26] Execution ended correctly
-[0m[32m[8] Execution ended correctly
+[0m[32m[15] Execution ended correctly
 [0m[32m[23] Execution ended correctly
 [0m[32m[21] Execution ended correctly
-[0m[32m[25] Execution ended correctly
-[0m[32m[24] Execution ended correctly
 [0m[32m[33] Execution ended correctly
-[0m[32m[3] Execution ended correctly
-[0m[32m[13] Execution ended correctly
-[0m[32m[27] Execution ended correctly
-[0m[32m[7] Execution ended correctly
-[0m[32m[14] Execution ended correctly
-[0m[32m[36] Execution ended correctly
-[0m[32m[0] Execution ended correctly
-[0m[32m[35] Execution ended correctly
-[0m[32m[9] Execution ended correctly
-[0m[32m[31] Execution ended correctly
+[0m[32m[38] Execution ended correctly
 [0m[32m[16] Execution ended correctly
-[0m[32m[37] Execution ended correctly
+[0m[32m[36] Execution ended correctly
+[0m[32m[27] Execution ended correctly
+[0m[32m[39] Execution ended correctly
+[0m[32m[30] Execution ended correctly
+[0m[32m[1] Execution ended correctly
 [0m[32m[20] Execution ended correctly
+[0m[32m[11] Execution ended correctly
+[0m[32m[18] Execution ended correctly
+[0m[32m[26] Execution ended correctly
+[0m[32m[8] Execution ended correctly
+[0m[32m[17] Execution ended correctly
+[0m[32m[3] Execution ended correctly
+[0m[32m[32] Execution ended correctly
+[0m[32m[12] Execution ended correctly
+[0m[32m[6] Execution ended correctly
+[0m[32m[24] Execution ended correctly
+[0m[32m[34] Execution ended correctly
+[0m[32m[14] Execution ended correctly
+[0m[32m[22] Execution ended correctly
+[0m[32m[2] Execution ended correctly
+[0m[32m[19] Execution ended correctly
+[0m[32m[0] Execution ended correctly
+[0m[32m[4] Execution ended correctly
 [0mSimulation final report:
 Thread: 40	LP: 881
 
 ===== SYSTEM-WIDE STATISTICS =====
-[36mTotal events....................................:      2415213
-Committed events................................:      2399735 (99.36%)
-Events executed and committed tot...............:       196008
-Straggler events................................:          416 (0.02%)
-Anti events.....................................:           36 (0.00%)
-Useless events..................................:         1508 (0.06%)
-Silent events...................................:        10859 (0.45%)
+[36mTotal events....................................:      3150906
+Committed events................................:      3133616 (99.45%)
+Events executed and committed tot...............:       251706
+Straggler events................................:          572 (0.02%)
+Anti events.....................................:           44 (0.00%)
+Useless events..................................:         2151 (0.07%)
+Silent events...................................:        14867 (0.47%)
 Silent events for GVT...........................:            0 (0.00%)
 
-Flushed events..................................:      2408511 (99.72%)
-Fetched operations..............................:      2404390 (99.55%)
-   Fetch succeed................................:      2404390 (100.00%)
+Flushed events..................................:      3140216 (99.66%)
+Fetched operations..............................:      3136083 (99.53%)
+   Fetch succeed................................:      3136083 (100.00%)
    Fetch failed.................................:            0 (0.00%)
-   Avg node traversed during fetch..............:       458.46
+   Avg node traversed during fetch..............:       470.90
 
-Average time to process any event...............:     35259.69 clocks
-   Average time spent in standard execution.....:     35393.35 clocks
-   Average time spent in silent execution.......:      5665.80 clocks (0.00%)
-Average time spent to fetch.....................:    250790.09 clocks (0.00%)
-   Average time in successfull fetch............:    250790.09 clocks (0.00%)
+Average time to process any event...............:     25155.24 clocks
+   Average time spent in standard execution.....:     25254.86 clocks
+   Average time spent in silent execution.......:      4141.93 clocks (0.00%)
+Average time spent to fetch.....................:    195463.46 clocks (0.00%)
+   Average time in successfull fetch............:    195463.46 clocks (0.00%)
    Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
-Average time spent to Enqueue...................:      3707.72 clocks (0.00%)
+Average time spent to Enqueue...................:      3208.63 clocks (0.00%)
 
-Save Checkpoint operations.........................................:        48547
-Restore Checkpoint operations......................................:          452
+Save Checkpoint operations.........................................:        63190
+Restore Checkpoint operations......................................:          616
 Rollback operations to resume LP state.............................:            0 (0.00%)
 Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (0.00%)
 Rollback ops to resume LP state and execute evt in future..........:            0 (0.00%)
-Rollback operations................................................:          452
-AVG Rollbacked Events per Rollback.................................:         3.34
-AVG Reprocessed Events per Rollback................................:        24.02
+Rollback operations................................................:          616
+AVG Rollbacked Events per Rollback.................................:         3.49
+AVG Reprocessed Events per Rollback................................:        24.13
 CheckOnGVT invocations.............................................:            0
 
-Save Checkpoint time............................:   3488675.97 clocks (934.90%)
-Restore Checkpoint time.........................:    162623.61 clocks (43.58%)
-Rollback time...................................:    373158.87 clocks
-Checkpoint mem..................................:       124744 B
+Save Checkpoint time............................:   2579180.01 clocks (1265.96%)
+Restore Checkpoint time.........................:     79814.88 clocks (39.18%)
+Rollback time...................................:    203732.68 clocks
+Checkpoint mem..................................:       125197 B
 Checkpoint recalculations.......................:            0
 Checkpoint period...............................:            0
 
 Event not flushed tot...........................:            0
-Exposition forward Time tot.....................:  96458180458 clocks
-Exposition forward Time per event...............:     40118.13 clocks
-Exposition silent Time tot......................:     69558468 clocks
-Exposition silent Time per event................:      6405.61 clocks
+Exposition forward Time tot.....................:  91935525408 clocks
+Exposition forward Time per event...............:     29315.81 clocks
+Exposition silent Time tot......................:     69929240 clocks
+Exposition silent Time per event................:      4703.66 clocks
 
 Total resumable rollback executed...............:            0
 Avg events resume per rollback_resume...........:         -nan
 Avg clock resume per rollback resume............:         -nan clocks
 
-Total allocated space...........................: 12174 MB
+Total allocated space...........................: 14224 MB
 
 
-Total Clock.....................................: 878120509362 clocks
-Event Processing................................:  85159671966 clocks (9.70%)
-Safe Processing.................................:  85098147068 clocks (9.69%)
-Frame Processing................................:  85075955436 clocks (9.69%)
-Rollback Processing.............................:    168667808 clocks (0.02%)
-Checkpoint Saving...............................: 169364752358 clocks (19.29%)
-Fetch Successful................................: 602997175332 clocks (68.67%)
+Total Clock.....................................: 877958743558 clocks
+Event Processing................................:  79261790938 clocks (9.03%)
+Safe Processing.................................:  79200212884 clocks (9.02%)
+Frame Processing................................:  79168139217 clocks (9.02%)
+Rollback Processing.............................:    125499330 clocks (0.01%)
+Checkpoint Saving...............................: 162978384744 clocks (18.56%)
+Fetch Successful................................: 612989620874 clocks (69.82%)
 [0m
-Simulation ended (seconds):        12.16
-Simulation ended  (clocks): 26693787490
-Last gvt: 134695.170544
-EventsPerSec:    197314.18
-EventsPerThreadPerSec:      4932.85
+Simulation ended (seconds):        11.29
+Simulation ended  (clocks): 24781885642
+Last gvt: 176092.314379
+EventsPerSec:    277532.19
+EventsPerThreadPerSec:      6938.30
 [32mExecution ended correctly
 [0mScript done, file is USE_output.txt
 Executing optimization...
@@ -470,7 +470,7 @@ Executing model...
 Serial execution.
 Script started, file is USE_output.txt
 taken 4 parameters
-commit hash: 2704d299da29a31c04305de505cd770f837708f6
+commit hash: 50f5908b92d0fb8510d9a6bd86f9b54b5270a44a
 ***START SIMULATION***
 
 [36m
@@ -491,7 +491,7 @@ LP_metada init finished
 Dymelor_init finished
 Statistics_init finished
 Queue_init finished
-master seed is 3247095340411253065
+master seed is 3247095341599845102
 Numerical_init finished
 Nodes_init finished
 EXECUTED ALL INIT EVENTS
@@ -502,30 +502,30 @@ The process will last 300 seconds
 Thread: 1	LP: 881
 
 ===== SYSTEM-WIDE STATISTICS =====
-[36mTotal events....................................:     23651582
-Committed events................................:     23651582 (100.00%)
-Events executed and committed tot...............:     23651582
+[36mTotal events....................................:     56015775
+Committed events................................:     56015775 (100.00%)
+Events executed and committed tot...............:     56015775
 Straggler events................................:            0 (0.00%)
 Anti events.....................................:            0 (0.00%)
 Useless events..................................:            0 (0.00%)
 Silent events...................................:            0 (0.00%)
 Silent events for GVT...........................:            0 (-nan%)
 
-Flushed events..................................:     23656545 (100.02%)
-Fetched operations..............................:     23651582 (100.00%)
-   Fetch succeed................................:     23651582 (100.00%)
+Flushed events..................................:     56019857 (100.01%)
+Fetched operations..............................:     56015775 (100.00%)
+   Fetch succeed................................:     56015775 (100.00%)
    Fetch failed.................................:            0 (0.00%)
    Avg node traversed during fetch..............:         1.00
 
-Average time to process any event...............:      1829.66 clocks
-   Average time spent in standard execution.....:      1829.66 clocks
+Average time to process any event...............:      1077.03 clocks
+   Average time spent in standard execution.....:      1077.03 clocks
    Average time spent in silent execution.......:         -nan clocks (0.00%)
-Average time spent to fetch.....................:     13779.63 clocks (0.00%)
-   Average time in successfull fetch............:     13779.63 clocks (0.00%)
+Average time spent to fetch.....................:      5547.07 clocks (0.00%)
+   Average time in successfull fetch............:      5547.07 clocks (0.00%)
    Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
-Average time spent to Enqueue...................:      7485.50 clocks (0.00%)
+Average time spent to Enqueue...................:      2488.52 clocks (0.00%)
 
-Save Checkpoint operations.........................................:       473475
+Save Checkpoint operations.........................................:      1120762
 Restore Checkpoint operations......................................:            0
 Rollback operations to resume LP state.............................:            0 (-nan%)
 Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (-nan%)
@@ -535,16 +535,16 @@ AVG Rollbacked Events per Rollback.................................:         -na
 AVG Reprocessed Events per Rollback................................:         -nan
 CheckOnGVT invocations.............................................:            0
 
-Save Checkpoint time............................:    106622.80 clocks (-nan%)
+Save Checkpoint time............................:     64742.22 clocks (-nan%)
 Restore Checkpoint time.........................:         -nan clocks (-nan%)
 Rollback time...................................:         -nan clocks
-Checkpoint mem..................................:       101698 B
+Checkpoint mem..................................:       103104 B
 Checkpoint recalculations.......................:            0
 Checkpoint period...............................:            0
 
 Event not flushed tot...........................:            0
-Exposition forward Time tot.....................: 230853391032 clocks
-Exposition forward Time per event...............:      9760.59 clocks
+Exposition forward Time tot.....................: 214188481542 clocks
+Exposition forward Time per event...............:      3823.72 clocks
 Exposition silent Time tot......................:            0 clocks
 Exposition silent Time per event................:         -nan clocks
 
@@ -555,19 +555,19 @@ Avg clock resume per rollback resume............:         -nan clocks
 Total allocated space...........................: 7259 MB
 
 
-Total Clock.....................................: 658529459420 clocks
-Event Processing................................:  43274266178 clocks (6.57%)
-Safe Processing.................................:  43274266178 clocks (6.57%)
-Frame Processing................................:  43275878105 clocks (6.57%)
+Total Clock.....................................: 658479593872 clocks
+Event Processing................................:  60330930698 clocks (9.16%)
+Safe Processing.................................:  60330930698 clocks (9.16%)
+Frame Processing................................:  60331879565 clocks (9.16%)
 Rollback Processing.............................: 9223372036854775808 clocks (-nan%)
-Checkpoint Saving...............................:  50483232088 clocks (7.67%)
-Fetch Successful................................: 325910063264 clocks (49.49%)
+Checkpoint Saving...............................:  72560624860 clocks (11.02%)
+Fetch Successful................................: 310723404174 clocks (47.19%)
 [0m
-Simulation ended (seconds):       301.74
-Simulation ended  (clocks): 662263126682
-Last gvt: 5000218.000000
-EventsPerSec:     78384.50
-EventsPerThreadPerSec:     78384.50
+Simulation ended (seconds):       301.02
+Simulation ended  (clocks): 660682097934
+Last gvt: 13246815.452055
+EventsPerSec:    186087.79
+EventsPerThreadPerSec:    186087.79
 [32mExecution ended correctly
 [0mScript done, file is USE_output.txt
 parsing statistics...
@@ -577,8 +577,8 @@ Done.
 Merging jsons in lp_data...
 Done, results are in simulation_results.json.
 Done.
-FINISHED CPU 717.85 MEM 0 MAXMEM 13251828 STALE 0 MAXMEM_RSS 12475728
-<time name="ALL">712080</time>
+FINISHED CPU 696.87 MEM 19768 MAXMEM 16054380 STALE 0 MAXMEM_RSS 14446032
+<time name="ALL">691740</time>
 
-Script done on 2020-12-29 20:53:55+01:00 [COMMAND_EXIT_CODE="0"]
-Test 80-400 COMPLETE at 29/12/2020 - 20:53:55
+Script done on 2020-12-30 17:52:55+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 30/12/2020 - 17:52:55

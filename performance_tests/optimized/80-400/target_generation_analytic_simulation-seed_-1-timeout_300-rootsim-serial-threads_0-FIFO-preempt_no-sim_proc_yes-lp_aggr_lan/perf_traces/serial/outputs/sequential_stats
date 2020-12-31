@@ -2,13 +2,13 @@
 ----------------------SERIAL STATISTICS---------------------
 ------------------------------------------------------------
 
-SIMULATION STARTED AT ..... : 2020-12-29 20:00:12 
-SIMULATION FINISHED AT .... : 2020-12-29 20:00:13 
-TOTAL SIMULATION TIME ..... : 0.720 seconds 
+SIMULATION STARTED AT ..... : 2020-12-30 17:00:37 
+SIMULATION FINISHED AT .... : 2020-12-30 17:00:38 
+TOTAL SIMULATION TIME ..... : 0.743 seconds 
 
 TOTAL LPs.................. : 881 
-TOTAL EXECUTED EVENTS ..... : 352456 
-AVERAGE EVENT COST......... : 2.043 us
+TOTAL EXECUTED EVENTS ..... : 348354 
+AVERAGE EVENT COST......... : 2.133 us
 AVERAGE EVENT COST (EMA)... : 0.00 us
 
 LAST COMMITTED GVT ........ : 0.000000

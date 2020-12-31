@@ -1,7 +1,7 @@
-BEGIN test 8 of 24 with topology 80-400:.............29/12/2020 - 19:42:50
+BEGIN test 8 of 24 with topology 80-400:.............30/12/2020 - 16:49:30
 test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim serial --sched=FIFO --preempt --sim-processing --timeout=300 --lp-aggregation=local --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
 results path: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local
-Script started on 2020-12-29 19:49:08+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2020-12-30 16:49:30+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="-1" LINES="-1"]
 /home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
 Starting generator...
 Done.
@@ -61,7 +61,8 @@ Halt Simulation After: 100000
 LPs Distribution Mode across Kernels: block
 Check Termination Mode: normal
 Set Seed: 0
-TIME BARRIER: 50503.822247
+TIME BARRIER: 35006.174588
+TIME BARRIER: 96759.773549
 
 --------- SIMULATION CORRECTLY COMPLETED ----------
 Done.
@@ -98,74 +99,31 @@ TIME BARRIER 9.000000
 TIME BARRIER 9.000000
 TIME BARRIER 9.000000
 TIME BARRIER 9.000000
-TIME BARRIER 4514.338021
-TIME BARRIER 29952.250743
-TIME BARRIER 58272.185733
-TIME BARRIER 87056.567442
-TIME BARRIER 118754.407536
+TIME BARRIER 5128.168636
+TIME BARRIER 13793.251446
+TIME BARRIER 34712.120999
+TIME BARRIER 63079.974469
+TIME BARRIER 95831.179693
+TIME BARRIER 129859.477236
 
 --------- SIMULATION CORRECTLY COMPLETED ----------
 Done.
 Executing optimization...
-R 14.755794645315056 checkpoint period 40 threads 481
--q rootsim --sched=FIFO --preempt --sim-processing --run-complete --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local serial --checkpoint-period=40 --timeout=300
+R 17.367634815889506 checkpoint period 38 threads 481
+-q rootsim --sched=FIFO --preempt --sim-processing --run-complete --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_local serial --checkpoint-period=38 --timeout=300
 Done.
 Starting simulation...
 Using ROOT-Sim as the simulation platform.
 Removing previous output files..
 Done.
 Compiling model...
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c -o simulation_rootsim.o
-[01m[Ksimulation.c:[m[K In function ‘[01m[KProcessEvent_light[m[K’:
-[01m[Ksimulation.c:145:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void ProcessEvent(unsigned int me, simtime_t now, unsigned int event_type, void *content, [01;35m[Kint size[m[K, lp_state * state)
-                                                                                           [01;35m[K~~~~^~~~[m[K
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/finish_event/finish_functions.c -o simulation_functions/finish_event/finish_functions_rootsim.o
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_reply[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:51:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_reply([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, int sender, double delay, double busy_time_transition, double waiting_time_transition, double order_shift){
-                        [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_command[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:71:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_command([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, int id_selected_actuator, double delay_down, double order_shift){
-                          [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kget_id_random_actuator[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:98:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static int get_id_random_actuator([01;35m[Kunsigned int id_device[m[K, device_state  * state){
-                                   [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kupdate_metrics[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:123:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcore[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void update_metrics(simtime_t now, queue_state * queue_state, job_info * info, [01;35m[Kint core[m[K){
-                                                                                       [01;35m[K~~~~^~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kschedule_next_job[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:168:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kservice_rates[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void schedule_next_job(unsigned int id_device, simtime_t now, queue_state * queue_state, [01;35m[Kdouble * service_rates[m[K, lan_direction direction, events_type event_to_trigger, unsigned int id_lp, int core){
-                                                                                                 [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_to_up_node[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:217:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_to_up_node([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, double delay, job_info * info, double order_shift){
-                             [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/arrive_event/arrive_functions.c -o simulation_functions/arrive_event/arrive_functions_rootsim.o
-[01m[Ksimulation_functions/arrive_event/arrive_functions.c:[m[K In function ‘[01m[Karrive_wan[m[K’:
-[01m[Ksimulation_functions/arrive_event/arrive_functions.c:154:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void arrive_wan([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, job_info* info){
-                 [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/init_event/init_functions.c -o simulation_functions/init_event/init_functions_rootsim.o
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_node[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:106:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_node([01;35m[Kunsigned int id_device[m[K, device_state* state){
-                [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_lan[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:235:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_lan([01;35m[Kunsigned int id_device[m[K, device_state * state){
-               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_wan[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:280:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_wan([01;35m[Kunsigned int id_device[m[K, device_state * state){
-               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/priority_queue.c -o ../utils/priority_queue/priority_queue_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/heap/heap.c -o ../utils/priority_queue/heap/heap_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/parser.c -o ../utils/partop/parser_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c -o simulation_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/finish_event/finish_functions.c -o simulation_functions/finish_event/finish_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/arrive_event/arrive_functions.c -o simulation_functions/arrive_event/arrive_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/init_event/init_functions.c -o simulation_functions/init_event/init_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/priority_queue.c -o ../utils/priority_queue/priority_queue_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/heap/heap.c -o ../utils/priority_queue/heap/heap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/parser.c -o ../utils/partop/parser_rootsim.o
 [01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
 [01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
       [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
@@ -173,64 +131,20 @@ Compiling model...
 [01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
       strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
                               [01;36m[K^~~~~~~~~~~~[m[K
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/topology.c -o ../utils/partop/topology_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/priority_scheduler.c -o ../utils/priority_scheduler/priority_scheduler_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/queue_quick_sort.c -o ../utils/priority_scheduler/queue_quick_sort_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_protocol.c -o simulation_functions/setup_protocol/setup_protocol_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_recv_functions.c -o simulation_functions/setup_protocol/setup_recv_functions_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_send_functions.c -o simulation_functions/setup_protocol/setup_send_functions_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap.c -o ../utils/idmap/idmap_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap_quick_sort.c -o ../utils/idmap/idmap_quick_sort_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/message/message.c -o ../utils/message/message_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/common_functions.c -o simulation_functions/common_functions_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/binaryParse.c -o ../utils/partop/binaryParse_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/scheduling_algorithms.c -o ../utils/priority_scheduler/scheduling_algorithms_rootsim.o
-../Simulators/ROOT-Sim-bin/bin/rootsim-cc -Wall -Wextra  -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c -o simulation_rootsim
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/topology.c -o ../utils/partop/topology_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/priority_scheduler.c -o ../utils/priority_scheduler/priority_scheduler_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/queue_quick_sort.c -o ../utils/priority_scheduler/queue_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_protocol.c -o simulation_functions/setup_protocol/setup_protocol_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_recv_functions.c -o simulation_functions/setup_protocol/setup_recv_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_send_functions.c -o simulation_functions/setup_protocol/setup_send_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap.c -o ../utils/idmap/idmap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap_quick_sort.c -o ../utils/idmap/idmap_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/message/message.c -o ../utils/message/message_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation_functions/common_functions.c -o simulation_functions/common_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/binaryParse.c -o ../utils/partop/binaryParse_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/scheduling_algorithms.c -o ../utils/priority_scheduler/scheduling_algorithms_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=300 -I../Simulators/ROOT-Sim-bin/include simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c -o simulation_rootsim
 Compiling  simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c...
-[01m[Ksimulation.c:[m[K In function ‘[01m[KProcessEvent_light[m[K’:
-[01m[Ksimulation.c:145:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void ProcessEvent(unsigned int me, simtime_t now, unsigned int event_type, void *content, [01;35m[Kint size[m[K, lp_state * state)
-                                                                                           [01;35m[K~~~~^~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_reply[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:51:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_reply([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, int sender, double delay, double busy_time_transition, double waiting_time_transition, double order_shift){
-                        [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_command[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:71:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_command([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, int id_selected_actuator, double delay_down, double order_shift){
-                          [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kget_id_random_actuator[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:98:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static int get_id_random_actuator([01;35m[Kunsigned int id_device[m[K, device_state  * state){
-                                   [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kupdate_metrics[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:123:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcore[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void update_metrics(simtime_t now, queue_state * queue_state, job_info * info, [01;35m[Kint core[m[K){
-                                                                                       [01;35m[K~~~~^~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Kschedule_next_job[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:168:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kservice_rates[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void schedule_next_job(unsigned int id_device, simtime_t now, queue_state * queue_state, [01;35m[Kdouble * service_rates[m[K, lan_direction direction, events_type event_to_trigger, unsigned int id_lp, int core){
-                                                                                                 [01;35m[K~~~~~~~~~^~~~~~~~~~~~~[m[K
-[01m[Ksimulation_functions/finish_event/finish_functions.c:[m[K In function ‘[01m[Ksend_to_up_node[m[K’:
-[01m[Ksimulation_functions/finish_event/finish_functions.c:217:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- static void send_to_up_node([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state  * state, double delay, job_info * info, double order_shift){
-                             [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/arrive_event/arrive_functions.c:[m[K In function ‘[01m[Karrive_wan[m[K’:
-[01m[Ksimulation_functions/arrive_event/arrive_functions.c:154:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void arrive_wan([01;35m[Kunsigned int id_device[m[K, simtime_t now, device_state * state, job_info* info){
-                 [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_node[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:106:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_node([01;35m[Kunsigned int id_device[m[K, device_state* state){
-                [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_lan[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:235:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_lan([01;35m[Kunsigned int id_device[m[K, device_state * state){
-               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
-[01m[Ksimulation_functions/init_event/init_functions.c:[m[K In function ‘[01m[Kinit_wan[m[K’:
-[01m[Ksimulation_functions/init_event/init_functions.c:280:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid_device[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- void init_wan([01;35m[Kunsigned int id_device[m[K, device_state * state){
-               [01;35m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
 [01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
 [01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
       [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
@@ -254,550 +168,555 @@ Output Statistics Directory: outputs
 Scheduler: stf
 GVT Time Period: 1.00 seconds
 Checkpointing Type: periodic
-Checkpointing Period: 40
+Checkpointing Period: 38
 Snapshot Reconstruction Type: full
 Halt Simulation After: 0
 LPs Distribution Mode across Kernels: block
 Check Termination Mode: normal
 Set Seed: 0
-TIME BARRIER: 44648.523026
-TIME BARRIER: 105779.008494
-TIME BARRIER: 167247.278655
-TIME BARRIER: 228733.136385
-TIME BARRIER: 291385.387759
-TIME BARRIER: 328574.044206
-TIME BARRIER: 391342.192674
-TIME BARRIER: 426746.020478
-TIME BARRIER: 488432.732103
-TIME BARRIER: 550409.771548
-TIME BARRIER: 612789.186357
-TIME BARRIER: 675001.465751
-TIME BARRIER: 729666.542441
-TIME BARRIER: 792320.564138
-TIME BARRIER: 838317.360301
-TIME BARRIER: 900377.000000
-TIME BARRIER: 944413.409197
-TIME BARRIER: 1002146.919100
-TIME BARRIER: 1052263.453809
-TIME BARRIER: 1103473.000000
-TIME BARRIER: 1159519.046377
-TIME BARRIER: 1203975.458263
-TIME BARRIER: 1266307.198302
-TIME BARRIER: 1310774.259915
-TIME BARRIER: 1372733.361672
-TIME BARRIER: 1419218.577348
-TIME BARRIER: 1480274.136042
-TIME BARRIER: 1529581.295270
-TIME BARRIER: 1592147.419158
-TIME BARRIER: 1642210.644069
-TIME BARRIER: 1701987.000000
-TIME BARRIER: 1753938.002342
-TIME BARRIER: 1806747.501919
-TIME BARRIER: 1868038.402282
-TIME BARRIER: 1921745.131354
-TIME BARRIER: 1983072.301691
-TIME BARRIER: 2039016.496362
-TIME BARRIER: 2101336.000000
-TIME BARRIER: 2159527.641551
-TIME BARRIER: 2218163.215120
-TIME BARRIER: 2279924.922121
-TIME BARRIER: 2340729.459034
-TIME BARRIER: 2402680.768191
-TIME BARRIER: 2463429.694743
-TIME BARRIER: 2524891.646370
-TIME BARRIER: 2586929.742026
-TIME BARRIER: 2648464.619257
-TIME BARRIER: 2710207.024835
-TIME BARRIER: 2772478.138862
-TIME BARRIER: 2833774.890773
-TIME BARRIER: 2896776.569469
-TIME BARRIER: 2958778.603695
-TIME BARRIER: 3021030.867162
-TIME BARRIER: 3084281.616273
-TIME BARRIER: 3146481.322568
-TIME BARRIER: 3208172.751707
-TIME BARRIER: 3270679.666127
-TIME BARRIER: 3333445.706705
-TIME BARRIER: 3395668.006748
-TIME BARRIER: 3457925.545028
-TIME BARRIER: 3520031.554496
-TIME BARRIER: 3583372.500324
-TIME BARRIER: 3646480.827641
-TIME BARRIER: 3709195.789244
-TIME BARRIER: 3772301.949683
-TIME BARRIER: 3833768.932743
-TIME BARRIER: 3896265.096960
-TIME BARRIER: 3958724.409568
-TIME BARRIER: 4020189.386021
-TIME BARRIER: 4083464.441522
-TIME BARRIER: 4144289.739111
-TIME BARRIER: 4204984.079136
-TIME BARRIER: 4268790.291696
-TIME BARRIER: 4329784.256225
-TIME BARRIER: 4393307.341583
-TIME BARRIER: 4453914.939052
-TIME BARRIER: 4513307.432661
-TIME BARRIER: 4576921.262555
-TIME BARRIER: 4635363.159429
-TIME BARRIER: 4698735.999990
-TIME BARRIER: 4758902.824715
-TIME BARRIER: 4818442.159897
-TIME BARRIER: 4882093.636219
-TIME BARRIER: 4941962.852691
-TIME BARRIER: 5002187.291271
-TIME BARRIER: 5065572.748172
-TIME BARRIER: 5125219.958152
-TIME BARRIER: 5189410.028974
-TIME BARRIER: 5249514.021128
-TIME BARRIER: 5308754.999073
-TIME BARRIER: 5371722.803517
-TIME BARRIER: 5431455.838612
-TIME BARRIER: 5495197.611848
-TIME BARRIER: 5553815.861481
-TIME BARRIER: 5614062.570267
-TIME BARRIER: 5677702.232580
-TIME BARRIER: 5737587.896197
-TIME BARRIER: 5800128.000000
-TIME BARRIER: 5860460.196191
-TIME BARRIER: 5920470.941407
-TIME BARRIER: 5984749.128258
-TIME BARRIER: 6045322.026564
-TIME BARRIER: 6105637.520349
-TIME BARRIER: 6169143.294386
-TIME BARRIER: 6229780.818401
-TIME BARRIER: 6293333.824112
-TIME BARRIER: 6353822.243685
-TIME BARRIER: 6414104.102523
-TIME BARRIER: 6477707.871694
-TIME BARRIER: 6538897.550280
-TIME BARRIER: 6600530.653341
-TIME BARRIER: 6663674.616180
-TIME BARRIER: 6724296.328214
-TIME BARRIER: 6787387.554464
-TIME BARRIER: 6848114.322637
-TIME BARRIER: 6909321.384892
-TIME BARRIER: 6972846.360864
-TIME BARRIER: 7034335.732649
-TIME BARRIER: 7098045.191257
-TIME BARRIER: 7159165.065277
-TIME BARRIER: 7220411.350942
-TIME BARRIER: 7283728.731523
-TIME BARRIER: 7344988.200233
-TIME BARRIER: 7405293.097360
-TIME BARRIER: 7468226.181894
-TIME BARRIER: 7529187.090630
-TIME BARRIER: 7591397.844407
-TIME BARRIER: 7652865.443029
-TIME BARRIER: 7714279.326064
-TIME BARRIER: 7777862.576914
-TIME BARRIER: 7839152.901311
-TIME BARRIER: 7900368.000000
-TIME BARRIER: 7963210.282089
-TIME BARRIER: 8024629.749038
-TIME BARRIER: 8087876.654893
-TIME BARRIER: 8149983.396200
-TIME BARRIER: 8211899.706006
-TIME BARRIER: 8274133.578459
-TIME BARRIER: 8335338.904906
-TIME BARRIER: 8398192.458323
-TIME BARRIER: 8459611.563847
-TIME BARRIER: 8520839.489465
-TIME BARRIER: 8584096.630777
-TIME BARRIER: 8646544.954403
-TIME BARRIER: 8708127.853875
-TIME BARRIER: 8770975.230479
-TIME BARRIER: 8832930.970186
-TIME BARRIER: 8896178.076024
-TIME BARRIER: 8957705.315618
-TIME BARRIER: 9021366.004493
-TIME BARRIER: 9085198.246521
-TIME BARRIER: 9147564.851796
-TIME BARRIER: 9209607.079974
-TIME BARRIER: 9272514.841883
-TIME BARRIER: 9333765.239729
-TIME BARRIER: 9397722.002161
-TIME BARRIER: 9460027.941301
-TIME BARRIER: 9522211.972823
-TIME BARRIER: 9584932.835496
-TIME BARRIER: 9647234.646364
-TIME BARRIER: 9708820.683638
-TIME BARRIER: 9772066.678008
-TIME BARRIER: 9833747.739373
-TIME BARRIER: 9896402.126163
-TIME BARRIER: 9958619.319296
-TIME BARRIER: 10020703.531188
-TIME BARRIER: 10085313.012305
-TIME BARRIER: 10147405.468319
-TIME BARRIER: 10209093.717358
-TIME BARRIER: 10272048.856953
-TIME BARRIER: 10334136.433402
-TIME BARRIER: 10397177.874869
-TIME BARRIER: 10459104.623569
-TIME BARRIER: 10521387.260482
-TIME BARRIER: 10584380.094635
-TIME BARRIER: 10646355.674428
-TIME BARRIER: 10709072.877601
-TIME BARRIER: 10773346.645383
-TIME BARRIER: 10835756.988930
-TIME BARRIER: 10899450.806840
-TIME BARRIER: 10962350.936307
-TIME BARRIER: 11024927.939488
-TIME BARRIER: 11088360.395360
-TIME BARRIER: 11151233.761433
-TIME BARRIER: 11213087.948169
-TIME BARRIER: 11276591.216229
-TIME BARRIER: 11339155.865880
-TIME BARRIER: 11401381.246086
-TIME BARRIER: 11464433.563252
-TIME BARRIER: 11526827.139723
-TIME BARRIER: 11590103.533200
-TIME BARRIER: 11652365.093954
-TIME BARRIER: 11714914.415189
-TIME BARRIER: 11778891.355573
-TIME BARRIER: 11840797.914398
-TIME BARRIER: 11902848.000000
-TIME BARRIER: 11966475.875057
-TIME BARRIER: 12029168.582104
-TIME BARRIER: 12091070.480869
-TIME BARRIER: 12153022.011006
-TIME BARRIER: 12214951.270138
-TIME BARRIER: 12278914.883614
-TIME BARRIER: 12341272.581248
-TIME BARRIER: 12403668.174878
-TIME BARRIER: 12466155.704641
-TIME BARRIER: 12528126.131658
-TIME BARRIER: 12591265.568197
-TIME BARRIER: 12654063.252275
-TIME BARRIER: 12716860.867655
-TIME BARRIER: 12780528.723839
-TIME BARRIER: 12842798.898124
-TIME BARRIER: 12906521.291693
-TIME BARRIER: 12969454.211218
-TIME BARRIER: 13032761.963779
-TIME BARRIER: 13096393.749929
-TIME BARRIER: 13158745.447721
-TIME BARRIER: 13221707.882396
-TIME BARRIER: 13285626.385045
-TIME BARRIER: 13347733.369164
-TIME BARRIER: 13410051.667093
-TIME BARRIER: 13473612.614276
-TIME BARRIER: 13535668.058791
-TIME BARRIER: 13598402.497292
-TIME BARRIER: 13660858.043789
-TIME BARRIER: 13723334.422134
-TIME BARRIER: 13786845.158259
-TIME BARRIER: 13849244.724039
-TIME BARRIER: 13912029.484458
-TIME BARRIER: 13975966.544610
-TIME BARRIER: 14038413.308789
-TIME BARRIER: 14101329.813339
-TIME BARRIER: 14164226.931501
-TIME BARRIER: 14227871.939697
-TIME BARRIER: 14290821.823492
-TIME BARRIER: 14354133.663746
-TIME BARRIER: 14417548.458809
-TIME BARRIER: 14480561.844794
-TIME BARRIER: 14543326.758755
-TIME BARRIER: 14606646.561278
-TIME BARRIER: 14669611.374624
-TIME BARRIER: 14732485.997719
-TIME BARRIER: 14795715.001692
-TIME BARRIER: 14858726.548206
-TIME BARRIER: 14921763.818654
-TIME BARRIER: 14984636.565011
-TIME BARRIER: 15046934.748103
-TIME BARRIER: 15109762.745477
-TIME BARRIER: 15172745.157853
-TIME BARRIER: 15235510.852277
-TIME BARRIER: 15297787.865532
-TIME BARRIER: 15361098.586303
-TIME BARRIER: 15423930.897305
-TIME BARRIER: 15487121.484746
-TIME BARRIER: 15549959.810605
-TIME BARRIER: 15612175.039527
-TIME BARRIER: 15675748.290153
-TIME BARRIER: 15738226.842951
-TIME BARRIER: 15800459.329548
-TIME BARRIER: 15863931.290023
-TIME BARRIER: 15925968.660381
-TIME BARRIER: 15989147.187837
-TIME BARRIER: 16052017.575853
-TIME BARRIER: 16114156.762391
-TIME BARRIER: 16176512.319968
-TIME BARRIER: 16238420.473124
-TIME BARRIER: 16301677.937303
-TIME BARRIER: 16365036.163551
-TIME BARRIER: 16428281.344856
-TIME BARRIER: 16491760.999261
-TIME BARRIER: 16554933.375036
-TIME BARRIER: 16618520.035519
-TIME BARRIER: 16682203.316847
-TIME BARRIER: 16745031.481699
-TIME BARRIER: 16808308.586937
-TIME BARRIER: 16871627.718045
-TIME BARRIER: 16934501.823868
-TIME BARRIER: 16997699.528260
-TIME BARRIER: 17060791.064930
-TIME BARRIER: 17123979.468951
-TIME BARRIER: 17186943.919438
-TIME BARRIER: 17249654.749893
-TIME BARRIER: 17312083.534733
-TIME BARRIER: 17374038.855651
-TIME BARRIER: 17436059.797062
-TIME BARRIER: 17500040.000000
-TIME BARRIER: 17562396.450552
-TIME BARRIER: 17624835.874039
-TIME BARRIER: 17687863.260147
-TIME BARRIER: 17751056.716374
-TIME BARRIER: 17814635.302103
-TIME BARRIER: 17877989.585768
-TIME BARRIER: 17940382.610902
-TIME BARRIER: 18002300.835018
-TIME BARRIER: 18064432.743736
-TIME BARRIER: 18126432.279046
-TIME BARRIER: 18188721.156513
-TIME BARRIER: 18251578.200276
-TIME BARRIER: 18303372.100000
-TIME BARRIER: 18336611.724112
-TIME BARRIER: 18400156.000000
-TIME BARRIER: 18450132.439897
-TIME BARRIER: 18512820.052232
-TIME BARRIER: 18575605.942557
-TIME BARRIER: 18639411.863826
-TIME BARRIER: 18703363.150243
-TIME BARRIER: 18767118.102047
-TIME BARRIER: 18830596.457410
-TIME BARRIER: 18894530.074439
-TIME BARRIER: 18956848.565405
-TIME BARRIER: 19019837.158574
-TIME BARRIER: 19082727.524779
-TIME BARRIER: 19145241.286613
-TIME BARRIER: 19209045.874009
-TIME BARRIER: 19273231.105096
-TIME BARRIER: 19335913.030621
-TIME BARRIER: 19399792.203649
-TIME BARRIER: 19464223.899544
-TIME BARRIER: 19527971.670756
-TIME BARRIER: 19591799.042252
-TIME BARRIER: 19656589.938930
-TIME BARRIER: 19720033.443967
-TIME BARRIER: 19784159.531979
-TIME BARRIER: 19848042.008020
-TIME BARRIER: 19911934.981775
-TIME BARRIER: 19975753.196403
-TIME BARRIER: 20039342.022136
-TIME BARRIER: 20103589.669205
-TIME BARRIER: 20167456.652711
-TIME BARRIER: 20231562.797189
-TIME BARRIER: 20296466.292081
-TIME BARRIER: 20360598.807812
-TIME BARRIER: 20425390.457433
-TIME BARRIER: 20489610.270919
-TIME BARRIER: 20554011.364519
-TIME BARRIER: 20617420.869433
-TIME BARRIER: 20681149.207608
-TIME BARRIER: 20745375.838335
-TIME BARRIER: 20808489.735713
-TIME BARRIER: 20871511.374636
-TIME BARRIER: 20934526.382348
-TIME BARRIER: 20998460.079570
-TIME BARRIER: 21062409.702001
-TIME BARRIER: 21126085.143399
-TIME BARRIER: 21190412.576813
-TIME BARRIER: 21254709.984652
-TIME BARRIER: 21319334.299236
-TIME BARRIER: 21383892.392962
-TIME BARRIER: 21449025.998478
-TIME BARRIER: 21512919.533132
-TIME BARRIER: 21577698.346053
-TIME BARRIER: 21642148.618975
-TIME BARRIER: 21706210.315067
-TIME BARRIER: 21770567.303613
-TIME BARRIER: 21834361.051854
-TIME BARRIER: 21898578.839126
-TIME BARRIER: 21963138.355132
-TIME BARRIER: 22027084.026756
-TIME BARRIER: 22091773.384377
-TIME BARRIER: 22156637.451466
-TIME BARRIER: 22221542.926382
-TIME BARRIER: 22286725.550665
-TIME BARRIER: 22352031.608921
-TIME BARRIER: 22416336.966294
-TIME BARRIER: 22480626.228041
-TIME BARRIER: 22545609.325026
-TIME BARRIER: 22609356.624647
-TIME BARRIER: 22673346.211541
-TIME BARRIER: 22738291.218613
-TIME BARRIER: 22802158.536560
-TIME BARRIER: 22866008.212804
-TIME BARRIER: 22930586.250122
-TIME BARRIER: 22995063.144997
-TIME BARRIER: 23058796.059605
-TIME BARRIER: 23123116.528243
-TIME BARRIER: 23188306.789234
-TIME BARRIER: 23252790.718787
-TIME BARRIER: 23316252.175733
-TIME BARRIER: 23380156.254512
-TIME BARRIER: 23444790.439395
-TIME BARRIER: 23509205.369619
-TIME BARRIER: 23573218.981148
-TIME BARRIER: 23638637.597688
-TIME BARRIER: 23702933.686633
-TIME BARRIER: 23767451.523774
-TIME BARRIER: 23832506.408055
-TIME BARRIER: 23897477.580034
-TIME BARRIER: 23961800.020969
-TIME BARRIER: 24025970.047118
-TIME BARRIER: 24090547.754482
-TIME BARRIER: 24155304.764080
-TIME BARRIER: 24219420.206286
-TIME BARRIER: 24283768.788960
-TIME BARRIER: 24348422.034975
-TIME BARRIER: 24412791.948230
-TIME BARRIER: 24476816.091691
-TIME BARRIER: 24541501.809984
-TIME BARRIER: 24605817.908928
-TIME BARRIER: 24670202.527996
-TIME BARRIER: 24734105.536396
-TIME BARRIER: 24798371.646691
-TIME BARRIER: 24862139.307330
-TIME BARRIER: 24926796.956291
-TIME BARRIER: 24991298.269672
-TIME BARRIER: 25056025.730293
-TIME BARRIER: 25119459.792477
-TIME BARRIER: 25183519.905744
-TIME BARRIER: 25247473.319653
-TIME BARRIER: 25312699.751774
-TIME BARRIER: 25377405.615195
-TIME BARRIER: 25441643.239873
-TIME BARRIER: 25506769.241871
-TIME BARRIER: 25570727.502301
-TIME BARRIER: 25635162.414250
-TIME BARRIER: 25699811.703237
-TIME BARRIER: 25764891.624393
-TIME BARRIER: 25829645.817765
-TIME BARRIER: 25894474.418028
-TIME BARRIER: 25958420.408988
-TIME BARRIER: 26022547.070108
-TIME BARRIER: 26086025.479584
-TIME BARRIER: 26150426.540541
-TIME BARRIER: 26214240.344287
-TIME BARRIER: 26278312.107404
-TIME BARRIER: 26342795.925009
-TIME BARRIER: 26407445.315164
-TIME BARRIER: 26472072.634833
-TIME BARRIER: 26536565.325264
-TIME BARRIER: 26600716.724701
-TIME BARRIER: 26664363.067326
-TIME BARRIER: 26728323.868442
-TIME BARRIER: 26792797.148577
-TIME BARRIER: 26857786.690395
-TIME BARRIER: 26922153.901241
-TIME BARRIER: 26986753.883941
-TIME BARRIER: 27050977.399331
-TIME BARRIER: 27115119.740047
-TIME BARRIER: 27179131.612645
-TIME BARRIER: 27243446.081532
-TIME BARRIER: 27307413.323074
-TIME BARRIER: 27372146.727012
-TIME BARRIER: 27436402.707030
-TIME BARRIER: 27500199.504063
-TIME BARRIER: 27564212.253918
-TIME BARRIER: 27628500.120239
-TIME BARRIER: 27692826.764570
-TIME BARRIER: 27757239.263772
-TIME BARRIER: 27821426.836286
-TIME BARRIER: 27885623.269964
-TIME BARRIER: 27948692.864339
-TIME BARRIER: 28011328.496375
-TIME BARRIER: 28074642.649030
-TIME BARRIER: 28138883.441203
-TIME BARRIER: 28202100.047849
-TIME BARRIER: 28266705.013860
-TIME BARRIER: 28330888.879686
-TIME BARRIER: 28394793.427545
-TIME BARRIER: 28458792.829567
-TIME BARRIER: 28523417.438731
-TIME BARRIER: 28587700.887968
-TIME BARRIER: 28652426.704321
-TIME BARRIER: 28717156.076408
-TIME BARRIER: 28781679.404945
-TIME BARRIER: 28846411.398111
-TIME BARRIER: 28909451.491767
-TIME BARRIER: 28972909.395774
-TIME BARRIER: 29036352.302608
-TIME BARRIER: 29099645.348170
-TIME BARRIER: 29163242.551049
-TIME BARRIER: 29227337.984330
-TIME BARRIER: 29291998.299801
-TIME BARRIER: 29356242.071003
-TIME BARRIER: 29420276.209111
-TIME BARRIER: 29484808.755146
-TIME BARRIER: 29549693.474395
-TIME BARRIER: 29614195.458948
-TIME BARRIER: 29678573.869950
-TIME BARRIER: 29742625.152538
-TIME BARRIER: 29806710.382484
-TIME BARRIER: 29870551.617891
-TIME BARRIER: 29934157.860911
-TIME BARRIER: 29998436.381833
-TIME BARRIER: 30062852.486663
-TIME BARRIER: 30126937.383349
-TIME BARRIER: 30191139.201792
-TIME BARRIER: 30254765.425766
-TIME BARRIER: 30319103.571156
-TIME BARRIER: 30382802.662970
-TIME BARRIER: 30447549.330734
-TIME BARRIER: 30511851.034384
-TIME BARRIER: 30576616.499411
-TIME BARRIER: 30639133.394989
-TIME BARRIER: 30703238.917621
-TIME BARRIER: 30766434.156081
-TIME BARRIER: 30830596.402079
-TIME BARRIER: 30894923.526846
-TIME BARRIER: 30959134.605702
-TIME BARRIER: 31022913.182604
-TIME BARRIER: 31087182.948787
-TIME BARRIER: 31151795.865579
-TIME BARRIER: 31216151.530417
-TIME BARRIER: 31280475.006790
-TIME BARRIER: 31343743.473884
-TIME BARRIER: 31407170.684421
-TIME BARRIER: 31471343.078166
-TIME BARRIER: 31535691.980143
-TIME BARRIER: 31599829.978447
-TIME BARRIER: 31663864.172228
-TIME BARRIER: 31727572.720630
-TIME BARRIER: 31791843.123279
-TIME BARRIER: 31856182.924975
-TIME BARRIER: 31920103.821798
-TIME BARRIER: 31984347.046389
-TIME BARRIER: 32049055.916067
-TIME BARRIER: 32113229.193711
-TIME BARRIER: 32178025.030306
-TIME BARRIER: 32242111.026036
-TIME BARRIER: 32307047.705012
-TIME BARRIER: 32372443.776413
-TIME BARRIER: 32436203.617731
-TIME BARRIER: 32500620.978922
-TIME BARRIER: 32565482.778118
-TIME BARRIER: 32629815.770552
-TIME BARRIER: 32694137.024952
-TIME BARRIER: 32758323.072662
-TIME BARRIER: 32822996.521354
-TIME BARRIER: 32887318.602299
-TIME BARRIER: 32951465.082338
-TIME BARRIER: 33015678.894034
-TIME BARRIER: 33079757.867953
-TIME BARRIER: 33144271.272178
-TIME BARRIER: 33208704.696448
-TIME BARRIER: 33272414.849095
-TIME BARRIER: 33335714.938109
-TIME BARRIER: 33399523.514921
-TIME BARRIER: 33463246.076423
-TIME BARRIER: 33527748.264448
-TIME BARRIER: 33591413.077852
-TIME BARRIER: 33655655.666534
+TIME BARRIER: 39317.001470
+TIME BARRIER: 102127.133632
+TIME BARRIER: 162821.507227
+TIME BARRIER: 223643.034533
+TIME BARRIER: 284633.014366
+TIME BARRIER: 322409.692845
+TIME BARRIER: 383010.320373
+TIME BARRIER: 416340.817344
+TIME BARRIER: 476747.428582
+TIME BARRIER: 536945.304171
+TIME BARRIER: 598634.233983
+TIME BARRIER: 658959.126368
+TIME BARRIER: 711745.071232
+TIME BARRIER: 772557.324922
+TIME BARRIER: 817628.682734
+TIME BARRIER: 878377.705957
+TIME BARRIER: 919159.873752
+TIME BARRIER: 979530.162614
+TIME BARRIER: 1019889.419945
+TIME BARRIER: 1080149.522390
+TIME BARRIER: 1122096.695911
+TIME BARRIER: 1185054.648854
+TIME BARRIER: 1227373.740199
+TIME BARRIER: 1288627.740498
+TIME BARRIER: 1331532.999797
+TIME BARRIER: 1393314.522516
+TIME BARRIER: 1438471.361579
+TIME BARRIER: 1499212.475100
+TIME BARRIER: 1549348.893230
+TIME BARRIER: 1603463.000000
+TIME BARRIER: 1660302.493110
+TIME BARRIER: 1711375.718351
+TIME BARRIER: 1772277.139680
+TIME BARRIER: 1824834.764179
+TIME BARRIER: 1885940.379119
+TIME BARRIER: 1941048.051915
+TIME BARRIER: 2001463.310707
+TIME BARRIER: 2057459.057017
+TIME BARRIER: 2113491.917741
+TIME BARRIER: 2174770.554459
+TIME BARRIER: 2230681.061940
+TIME BARRIER: 2291845.620513
+TIME BARRIER: 2349172.969501
+TIME BARRIER: 2408108.066873
+TIME BARRIER: 2470049.175192
+TIME BARRIER: 2530134.248676
+TIME BARRIER: 2592366.895580
+TIME BARRIER: 2653384.337511
+TIME BARRIER: 2713512.130427
+TIME BARRIER: 2776419.185190
+TIME BARRIER: 2837553.756685
+TIME BARRIER: 2900244.088973
+TIME BARRIER: 2961242.801109
+TIME BARRIER: 3023330.569174
+TIME BARRIER: 3085991.520617
+TIME BARRIER: 3148080.986892
+TIME BARRIER: 3210075.397931
+TIME BARRIER: 3272426.062592
+TIME BARRIER: 3333244.988702
+TIME BARRIER: 3396039.764045
+TIME BARRIER: 3458313.680967
+TIME BARRIER: 3521388.714352
+TIME BARRIER: 3584385.226101
+TIME BARRIER: 3646346.575404
+TIME BARRIER: 3707995.490453
+TIME BARRIER: 3770564.410595
+TIME BARRIER: 3832648.281875
+TIME BARRIER: 3895804.657235
+TIME BARRIER: 3956259.092591
+TIME BARRIER: 4016977.931574
+TIME BARRIER: 4079937.634799
+TIME BARRIER: 4140520.599737
+TIME BARRIER: 4202211.820105
+TIME BARRIER: 4266297.642588
+TIME BARRIER: 4326178.314171
+TIME BARRIER: 4388278.926931
+TIME BARRIER: 4448531.167992
+TIME BARRIER: 4508963.772208
+TIME BARRIER: 4571661.441406
+TIME BARRIER: 4631154.370079
+TIME BARRIER: 4694360.263786
+TIME BARRIER: 4753064.255684
+TIME BARRIER: 4810821.916108
+TIME BARRIER: 4874319.269571
+TIME BARRIER: 4934143.824146
+TIME BARRIER: 4996892.173335
+TIME BARRIER: 5055996.542154
+TIME BARRIER: 5115173.720013
+TIME BARRIER: 5177586.914836
+TIME BARRIER: 5236804.462063
+TIME BARRIER: 5299864.603770
+TIME BARRIER: 5358686.596654
+TIME BARRIER: 5417521.538467
+TIME BARRIER: 5479704.246355
+TIME BARRIER: 5539335.882253
+TIME BARRIER: 5600384.000000
+TIME BARRIER: 5663753.246475
+TIME BARRIER: 5725006.906755
+TIME BARRIER: 5789022.228699
+TIME BARRIER: 5848752.625419
+TIME BARRIER: 5908629.324928
+TIME BARRIER: 5971582.517905
+TIME BARRIER: 6032164.506906
+TIME BARRIER: 6094991.094761
+TIME BARRIER: 6154897.199186
+TIME BARRIER: 6215199.779038
+TIME BARRIER: 6277439.601767
+TIME BARRIER: 6336737.358122
+TIME BARRIER: 6399646.765450
+TIME BARRIER: 6459935.803384
+TIME BARRIER: 6520363.148064
+TIME BARRIER: 6582501.272086
+TIME BARRIER: 6642134.521078
+TIME BARRIER: 6702563.091098
+TIME BARRIER: 6764764.847544
+TIME BARRIER: 6824549.324559
+TIME BARRIER: 6887495.295102
+TIME BARRIER: 6948086.102961
+TIME BARRIER: 7009153.508465
+TIME BARRIER: 7072052.727356
+TIME BARRIER: 7132933.899453
+TIME BARRIER: 7195581.512325
+TIME BARRIER: 7255281.388689
+TIME BARRIER: 7316381.874502
+TIME BARRIER: 7378920.487364
+TIME BARRIER: 7439650.451184
+TIME BARRIER: 7501007.272730
+TIME BARRIER: 7563870.236914
+TIME BARRIER: 7624897.624696
+TIME BARRIER: 7688469.788044
+TIME BARRIER: 7750442.290200
+TIME BARRIER: 7811042.193247
+TIME BARRIER: 7873597.062255
+TIME BARRIER: 7934570.730734
+TIME BARRIER: 7997096.529767
+TIME BARRIER: 8057227.598473
+TIME BARRIER: 8117430.892119
+TIME BARRIER: 8178965.528080
+TIME BARRIER: 8240187.734928
+TIME BARRIER: 8301072.880596
+TIME BARRIER: 8363425.708638
+TIME BARRIER: 8424460.063561
+TIME BARRIER: 8486972.688436
+TIME BARRIER: 8548747.794944
+TIME BARRIER: 8610130.235751
+TIME BARRIER: 8673791.947032
+TIME BARRIER: 8735925.970976
+TIME BARRIER: 8799305.130943
+TIME BARRIER: 8862488.204308
+TIME BARRIER: 8924630.170862
+TIME BARRIER: 8988858.103341
+TIME BARRIER: 9052150.930605
+TIME BARRIER: 9114787.521022
+TIME BARRIER: 9178536.484396
+TIME BARRIER: 9241231.703215
+TIME BARRIER: 9302632.198951
+TIME BARRIER: 9365657.005091
+TIME BARRIER: 9426519.170199
+TIME BARRIER: 9489913.680983
+TIME BARRIER: 9551767.630095
+TIME BARRIER: 9614117.347138
+TIME BARRIER: 9678134.935603
+TIME BARRIER: 9740471.476336
+TIME BARRIER: 9803509.762609
+TIME BARRIER: 9866910.320279
+TIME BARRIER: 9929654.981809
+TIME BARRIER: 9993499.790616
+TIME BARRIER: 10055457.815517
+TIME BARRIER: 10117343.748306
+TIME BARRIER: 10180634.855166
+TIME BARRIER: 10242733.240920
+TIME BARRIER: 10304024.953547
+TIME BARRIER: 10366858.309184
+TIME BARRIER: 10429048.436614
+TIME BARRIER: 10490877.570518
+TIME BARRIER: 10552761.118142
+TIME BARRIER: 10615670.722745
+TIME BARRIER: 10679375.144687
+TIME BARRIER: 10740999.335101
+TIME BARRIER: 10802233.327303
+TIME BARRIER: 10865355.037017
+TIME BARRIER: 10927020.902477
+TIME BARRIER: 10990003.149733
+TIME BARRIER: 11051104.210367
+TIME BARRIER: 11113383.677376
+TIME BARRIER: 11176323.607465
+TIME BARRIER: 11237817.911126
+TIME BARRIER: 11300222.000000
+TIME BARRIER: 11363097.227463
+TIME BARRIER: 11425679.549913
+TIME BARRIER: 11488678.909804
+TIME BARRIER: 11550673.861328
+TIME BARRIER: 11612710.584958
+TIME BARRIER: 11675759.338988
+TIME BARRIER: 11737424.442687
+TIME BARRIER: 11800151.898359
+TIME BARRIER: 11862682.495742
+TIME BARRIER: 11924392.702220
+TIME BARRIER: 11988351.268882
+TIME BARRIER: 12051120.548556
+TIME BARRIER: 12113832.307410
+TIME BARRIER: 12177234.554273
+TIME BARRIER: 12239843.117700
+TIME BARRIER: 12302535.594442
+TIME BARRIER: 12366824.241177
+TIME BARRIER: 12430264.356702
+TIME BARRIER: 12493672.671651
+TIME BARRIER: 12556224.307475
+TIME BARRIER: 12618739.886030
+TIME BARRIER: 12682190.056788
+TIME BARRIER: 12745539.680200
+TIME BARRIER: 12808419.904606
+TIME BARRIER: 12872300.523645
+TIME BARRIER: 12934374.417108
+TIME BARRIER: 12998946.078998
+TIME BARRIER: 13061948.738801
+TIME BARRIER: 13125534.224060
+TIME BARRIER: 13189288.262894
+TIME BARRIER: 13252452.495819
+TIME BARRIER: 13315490.584144
+TIME BARRIER: 13378491.717340
+TIME BARRIER: 13440470.927982
+TIME BARRIER: 13502839.912432
+TIME BARRIER: 13566461.933719
+TIME BARRIER: 13629799.766403
+TIME BARRIER: 13693709.403772
+TIME BARRIER: 13756791.998888
+TIME BARRIER: 13819025.723590
+TIME BARRIER: 13882300.858621
+TIME BARRIER: 13945089.799212
+TIME BARRIER: 14007454.868863
+TIME BARRIER: 14069850.535350
+TIME BARRIER: 14132297.644965
+TIME BARRIER: 14195650.023662
+TIME BARRIER: 14258479.715670
+TIME BARRIER: 14320936.196066
+TIME BARRIER: 14383997.094019
+TIME BARRIER: 14446580.998540
+TIME BARRIER: 14508072.127546
+TIME BARRIER: 14571594.173823
+TIME BARRIER: 14634217.672416
+TIME BARRIER: 14697148.810213
+TIME BARRIER: 14759795.942991
+TIME BARRIER: 14822780.638558
+TIME BARRIER: 14886346.425032
+TIME BARRIER: 14949497.857545
+TIME BARRIER: 15012360.004275
+TIME BARRIER: 15075578.437091
+TIME BARRIER: 15139264.937448
+TIME BARRIER: 15202572.281984
+TIME BARRIER: 15266035.308040
+TIME BARRIER: 15329035.821543
+TIME BARRIER: 15392324.386862
+TIME BARRIER: 15454279.011633
+TIME BARRIER: 15516751.218142
+TIME BARRIER: 15579617.024649
+TIME BARRIER: 15641942.686181
+TIME BARRIER: 15705248.507385
+TIME BARRIER: 15768087.917278
+TIME BARRIER: 15829639.621707
+TIME BARRIER: 15892851.035872
+TIME BARRIER: 15955098.293418
+TIME BARRIER: 16017029.224494
+TIME BARRIER: 16080217.655980
+TIME BARRIER: 16142379.851466
+TIME BARRIER: 16204347.346155
+TIME BARRIER: 16266812.491111
+TIME BARRIER: 16329003.686234
+TIME BARRIER: 16391267.236997
+TIME BARRIER: 16454303.601297
+TIME BARRIER: 16517134.874165
+TIME BARRIER: 16580187.328906
+TIME BARRIER: 16642959.222700
+TIME BARRIER: 16704759.078000
+TIME BARRIER: 16767800.730482
+TIME BARRIER: 16830287.234719
+TIME BARRIER: 16893310.294963
+TIME BARRIER: 16955882.331974
+TIME BARRIER: 17018418.144287
+TIME BARRIER: 17081399.465395
+TIME BARRIER: 17143984.510888
+TIME BARRIER: 17206343.620323
+TIME BARRIER: 17268549.037912
+TIME BARRIER: 17330817.178220
+TIME BARRIER: 17393511.508286
+TIME BARRIER: 17456218.246964
+TIME BARRIER: 17517963.467218
+TIME BARRIER: 17579993.813958
+TIME BARRIER: 17642532.385950
+TIME BARRIER: 17705590.757706
+TIME BARRIER: 17768907.275587
+TIME BARRIER: 17831326.427410
+TIME BARRIER: 17894616.924937
+TIME BARRIER: 17957221.857859
+TIME BARRIER: 18019843.516020
+TIME BARRIER: 18082911.485974
+TIME BARRIER: 18145694.353243
+TIME BARRIER: 18208936.713362
+TIME BARRIER: 18271801.010980
+TIME BARRIER: 18335185.387645
+TIME BARRIER: 18398121.934704
+TIME BARRIER: 18462154.108013
+TIME BARRIER: 18525805.035115
+TIME BARRIER: 18588105.578426
+TIME BARRIER: 18651113.211465
+TIME BARRIER: 18713214.129129
+TIME BARRIER: 18775783.292452
+TIME BARRIER: 18837891.902467
+TIME BARRIER: 18900102.884277
+TIME BARRIER: 18963489.480002
+TIME BARRIER: 19026964.662482
+TIME BARRIER: 19089766.637285
+TIME BARRIER: 19152753.557446
+TIME BARRIER: 19215574.814700
+TIME BARRIER: 19278319.811584
+TIME BARRIER: 19341659.299533
+TIME BARRIER: 19404874.042919
+TIME BARRIER: 19467360.059860
+TIME BARRIER: 19531277.605989
+TIME BARRIER: 19593953.783508
+TIME BARRIER: 19657323.298346
+TIME BARRIER: 19720626.005585
+TIME BARRIER: 19783636.138281
+TIME BARRIER: 19846096.651974
+TIME BARRIER: 19908105.081428
+TIME BARRIER: 19970259.010380
+TIME BARRIER: 20033163.793592
+TIME BARRIER: 20096719.605770
+TIME BARRIER: 20160319.234829
+TIME BARRIER: 20223617.577652
+TIME BARRIER: 20285721.626673
+TIME BARRIER: 20347414.519619
+TIME BARRIER: 20411262.540298
+TIME BARRIER: 20475372.601646
+TIME BARRIER: 20537794.265652
+TIME BARRIER: 20601294.449348
+TIME BARRIER: 20664477.473929
+TIME BARRIER: 20727579.200694
+TIME BARRIER: 20790440.801965
+TIME BARRIER: 20853147.155861
+TIME BARRIER: 20916548.750571
+TIME BARRIER: 20979268.004674
+TIME BARRIER: 21043028.659722
+TIME BARRIER: 21106376.511461
+TIME BARRIER: 21169495.792279
+TIME BARRIER: 21232636.322479
+TIME BARRIER: 21296012.247679
+TIME BARRIER: 21359430.594446
+TIME BARRIER: 21422622.007509
+TIME BARRIER: 21485536.636829
+TIME BARRIER: 21549147.517625
+TIME BARRIER: 21612875.232907
+TIME BARRIER: 21676066.391899
+TIME BARRIER: 21739096.546529
+TIME BARRIER: 21802402.414687
+TIME BARRIER: 21865331.739003
+TIME BARRIER: 21928470.436218
+TIME BARRIER: 21990718.311058
+TIME BARRIER: 22053394.459726
+TIME BARRIER: 22115619.926585
+TIME BARRIER: 22178498.073261
+TIME BARRIER: 22241237.171562
+TIME BARRIER: 22303726.819437
+TIME BARRIER: 22366276.312752
+TIME BARRIER: 22429704.442344
+TIME BARRIER: 22492574.044684
+TIME BARRIER: 22556356.021730
+TIME BARRIER: 22619281.999769
+TIME BARRIER: 22683016.765441
+TIME BARRIER: 22746617.515381
+TIME BARRIER: 22809494.045627
+TIME BARRIER: 22872100.882546
+TIME BARRIER: 22935470.831660
+TIME BARRIER: 22998440.962656
+TIME BARRIER: 23061462.515375
+TIME BARRIER: 23123832.385248
+TIME BARRIER: 23186255.050576
+TIME BARRIER: 23249577.819909
+TIME BARRIER: 23312569.805467
+TIME BARRIER: 23376032.340177
+TIME BARRIER: 23439284.718547
+TIME BARRIER: 23502169.449222
+TIME BARRIER: 23565285.010520
+TIME BARRIER: 23628741.711720
+TIME BARRIER: 23692358.313332
+TIME BARRIER: 23755339.667739
+TIME BARRIER: 23818428.253056
+TIME BARRIER: 23881614.673223
+TIME BARRIER: 23944267.349961
+TIME BARRIER: 24006401.399976
+TIME BARRIER: 24068604.416756
+TIME BARRIER: 24131204.116196
+TIME BARRIER: 24194950.607552
+TIME BARRIER: 24258164.892539
+TIME BARRIER: 24321573.704392
+TIME BARRIER: 24384908.923264
+TIME BARRIER: 24448185.365374
+TIME BARRIER: 24511247.256410
+TIME BARRIER: 24574700.853905
+TIME BARRIER: 24637744.979618
+TIME BARRIER: 24700868.161163
+TIME BARRIER: 24764486.053825
+TIME BARRIER: 24828548.806626
+TIME BARRIER: 24891198.100993
+TIME BARRIER: 24955072.906135
+TIME BARRIER: 25018463.709575
+TIME BARRIER: 25081865.246122
+TIME BARRIER: 25145479.497293
+TIME BARRIER: 25208658.924302
+TIME BARRIER: 25271765.830165
+TIME BARRIER: 25335493.106513
+TIME BARRIER: 25399802.346121
+TIME BARRIER: 25462617.016660
+TIME BARRIER: 25526216.392870
+TIME BARRIER: 25589050.413615
+TIME BARRIER: 25652458.799830
+TIME BARRIER: 25715322.151408
+TIME BARRIER: 25779670.579530
+TIME BARRIER: 25842861.821676
+TIME BARRIER: 25906375.689301
+TIME BARRIER: 25969402.427097
+TIME BARRIER: 26032652.892795
+TIME BARRIER: 26096095.495638
+TIME BARRIER: 26158770.670682
+TIME BARRIER: 26220977.303426
+TIME BARRIER: 26283782.570320
+TIME BARRIER: 26347098.020745
+TIME BARRIER: 26410302.976905
+TIME BARRIER: 26473256.921938
+TIME BARRIER: 26536584.459285
+TIME BARRIER: 26599831.583333
+TIME BARRIER: 26662508.322363
+TIME BARRIER: 26725076.031988
+TIME BARRIER: 26788271.519455
+TIME BARRIER: 26851627.854879
+TIME BARRIER: 26914488.242136
+TIME BARRIER: 26977665.885112
+TIME BARRIER: 27040481.638653
+TIME BARRIER: 27102878.157001
+TIME BARRIER: 27165946.918183
+TIME BARRIER: 27228643.327893
+TIME BARRIER: 27291376.840538
+TIME BARRIER: 27354094.702112
+TIME BARRIER: 27415853.975467
+TIME BARRIER: 27479186.083048
+TIME BARRIER: 27542554.316956
+TIME BARRIER: 27605961.433425
+TIME BARRIER: 27668176.737833
+TIME BARRIER: 27730090.004335
+TIME BARRIER: 27792539.099594
+TIME BARRIER: 27855255.762112
+TIME BARRIER: 27918108.183741
+TIME BARRIER: 27981106.365837
+TIME BARRIER: 28044358.613020
+TIME BARRIER: 28107000.211159
+TIME BARRIER: 28170285.400229
+TIME BARRIER: 28233221.942043
+TIME BARRIER: 28296029.652449
+TIME BARRIER: 28358968.968485
+TIME BARRIER: 28421614.812480
+TIME BARRIER: 28484778.579407
+TIME BARRIER: 28547126.338447
+TIME BARRIER: 28609457.864678
+TIME BARRIER: 28671896.119869
+TIME BARRIER: 28734908.523292
+TIME BARRIER: 28797025.669042
+TIME BARRIER: 28858199.425193
+TIME BARRIER: 28920631.849643
+TIME BARRIER: 28984213.707726
+TIME BARRIER: 29047807.798124
+TIME BARRIER: 29110496.771733
+TIME BARRIER: 29173138.021880
+TIME BARRIER: 29236447.261658
+TIME BARRIER: 29299628.481035
+TIME BARRIER: 29362102.958822
+TIME BARRIER: 29424420.185793
+TIME BARRIER: 29487292.368520
+TIME BARRIER: 29549812.044300
+TIME BARRIER: 29612425.113245
+TIME BARRIER: 29674683.163948
+TIME BARRIER: 29737459.526084
+TIME BARRIER: 29800219.000000
+TIME BARRIER: 29863345.538299
+TIME BARRIER: 29926747.178000
+TIME BARRIER: 29990273.996428
+TIME BARRIER: 30053926.182251
+TIME BARRIER: 30116887.262009
+TIME BARRIER: 30180029.234926
+TIME BARRIER: 30243420.231105
+TIME BARRIER: 30307575.393477
+TIME BARRIER: 30371053.839675
+TIME BARRIER: 30434363.654837
+TIME BARRIER: 30497914.245259
+TIME BARRIER: 30561726.893210
+TIME BARRIER: 30624895.823203
+TIME BARRIER: 30688506.799555
+TIME BARRIER: 30751881.415123
+TIME BARRIER: 30815131.794752
+TIME BARRIER: 30878772.925654
+TIME BARRIER: 30942076.256389
+TIME BARRIER: 31005512.852634
+TIME BARRIER: 31068892.790064
+TIME BARRIER: 31131937.425372
+TIME BARRIER: 31195902.536357
+TIME BARRIER: 31259550.334013
+TIME BARRIER: 31322969.554551
+TIME BARRIER: 31386000.902703
+TIME BARRIER: 31449542.262963
+TIME BARRIER: 31512477.555637
+TIME BARRIER: 31575254.689157
+TIME BARRIER: 31637852.493032
+TIME BARRIER: 31700744.731159
+TIME BARRIER: 31764206.137346
+TIME BARRIER: 31827431.152736
+TIME BARRIER: 31890009.347673
+TIME BARRIER: 31953157.418609
+TIME BARRIER: 32015406.709605
+TIME BARRIER: 32078705.476210
+TIME BARRIER: 32141284.678604
+TIME BARRIER: 32204710.007319
+TIME BARRIER: 32268206.726619
+TIME BARRIER: 32331473.602895
+TIME BARRIER: 32394659.138349
+TIME BARRIER: 32456991.649738
+TIME BARRIER: 32519318.807810
+TIME BARRIER: 32582712.622200
+TIME BARRIER: 32645733.271331
+TIME BARRIER: 32708535.277713
+TIME BARRIER: 32771182.373427
+TIME BARRIER: 32833618.412679
+TIME BARRIER: 32896533.195325
+TIME BARRIER: 32959982.338617
+TIME BARRIER: 33023374.603713
+TIME BARRIER: 33086389.297604
+TIME BARRIER: 33149617.630227
+TIME BARRIER: 33212953.002053
+TIME BARRIER: 33276142.936059
+TIME BARRIER: 33339440.426346
+TIME BARRIER: 33403092.938302
+TIME BARRIER: 33466553.540906
+TIME BARRIER: 33529865.254584
+TIME BARRIER: 33593168.171846
+TIME BARRIER: 33655794.747683
 
 --------- SIMULATION CORRECTLY COMPLETED ----------
 Done.
@@ -808,8 +727,8 @@ Done.
 Merging jsons in lp_data...
 Done, results are in simulation_results.json.
 Done.
-FINISHED CPU 761.69 MEM 37500 MAXMEM 25107716 STALE 0 MAXMEM_RSS 22336184
-<time name="ALL">754670</time>
+FINISHED CPU 784.33 MEM 0 MAXMEM 25753924 STALE 0 MAXMEM_RSS 22940420
+<time name="ALL">776790</time>
 
-Script done on 2020-12-29 19:59:09+01:00 [COMMAND_EXIT_CODE="0"]
-Test 80-400 COMPLETE at 29/12/2020 - 19:59:09
+Script done on 2020-12-30 16:59:35+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 30/12/2020 - 16:59:35
