@@ -8,6 +8,7 @@ import visualizations.arrival_rate_histograms as arrival_rate_histograms
 import visualizations.sim_model_utilization_factor_histograms as sim_model_utilization_factor_histograms
 import visualizations.sim_model_utilization_factor_cat_histograms as sim_model_utilization_factor_cat_histograms
 import visualizations.sim_model_response_time_histograms as sim_model_response_time_histograms
+import visualizations.sim_model_N_cat_histograms as sim_model_N_cat_histograms
 import visualizations.sim_model_response_timeB_histograms as sim_model_response_timeB_histograms
 import visualizations.sim_model_arrival_rate_histograms as sim_model_arrival_rate_histograms
 import visualizations.sim_model_service_demand_histograms as sim_model_service_demand_histograms
@@ -44,11 +45,25 @@ def build_name_function(path_to_tests, scenario, seed, policy, preemption, sim_t
 
 path_to_tests = "../model_tests/"
 
-scenarios = ["2-4-8-16/"]
+#scenarios = ["2-4-8-16/"]
+
+#############
+#FINAL TESTS
+############
+#scenarios = ["80-400-realistic/"]
+scenarios = ["2-4-8-16/", "2-4-8-16_balanced/", "2-4-8-16_multicore/", "2-4-8-16_powerfull/", "2-4-8-16_no_reply/", "2-4-8-16_one_class/", "80-400/"]
+
+
 
 #seed_list = ["1996", "2006"]
-#seed_list = ["1492", "1789", "1984", "2006", "2077"]
-seed_list = ["1996"]
+#seed_list = ["1492"]
+
+#############
+#FINAL TESTS
+############
+#seed_list = ["1492", "1789"]
+seed_list = ["1492", "1789", "1984", "2006", "2077"]
+
 policy_list = ["FIFO", "RR"]
 preemption_list = ["preempt_no", "preempt_yes"]
 
@@ -98,8 +113,9 @@ for scenario in scenarios:
     print("Sim model Comparison")
 
     sim_model_utilization_factor_histograms.plot(files_list, policies, path_to_print)
-    
-    sim_model_N_vs_U.plot(files_list, policies, path_to_print)
+
+    ##DISABLED
+    ##sim_model_N_vs_U.plot(files_list, policies, path_to_print)
 
     sim_model_N_vs_U_complete.plot(files_list, policies, path_to_print)
     
@@ -108,6 +124,8 @@ for scenario in scenarios:
     sim_model_R_vs_U_complete.plot(files_list, policies, path_to_print)
     
     sim_model_response_time_histograms.plot(files_list, policies, path_to_print)
+    
+    sim_model_N_cat_histograms.plot(files_list, policies, path_to_print)
     
     sim_model_response_timeB_histograms.plot(files_list, policies, path_to_print)
     
@@ -120,6 +138,8 @@ for scenario in scenarios:
 ##################################
 #PREPARATION SECOND CHART
 ##############################
+
+print("Convergence")
 
 scenarios = ["2-4-8-16_convergence/"]
 
@@ -141,6 +161,9 @@ convergence.plot(files_list, sim_time_end_list, path_to_print, "utilization_fact
 convergence.plot(files_list, sim_time_end_list, path_to_print, "lambda_in")
 convergence.plot(files_list, sim_time_end_list, path_to_print, "service_demand")
 
+
+
+print("Cost and performance")
 
 scenarios = ["2-4-8-16/", "2-4-8-16_balanced/", "2-4-8-16_multicore/", "2-4-8-16_powerfull/"]
 names_scenarios = ["unbalanced", "balanced", "multicore", "powerfull"]

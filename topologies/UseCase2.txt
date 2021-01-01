@@ -1,2 +1,2 @@
 central_type_and_additional_info  = Type-use_case-1,0.3,Type-use_case-1
-2000 Type-use_case-1: 200 Type-use_case-1
+2000 Type-use_case-2: 200 Type-use_case-2
