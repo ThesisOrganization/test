@@ -6,11 +6,11 @@
             "batch": 2
         },
         "service_times": {
-          "telemetry": 0.0020,
-          "transition": 0.0,
-          "command": 0.0,
-          "batch": 0.0,
-          "reply": 0.0
+          "telemetry": 0.00002,
+          "transition": 0.0001,
+          "command": 0.00001,
+          "batch": 0.00004,
+          "reply": 0.0001
         },
         "cores":1,
         "delay_upper_router": 0.3,

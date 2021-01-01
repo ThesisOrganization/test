@@ -1,6 +1,6 @@
   {
         "service_time_commands_act": 0.6,
-        "rate_trans_act": 0.138,
+        "rate_trans_act": 0.27,
         "measure_type": "0",
         "job_type": "BATCH",
         "weight": 0.4,

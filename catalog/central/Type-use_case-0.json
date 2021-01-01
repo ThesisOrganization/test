@@ -6,7 +6,7 @@
             "batch": 2
         },
         "service_times": {
-          "telemetry": 0.0020,
+          "telemetry": 0.004,
           "transition": 0.0,
           "command": 0.0,
           "batch": 0.0,
