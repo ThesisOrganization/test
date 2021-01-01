@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-SAVE = False
-PRINT = True
+SAVE = True
+PRINT = False
 
 ####################################
 #UTILS
@@ -28,7 +28,7 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)
     ax.yaxis.set_label_coords(-0.03, 1.1)
-    
+
     len_names = len(names)
     len_values = len(values)
 
@@ -43,7 +43,7 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     else:
         plt.bar(x_pos, values, width = 0.5)
     plt.xticks(x_pos, names, rotation= '45')
-    
+
     if ISLABEL:
         for i, y in enumerate(values):
             if ISSCIE:
@@ -72,7 +72,7 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
 
 
 def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, legend_labels, colors=None, PATH=None):
-    
+
     WIDTH = 0.35
     DISTANCE_BETWEEN_GROUPS = 0.15
     START_DISTANCE = DISTANCE_BETWEEN_GROUPS
@@ -229,7 +229,7 @@ def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM,
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)
     ax.yaxis.set_label_coords(-0.03, 1.02)
-    
+
 
     len_x = len(x_number_values)
     len_y = len(y_number_values)
@@ -270,7 +270,7 @@ def draw_lines_scatterplot(y_number_values, x_number_values, TITLE, XLABEL, YLAB
     ax = plt.subplot(111)
     ax.set_ylim(bottom=YBOTTOM, top=YTOP)
     ax.yaxis.set_label_coords(-0.03, 1.02)
-    
+
 
     len_x = len(x_number_values)
     len_y = len(y_number_values)
@@ -321,7 +321,7 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
         return
 
     ax.scatter(x = x_number_values, y = y_number_values)
-    
+
     #if len(labels) != len_x:
     #    print("ERROR: len(labels) != len_y")
     #    plt.close()
@@ -331,7 +331,7 @@ def draw_scatterplot(y_number_values, x_number_values, labels, TITLE, XLABEL, YL
     #    x = x_number_values[i]
     #    y = y_number_values[i]
     #    ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
-    
+
     plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
     plt.ylabel(YLABEL, fontsize=12, rotation=0)
@@ -358,7 +358,7 @@ def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XL
         print("num_classes != len(x_number_values)")
         plt.close()
         return
-    
+
     if len(labels) != num_classes:
         print("len(labels) != num_classes")
         plt.close()
@@ -372,12 +372,12 @@ def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XL
             print("ERROR: len_x != len_y")
             plt.close()
             return
-        
+
         if MARKERS == None:
             ax.scatter(x = x_number_values[i], y = y_number_values[i], label=labels[i], alpha=0.8)
         else:
             ax.scatter(x = x_number_values[i], y = y_number_values[i], marker=MARKERS[i], label=labels[i], alpha=0.8)
-    
+
     #if len(labels) != len_x:
     #    print("ERROR: len(labels) != len_y")
     #    plt.close()
@@ -387,7 +387,7 @@ def draw_classes_scatterplot(y_number_values, x_number_values, labels, TITLE, XL
     #    x = x_number_values[i]
     #    y = y_number_values[i]
     #    ax.text(x+0.1, y+0.1, labels[i], fontsize=12)
-    
+
     ax.legend()
 
     plt.title(TITLE, fontsize=18, y=1.13)

@@ -2,6 +2,8 @@ import os
 from plot_functions import plot_graph
 import re
 import math
+import json
+from response_time_computation.total_response_time import compute_total_response_time
 
 def get_data(path_to_tests,scenarios,simulator_list,threads_list,sim_proc_list,lp_aggr_list,preempt_list,parameters_list):
 	data_dict={}
@@ -220,5 +222,19 @@ sim_proc_list = ["no"] #["no", "yes"]
 lp_aggr_list = ["regional"]#["regional","local"]
 preempt_list = ["no"]
 parameters_list=["Rollback operations","Rollback length","Allocated Memory (MB)","Events per second"]
+
+usecase0dir=os.listdir("../use_cases/UseCase0")[0]
+usecase0_f=open("../use_cases/UseCase0/"+usecase0dir+"/simulation_results.json","r")
+usecase0_json=json.load(usecase0_f)
+usecase0_f.close()
+usecase0_data=compute_total_response_time(usecase0_json,0)
+usecase0_res_f=open("../use_cases/UseCase0/"+usecase0dir+"/total_response_times.json","w")
+
+usecase0_res_dict={}
+message_classes=["telemetry","transition","command","batch"]
+for message_class in range(0,len(message_classes)) :
+	usecase0_res_dict.update({ message_classes[message_class] : usecase0_data[message_class]})
+json.dump(usecase0_res_dict,usecase0_res_f,indent=2)
+usecase0_res_f.close()
 data_dict=get_data(path_to_tests,scenarios,simulator_list,threads_list,sim_proc_list,lp_aggr_list,preempt_list,parameters_list)
 plot_graphs(data_dict,parameters_list)
