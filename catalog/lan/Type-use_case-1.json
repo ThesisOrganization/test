@@ -1,8 +1,8 @@
 {
         "service_times": {
-            "telemetry": 0.12,
-            "transition": 0.15,
-            "command": 0.1
+            "telemetry": 0.00000000001,
+            "transition": 0.00000000001,
+            "command": 0.00000000001
         },
         "delay": 0.5,
         "cost": 2.3

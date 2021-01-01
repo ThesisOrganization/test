@@ -6,11 +6,11 @@
             "batch": 2
         },
         "service_times": {
-          "telemetry": 0.0005,
-          "transition": 0.0025,
-          "command": 0.0,
-          "batch": 0.0,
-          "reply": 0.0
+          "telemetry": 0.0002,
+          "transition": 0.001,
+          "command": 0.0001,
+          "batch": 0.0004,
+          "reply": 0.001
         },
         "cores":1,
         "prob_command_generated": 0.1,
