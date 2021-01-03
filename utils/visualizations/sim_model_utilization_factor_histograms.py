@@ -103,7 +103,7 @@ def group_lan_computation(groups, model_groups, type_element):
     return return_list_total_U, list_names
 
 
-def plot(files_list, name_files, path_out):
+def plot(files_list, name_files, path_out, passed_max_value=None):
     index_file = 0
 
     directory_name = "sim_model_utilization_factor_histograms/"
@@ -175,9 +175,12 @@ def plot(files_list, name_files, path_out):
 
         #draw_histograms(list(final_result), names, "Utilization factor", "Element Type", "U", 0.0, np.amax(final_result))
         #max_value = np.amax(final_result)
-        max_value = np.amax(final_result)
+        if passed_max_value == None:
+            max_value = np.amax(final_result)
+        else:
+            max_value = passed_max_value
         PERCENTAGE = 0.1
-        list_data_to_plot.append((list(final_result), names, "Sim vs Model Utilization factor", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((list(final_result), names, "Sim vs Model Utilization factor", "Element Type", "% difference of U", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1

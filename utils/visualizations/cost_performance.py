@@ -30,10 +30,17 @@ def plot(files_list, path_out, compute_total_response_time, compute_total_cost, 
         r1 = np.array(response_time1)
         r0 = np.array(response_time)
 
+        #print(r0)
+        #print(r1)
+        #print(r2)
+
         #print(r0 - r2)
+        #print(r0 - r2 - (r0 - r1) - np.array([0.01, 0.01, 0.01, 0.01]))
+        #print("end")
 
         #response_time_list.append(response_time)
         response_time_list.append(list(r0 - r2))
+        #response_time_list.append(list(r0 - r2 - (r0 - r1) - np.array([0.01, 0.01, 0.01, 0.01])))
 
         cost = compute_total_cost(sim_data)
         cost_list.append(cost)
