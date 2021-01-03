@@ -115,7 +115,7 @@ def plot(files_list, name_files, path_out):
         PERCENTAGE = 0.1
 
         #list_data_to_plot.append((list(final_result), list(final_result_x), [], "Scatterplot utilization factor and difference in percentage for N between model and simulation", "U", "Diff(N_m - N_s)", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
-        list_data_to_plot.append((list(final_result), list(final_result_x), ["Telemetry", "Transition", "Command", "Batch"], "Scatterplot utilization factor and difference in percentage for R between model and simulation", "U", "Diff(R_m - R_s)", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((list(final_result), list(final_result_x), ["Telemetry", "Transition", "Command", "Batch"], "% difference of R against U", "U", "% difference of R", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1

@@ -177,7 +177,7 @@ def plot(files_list, name_files, path_out):
         #max_value = np.amax(final_result)
         max_value = np.amax(final_result)
         PERCENTAGE = 0.1
-        list_data_to_plot.append((list(final_result), names, "Utilization factor difference in percentage between model and simulation", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((list(final_result), names, "Sim vs Model Utilization factor", "Element Type", "U", 0.0, max_value + PERCENTAGE*max_value, path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1

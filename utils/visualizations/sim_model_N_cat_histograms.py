@@ -225,7 +225,7 @@ def plot(files_list, name_files, path_out):
         #max_value = np.amax(final_result)
         max_value = np.amax(final_result)
         PERCENTAGE = 0.1
-        list_data_to_plot.append((np.transpose(final_result), names, "Sim vs Model Mean Number of elements", "Element Type", "% difference in N", 0.0, max_value + max_value*PERCENTAGE, ["Telemetry", "Transition", "Command", "Batch"], path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
+        list_data_to_plot.append((np.transpose(final_result), names, "Sim vs Model Mean Number of elements", "Element Type", "% difference of N", 0.0, max_value + max_value*PERCENTAGE, ["Telemetry", "Transition", "Command", "Batch"], path_out + directory_name + name_files[index_file][0] + "_" + name_files[index_file][1]))
 
 
         index_file += 1
