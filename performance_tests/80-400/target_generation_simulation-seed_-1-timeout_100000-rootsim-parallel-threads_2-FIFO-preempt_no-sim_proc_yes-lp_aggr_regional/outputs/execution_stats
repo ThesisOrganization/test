@@ -1,0 +1,52 @@
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 2 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+
+------------------------------------------------------------
+-----------------------NODE STATISTICS----------------------
+------------------------------------------------------------
+
+SIMULATION STARTED AT ..... : 2021-01-04 14:58:41 
+SIMULATION FINISHED AT .... : 2021-01-04 14:58:49 
+TOTAL SIMULATION TIME ..... : 7.984 seconds 
+
+TOTAL KERNELS ............. : 1 
+KERNEL ID ................. : 0 
+LPs HOSTED BY KERNEL....... : 80 
+TOTAL_THREADS ............. : 2 
+
+TOTAL EXECUTED EVENTS ..... : 378170 
+TOTAL COMMITTED EVENTS..... : 366667 
+TOTAL REPROCESSED EVENTS... : 232 
+TOTAL ROLLBACKS EXECUTED... : 49 
+TOTAL ANTIMESSAGES......... : 3833 
+ROLLBACK FREQUENCY......... : 0.01 %
+ROLLBACK LENGTH............ : 234.76 events
+EFFICIENCY................. : 96.96 %
+AVERAGE EVENT COST......... : 2.25 us
+AVERAGE EVENT COST (EMA)... : 1.73 us
+AVERAGE CHECKPOINT COST.... : 353.67 us
+AVERAGE RECOVERY COST...... : 133.40 us
+AVERAGE LOG SIZE........... : 963.09 KB
+
+IDLE CYCLES................ : 0
+LAST COMMITTED GVT ........ : 105312.590865
+NUMBER OF GVT REDUCTIONS... : 8
+SIMULATION TIME SPEED...... : 21262.50 units per GVT
+AVERAGE MEMORY USAGE....... : 2.65 GB
+PEAK MEMORY USAGE.......... : 7.25 GB
+
+--------- SIMULATION CORRECTLY COMPLETED ----------

@@ -1,0 +1,78 @@
+BEGIN test 154 of 168 with topology 80-400:.............04/01/2021 - 16:41:11
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt use parallel --wt=10 --sched=FIFO --sim-processing --simulation-timeout=100000 --timeout=75 --lp-aggregation=lan --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-use-parallel-threads_10-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-use-parallel-threads_10-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan
+Script started on 2021-01-04 16:42:03+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-use-parallel-threads_10-FIFO-preempt_no-sim_proc_yes-lp_aggr_lan" folder.
+Executing model...
+Parallel execution with 10 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: 91b3826ceecaae93662d4930724a9e3779e0e537
+***START SIMULATION***
+
+[36m
+Starting an execution with 10 THREADs, 881 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 5 set to CPU no 5
+Thread 6 set to CPU no 6
+Thread 7 set to CPU no 7
+Thread 8 set to CPU no 8
+Thread 0 set to CPU no 0
+Thread 9 set to CPU no 9
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095340903012213
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 75 seconds
+
+Session terminated.
+MEM CPU 454.20 MEM 60438236 MAXMEM 60438236 STALE 0 MAXMEM_RSS 59986840
+<time name="ALL">450420</time>
+
+Script done on 2021-01-04 16:42:56+01:00 [COMMAND_EXIT_CODE="143"]
+test 80-400 FAILED at 04/01/2021 - 16:42:56 with error code 143
+
+
+MAX RETRY (2) reached! SKIPPING

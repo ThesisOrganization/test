@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              60                60             22819             22390                 0                 0                 0          1.990929               946                 0                 0   
+              61                61             23062             22650                 0                 0                 0          1.955381               908                 0                 0   
+              62                62             21525             21110                 0                 0                 0          1.934030               888                 0                 0   
+              63                63             23817             23184                 1                 1               286          2.255070               913               276                 0   

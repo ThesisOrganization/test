@@ -1,0 +1,160 @@
+BEGIN test 28 of 168 with topology 80-400:.............04/01/2021 - 15:05:08
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=40 --sched=FIFO --preempt --sim-processing --simulation-timeout=100000 --timeout=75 --lp-aggregation=regional --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_40-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_40-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional
+Script started on 2021-01-04 15:05:08+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_40-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 40 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 40 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+TIME BARRIER 1581.981496
+TIME BARRIER 3609.654956
+TIME BARRIER 7552.297422
+TIME BARRIER 12512.906823
+TIME BARRIER 18997.210998
+TIME BARRIER 25517.172894
+TIME BARRIER 34180.501377
+TIME BARRIER 45852.660594
+TIME BARRIER 58516.784654
+TIME BARRIER 70613.107378
+TIME BARRIER 78490.615034
+TIME BARRIER 87234.782742
+TIME BARRIER 97505.943670
+TIME BARRIER 106892.061759
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 371.59 MEM 13816 MAXMEM 45054180 STALE 0 MAXMEM_RSS 43118732
+<time name="ALL">367630</time>
+
+Script done on 2021-01-04 15:05:30+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 04/01/2021 - 15:05:30

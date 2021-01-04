@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              32                32              8681              5423                32                 9              2628          3.015666              1069               347                 0   
+              33                33              8678              5865                14                 5              2106          2.765845              1088               402                 0   
+              34                34              8265              6239                44                 6              1233          3.563097              1163               526                 0   
+              35                35              7386              5532                22                 3              1129          3.339697              1144               318                 0   

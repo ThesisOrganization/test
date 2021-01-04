@@ -1,0 +1,76 @@
+BEGIN test 79 of 168 with topology 80-400:.............04/01/2021 - 15:18:59
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim parallel --wt=30 --sched=FIFO --preempt --simulation-timeout=100000 --timeout=75 --lp-aggregation=lan --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
+results path: /home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan
+Script started on 2021-01-04 15:18:59+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/80-400/target_generation_simulation-seed_-1-timeout_100000-rootsim-parallel-threads_30-FIFO-preempt_yes-sim_proc_no-lp_aggr_lan" folder.
+Executing model...
+Parallel execution with 30 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 30 used
+Number of Logical Processes: 881
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+TIME BARRIER 0.000000
+TIME BARRIER 1295.224571
+TIME BARRIER 2056.341532
+TIME BARRIER 16330.792908
+TIME BARRIER 31558.440571
+TIME BARRIER 40838.049950
+TIME BARRIER 39779.781533
+TIME BARRIER 65822.656884
+TIME BARRIER 75904.502928
+TIME BARRIER 96914.081525
+TIME BARRIER 125648.283463
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 292.52 MEM 0 MAXMEM 37890080 STALE 0 MAXMEM_RSS 33377052
+<time name="ALL">288500</time>
+
+Script done on 2021-01-04 15:19:19+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 04/01/2021 - 15:19:19

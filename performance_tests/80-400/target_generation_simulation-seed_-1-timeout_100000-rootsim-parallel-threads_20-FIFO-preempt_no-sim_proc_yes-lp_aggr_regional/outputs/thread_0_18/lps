@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              72                72              7591              6800                 0                 0                 0          5.225135              1295                 0                 0   
+              73                73              7459              6203                 2                 1               537          4.780265              1187               403                 0   
+              74                74              8196              6043                 0                 4              1340          4.218399              1120               402                 0   
+              75                75              7222              5942                 2                 1               549          4.371227              1202               284                 0   

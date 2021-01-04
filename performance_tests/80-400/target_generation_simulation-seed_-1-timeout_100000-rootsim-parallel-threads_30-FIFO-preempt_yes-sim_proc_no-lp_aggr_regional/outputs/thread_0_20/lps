@@ -1,0 +1,3 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              20                20             29978             21312                 8                 1               389          3.760791              1425               457                 0   
+              77                77             33355             22795                 4                 1              1955          4.315335              1707               480                 0   

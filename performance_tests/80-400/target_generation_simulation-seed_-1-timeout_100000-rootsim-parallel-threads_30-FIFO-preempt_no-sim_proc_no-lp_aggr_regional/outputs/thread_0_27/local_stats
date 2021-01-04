@@ -1,0 +1,31 @@
+------------------------------------------------------------
+----------------------THREAD STATISTICS---------------------
+------------------------------------------------------------
+
+TOTAL KERNELS ............. : 1 
+KERNEL ID ................. : 0 
+LPs HOSTED BY KERNEL....... : 80 
+TOTAL_THREADS ............. : 30 
+THREAD ID ................. : 27 
+LPs HOSTED BY THREAD ...... : 2 
+
+TOTAL EXECUTED EVENTS ..... : 14931 
+TOTAL COMMITTED EVENTS..... : 9006 
+TOTAL REPROCESSED EVENTS... : 33 
+TOTAL ROLLBACKS EXECUTED... : 5 
+TOTAL ANTIMESSAGES......... : 3939 
+ROLLBACK FREQUENCY......... : 0.03 %
+ROLLBACK LENGTH............ : 1185.00 events
+EFFICIENCY................. : 60.32 %
+AVERAGE EVENT COST......... : 6.78 us
+AVERAGE EVENT COST (EMA)... : 7.59 us
+AVERAGE CHECKPOINT COST.... : 2474.89 us
+AVERAGE RECOVERY COST...... : 602.11 us
+AVERAGE LOG SIZE........... : 962.35 KB
+
+IDLE CYCLES................ : 0
+NUMBER OF GVT REDUCTIONS... : 4
+SIMULATION TIME SPEED...... : 17033.52 units per GVT
+AVERAGE MEMORY USAGE....... : 3.46 GB
+
+--------- SIMULATION CORRECTLY COMPLETED ----------

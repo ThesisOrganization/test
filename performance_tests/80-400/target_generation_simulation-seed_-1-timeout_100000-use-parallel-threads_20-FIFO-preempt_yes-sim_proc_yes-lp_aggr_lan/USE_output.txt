@@ -1,0 +1,141 @@
+Script started on 2021-01-04 16:51:43+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/123" COLUMNS="190" LINES="51"]
+taken 4 parameters
+commit hash: 91b3826ceecaae93662d4930724a9e3779e0e537
+***START SIMULATION***
+
+[36m
+Starting an execution with 20 THREADs, 881 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 5 set to CPU no 5
+Thread 6 set to CPU no 6
+Thread 7 set to CPU no 7
+Thread 8 set to CPU no 8
+Thread 9 set to CPU no 9
+Thread 10 set to CPU no 10
+Thread 11 set to CPU no 11
+Thread 12 set to CPU no 12
+Thread 13 set to CPU no 13
+Thread 14 set to CPU no 14
+Thread 15 set to CPU no 15
+Thread 16 set to CPU no 16
+Thread 17 set to CPU no 17
+Thread 19 set to CPU no 19
+Thread 18 set to CPU no 18
+Thread 0 set to CPU no 0
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095340903012213
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 75 seconds
+[32m[14] Execution ended correctly
+[0m[32m[15] Execution ended correctly
+[0m[32m[16] Execution ended correctly
+[0m[32m[2] Execution ended correctly
+[0m[32m[6] Execution ended correctly
+[0m[32m[12] Execution ended correctly
+[0m[32m[11] Execution ended correctly
+[0m[32m[18] Execution ended correctly
+[0m[32m[4] Execution ended correctly
+[0m[32m[10] Execution ended correctly
+[0m[32m[5] Execution ended correctly
+[0m[32m[8] Execution ended correctly
+[0m[32m[17] Execution ended correctly
+[0m[32m[13] Execution ended correctly
+[0m[32m[1] Execution ended correctly
+[0m[32m[7] Execution ended correctly
+[0m[32m[3] Execution ended correctly
+[0m[32m[0] Execution ended correctly
+[0m[32m[9] Execution ended correctly
+[0m[32m[19] Execution ended correctly
+[0mSimulation final report:
+Thread: 20	LP: 881
+
+===== SYSTEM-WIDE STATISTICS =====
+[36mTotal events....................................:     25098788
+Committed events................................:     15944952 (63.53%)
+Events executed and committed tot...............:      1824658
+Straggler events................................:       373004 (1.49%)
+Anti events.....................................:      1145834 (4.57%)
+Useless events..................................:      2317934 (9.24%)
+Silent events...................................:      6835054 (27.23%)
+Silent events for GVT...........................:            0 (0.00%)
+
+Flushed events..................................:     19093669 (76.07%)
+Fetched operations..............................:     19409790 (77.33%)
+   Fetch succeed................................:     19409573 (100.00%)
+   Fetch failed.................................:          217 (0.00%)
+   Avg node traversed during fetch..............:       379.39
+
+Average time to process any event...............:      4170.38 clocks
+   Average time spent in standard execution.....:      5660.80 clocks
+   Average time spent in silent execution.......:       187.89 clocks (0.00%)
+Average time spent to fetch.....................:    127909.52 clocks (0.00%)
+   Average time in successfull fetch............:    127498.65 clocks (0.00%)
+   Average time in unsuccessfull fetch..........:  36877558.55 clocks (0.00%)
+Average time spent to Enqueue...................:      8858.06 clocks (0.00%)
+
+Save Checkpoint operations.........................................:      1827285
+Restore Checkpoint operations......................................:      1518838
+Rollback operations to resume LP state.............................:            0 (0.00%)
+Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (0.00%)
+Rollback ops to resume LP state and execute evt in future..........:            0 (0.00%)
+Rollback operations................................................:      1518838
+AVG Rollbacked Events per Rollback.................................:         1.53
+AVG Reprocessed Events per Rollback................................:         4.50
+CheckOnGVT invocations.............................................:            0
+
+Save Checkpoint time............................:    151989.04 clocks (120.61%)
+Restore Checkpoint time.........................:    117534.59 clocks (93.27%)
+Rollback time...................................:    126012.44 clocks
+Checkpoint mem..................................:       119240 B
+Checkpoint recalculations.......................:            0
+Checkpoint period...............................:            0
+
+Event not flushed tot...........................:            0
+Exposition forward Time tot.....................: 283455785700 clocks
+Exposition forward Time per event...............:     15520.14 clocks
+Exposition silent Time tot......................:   7974674914 clocks
+Exposition silent Time per event................:      1166.73 clocks
+
+Total resumable rollback executed...............:            0
+Avg events resume per rollback_resume...........:         -nan
+Avg clock resume per rollback resume............:         -nan clocks
+
+Total allocated space...........................: 49741 MB
+
+
+Total Clock.....................................: 3292308531036 clocks
+Event Processing................................: 104671535256 clocks (3.18%)
+Safe Processing.................................: 103387283798 clocks (3.14%)
+Frame Processing................................:  90270917994 clocks (2.74%)
+Rollback Processing.............................: 191392477536 clocks (5.81%)
+Checkpoint Saving...............................: 277727295082 clocks (8.44%)
+Fetch Successful................................: 2474694450768 clocks (75.17%)
+[0m
+Simulation ended (seconds):        76.11
+Simulation ended  (clocks): 167046233824
+Last gvt: 803699.100000
+EventsPerSec:    209504.28
+EventsPerThreadPerSec:     10475.21
+[32mExecution ended correctly
+[0m
+Script done on 2021-01-04 16:53:01+01:00 [COMMAND_EXIT_CODE="0"]

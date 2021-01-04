@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              44                44             19881             19660                 0                 0                 0          2.108999              1027                 0                 0   
+              45                45             22555             22210                 0                 0                 0          1.941388               900                 0                 0   
+              46                46             22149             21703                 3                 1                47          1.839993               974               233                 0   
+              47                47             23609             22796                 6                 1               123          1.897454               919               226                 0   

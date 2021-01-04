@@ -1,0 +1,5 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+               4                 4             22981             22940                 0                 0                 0          1.820808               889                 0                 0   
+               5                 5             22461             22227                 0                 1               223          2.598593               807               257                 0   
+               6                 6             24122             23544                14                 2               306          2.138504               984               331                 0   
+               7                 7             23375             23213                 8                 2                28          1.807701               937               170                 0   
