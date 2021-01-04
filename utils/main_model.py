@@ -16,6 +16,7 @@ import visualizations.sim_model_N_vs_U as sim_model_N_vs_U
 import visualizations.sim_model_N_vs_U_complete as sim_model_N_vs_U_complete
 import visualizations.sim_model_N_vs_U_sum as sim_model_N_vs_U_sum
 import visualizations.sim_model_R_vs_U_complete as sim_model_R_vs_U_complete
+import visualizations.sim_model_RA_vs_U_complete as sim_model_RA_vs_U_complete
 
 import visualizations.convergence as convergence
 
@@ -139,6 +140,8 @@ for scenario in scenarios:
     sim_model_N_vs_U_sum.plot(files_list, policies, path_to_print)
     
     sim_model_R_vs_U_complete.plot(files_list, policies, path_to_print)
+    
+    sim_model_RA_vs_U_complete.plot(files_list, policies, path_to_print)
     
     sim_model_response_time_histograms.plot(files_list, policies, path_to_print, passed_max_value=max_values[max_index_used])
     
