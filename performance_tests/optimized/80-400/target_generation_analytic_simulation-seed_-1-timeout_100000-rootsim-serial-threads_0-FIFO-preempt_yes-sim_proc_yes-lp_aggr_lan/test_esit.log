@@ -1,0 +1,186 @@
+BEGIN test 12 of 24 with topology 80-400:.............04/01/2021 - 18:23:19
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim serial --sched=FIFO --preempt --sim-processing --simulation-timeout=100000 --timeout=75 --lp-aggregation=lan --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan
+results path: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan
+Script started on 2021-01-04 18:23:51+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting optimzation...
+Getting serial trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 881
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 31136.645331
+TIME BARRIER: 73761.975908
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Getting parallel trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Parallel execution with 40 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 40 used
+Number of Logical Processes: 881
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+TIME BARRIER 0.000000
+TIME BARRIER 9.000000
+TIME BARRIER 4798.849099
+TIME BARRIER 12222.812661
+TIME BARRIER 18629.004336
+TIME BARRIER 31419.168655
+TIME BARRIER 41085.349547
+TIME BARRIER 58892.542690
+TIME BARRIER 79496.497067
+TIME BARRIER 97617.384262
+TIME BARRIER 100060.000000
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Executing optimization...
+Traceback (most recent call last):
+  File "sim_optimize.py", line 166, in <module>
+    visit_graph(0,comms_dict,lp_list,model)
+  File "sim_optimize.py", line 17, in visit_graph
+    visit_graph(child_id,comms_dict,lp_list,model)
+  File "sim_optimize.py", line 17, in visit_graph
+    visit_graph(child_id,comms_dict,lp_list,model)
+  File "sim_optimize.py", line 26, in visit_graph
+    child_rate+=jmespath.search(f'sum([lan_in,lan_out,parameters][].{elem}.lambda_in)',child)/jmespath.search(f'sum([lan_in,lan_out,parameters][].{elem}.aggregation_rate)',child)
+ZeroDivisionError: float division by zero
+cat: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan/sim_config.json: No such file or directory
+-q rootsim --sched=FIFO --preempt --sim-processing --run-complete --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan serial --checkpoint-period= --timeout=75
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation.c -o simulation_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/finish_event/finish_functions.c -o simulation_functions/finish_event/finish_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/arrive_event/arrive_functions.c -o simulation_functions/arrive_event/arrive_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/init_event/init_functions.c -o simulation_functions/init_event/init_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/priority_queue.c -o ../utils/priority_queue/priority_queue_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/heap/heap.c -o ../utils/priority_queue/heap/heap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/parser.c -o ../utils/partop/parser_rootsim.o
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/topology.c -o ../utils/partop/topology_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/priority_scheduler.c -o ../utils/priority_scheduler/priority_scheduler_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/queue_quick_sort.c -o ../utils/priority_scheduler/queue_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_protocol.c -o simulation_functions/setup_protocol/setup_protocol_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_recv_functions.c -o simulation_functions/setup_protocol/setup_recv_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_send_functions.c -o simulation_functions/setup_protocol/setup_send_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap.c -o ../utils/idmap/idmap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap_quick_sort.c -o ../utils/idmap/idmap_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/message/message.c -o ../utils/message/message_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/common_functions.c -o simulation_functions/common_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/binaryParse.c -o ../utils/partop/binaryParse_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/scheduling_algorithms.c -o ../utils/priority_scheduler/scheduling_algorithms_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c -o simulation_rootsim
+Compiling  simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c...
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+Linking...
+process done
+mkdir -p /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan ; mv simulation_rootsim /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan/simulation_rootsim
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_lan" folder.
+Executing model...
+Serial execution.
+simulation_rootsim: invalid value "" in ./simulation_rootsim option.
+Aborting!
+Try `simulation_rootsim --help' or `simulation_rootsim --usage' for more
+information.
+ROOT-Sim has raised an error, aborting.
+Error during model simulation, aborting.
+64
+FINISHED CPU 275.63 MEM 58820 MAXMEM 27926872 STALE 0 MAXMEM_RSS 24295244
+<time name="ALL">266860</time>
+
+Script done on 2021-01-04 18:24:22+01:00 [COMMAND_EXIT_CODE="64"]
+test 80-400 FAILED at 04/01/2021 - 18:24:22 with error code 64
+
+
+MAX RETRY (2) reached! SKIPPING

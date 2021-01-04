@@ -1,0 +1,3 @@
+#          "GID"             "LID"    "TOTAL EVENTS"     "COMM EVENTS"   "REPROC EVENTS"       "ROLLBACKS"         "ANTIMSG"    "AVG EVT COST"   "AVG CKPT COST"    "AVG REC COST"     "IDLE CYCLES"
+              50                50              5147              4840                 0                 0                 1         17.239946              4691                 0                 0   
+              51                51              4988              4477                 7                 1               103         15.790497              4509               406                 0   

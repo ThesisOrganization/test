@@ -1,0 +1,753 @@
+BEGIN test 4 of 24 with topology 80-400:.............04/01/2021 - 17:38:37
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/80-400.txt rootsim serial --sched=FIFO --preempt --sim-processing --simulation-timeout=100000 --timeout=75 --lp-aggregation=regional --threads-less-than-lps --redir-compilation-messages=/dev/null --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional
+Script started on 2021-01-04 17:38:37+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting optimzation...
+Getting serial trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 6064.458809
+TIME BARRIER: 13011.294069
+TIME BARRIER: 19686.505066
+TIME BARRIER: 26577.044631
+TIME BARRIER: 33394.346129
+TIME BARRIER: 40308.439552
+TIME BARRIER: 47310.609849
+TIME BARRIER: 53857.648337
+TIME BARRIER: 60880.341085
+TIME BARRIER: 67669.190605
+TIME BARRIER: 74498.650538
+TIME BARRIER: 81454.797361
+TIME BARRIER: 88422.892276
+TIME BARRIER: 95098.477018
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Getting parallel trace...
+Using ROOT-Sim as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional/perf_traces" folder.
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Parallel execution with 40 threads.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 40 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 100000
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+Initializing LPs... done
+****************************
+*    Simulation Started    *
+****************************
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+Initializing an additional area
+TIME BARRIER 1507.418264
+TIME BARRIER 4602.129833
+TIME BARRIER 7642.597937
+TIME BARRIER 12688.116163
+TIME BARRIER 19611.606212
+TIME BARRIER 28406.244574
+TIME BARRIER 37766.238538
+TIME BARRIER 48075.383194
+TIME BARRIER 59298.891481
+TIME BARRIER 72284.356054
+TIME BARRIER 78765.667108
+TIME BARRIER 90954.165595
+TIME BARRIER 102292.882411
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Executing optimization...
+R 3.9455794625796 checkpoint period 39 threads 40
+-q rootsim --sched=FIFO --preempt --sim-processing --run-complete --out=/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional serial --checkpoint-period=39 --timeout=75
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation.c -o simulation_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/finish_event/finish_functions.c -o simulation_functions/finish_event/finish_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/arrive_event/arrive_functions.c -o simulation_functions/arrive_event/arrive_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/init_event/init_functions.c -o simulation_functions/init_event/init_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/priority_queue.c -o ../utils/priority_queue/priority_queue_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_queue/heap/heap.c -o ../utils/priority_queue/heap/heap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/parser.c -o ../utils/partop/parser_rootsim.o
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/topology.c -o ../utils/partop/topology_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/priority_scheduler.c -o ../utils/priority_scheduler/priority_scheduler_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/queue_quick_sort.c -o ../utils/priority_scheduler/queue_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_protocol.c -o simulation_functions/setup_protocol/setup_protocol_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_recv_functions.c -o simulation_functions/setup_protocol/setup_recv_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/setup_protocol/setup_send_functions.c -o simulation_functions/setup_protocol/setup_send_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap.c -o ../utils/idmap/idmap_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/idmap/idmap_quick_sort.c -o ../utils/idmap/idmap_quick_sort_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/message/message.c -o ../utils/message/message_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation_functions/common_functions.c -o simulation_functions/common_functions_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/partop/binaryParse.c -o ../utils/partop/binaryParse_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc -c   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include ../utils/priority_scheduler/scheduling_algorithms.c -o ../utils/priority_scheduler/scheduling_algorithms_rootsim.o
+../Simulators/ROOT-Sim-bin/bin/rootsim-cc   -DSCHEDULING_ROUND_ROBIN=0 -DPREEMPTION=1 -DSIM_PROCESSING=1 -DSIM_PROCESSING_MULTIPLIER=1000 -DREAL_TIMEOUT=75 -I../Simulators/ROOT-Sim-bin/include simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c -o simulation_rootsim
+Compiling  simulation.c simulation_functions/finish_event/finish_functions.c simulation_functions/arrive_event/arrive_functions.c simulation_functions/init_event/init_functions.c ../utils/priority_queue/priority_queue.c ../utils/priority_queue/heap/heap.c ../utils/partop/parser.c ../utils/partop/topology.c ../utils/priority_scheduler/priority_scheduler.c ../utils/priority_scheduler/queue_quick_sort.c simulation_functions/setup_protocol/setup_protocol.c simulation_functions/setup_protocol/setup_recv_functions.c simulation_functions/setup_protocol/setup_send_functions.c ../utils/idmap/idmap.c ../utils/idmap/idmap_quick_sort.c ../utils/message/message.c simulation_functions/common_functions.c ../utils/partop/binaryParse.c ../utils/priority_scheduler/scheduling_algorithms.c...
+[01m[K../utils/partop/parser.c:[m[K In function ‘[01m[KgetTopology[m[K’:
+[01m[K../utils/partop/parser.c:678:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncpy[m[K’ specified bound depends on the length of the source argument [[01;35m[K-Wstringop-overflow=[m[K]
+      [01;35m[Kstrncpy(tempString,ptr2,strlen(ptr2)+1)[m[K;
+      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K../utils/partop/parser.c:678:30:[m[K [01;36m[Knote: [m[Klength computed here
+      strncpy(tempString,ptr2,[01;36m[Kstrlen(ptr2)[m[K+1);
+                              [01;36m[K^~~~~~~~~~~~[m[K
+Linking...
+process done
+mkdir -p /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional ; mv simulation_rootsim /home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional/simulation_rootsim
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/performance_tests/optimized/80-400/target_generation_analytic_simulation-seed_-1-timeout_100000-rootsim-serial-threads_0-FIFO-preempt_yes-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 80
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 39
+Snapshot Reconstruction Type: full
+Halt Simulation After: 0
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 5930.818638
+TIME BARRIER: 12395.149029
+TIME BARRIER: 18854.487714
+TIME BARRIER: 25346.792841
+TIME BARRIER: 31722.312081
+TIME BARRIER: 38196.527046
+TIME BARRIER: 44626.555029
+TIME BARRIER: 51071.024341
+TIME BARRIER: 57863.752812
+TIME BARRIER: 64625.033597
+TIME BARRIER: 71092.261839
+TIME BARRIER: 77428.404635
+TIME BARRIER: 83938.664946
+TIME BARRIER: 90512.520523
+TIME BARRIER: 97095.236408
+TIME BARRIER: 103278.738303
+TIME BARRIER: 109779.997535
+TIME BARRIER: 116489.690146
+TIME BARRIER: 122759.190577
+TIME BARRIER: 129110.835934
+TIME BARRIER: 135622.914477
+TIME BARRIER: 142056.645449
+TIME BARRIER: 148504.532894
+TIME BARRIER: 155277.942233
+TIME BARRIER: 161903.943780
+TIME BARRIER: 168516.054704
+TIME BARRIER: 175226.030999
+TIME BARRIER: 181820.611987
+TIME BARRIER: 188443.325480
+TIME BARRIER: 195054.379257
+TIME BARRIER: 201270.973888
+TIME BARRIER: 207586.664133
+TIME BARRIER: 213909.084470
+TIME BARRIER: 220456.285903
+TIME BARRIER: 227120.122112
+TIME BARRIER: 233458.077996
+TIME BARRIER: 239896.547049
+TIME BARRIER: 246323.170560
+TIME BARRIER: 252986.174329
+TIME BARRIER: 259960.933796
+TIME BARRIER: 266218.918197
+TIME BARRIER: 272859.698882
+TIME BARRIER: 279510.249464
+TIME BARRIER: 285904.766335
+TIME BARRIER: 292403.253119
+TIME BARRIER: 298893.064071
+TIME BARRIER: 361715.188157
+TIME BARRIER: 436449.139498
+TIME BARRIER: 513112.243206
+TIME BARRIER: 590476.227688
+TIME BARRIER: 666987.555013
+TIME BARRIER: 742965.158172
+TIME BARRIER: 818764.172847
+TIME BARRIER: 895619.825081
+TIME BARRIER: 971179.040057
+TIME BARRIER: 1047130.875466
+TIME BARRIER: 1122607.418149
+TIME BARRIER: 1199674.997981
+TIME BARRIER: 1276131.713134
+TIME BARRIER: 1352059.526007
+TIME BARRIER: 1427670.383965
+TIME BARRIER: 1504182.132680
+TIME BARRIER: 1581329.165737
+TIME BARRIER: 1657778.588733
+TIME BARRIER: 1733820.791554
+TIME BARRIER: 1809883.122475
+TIME BARRIER: 1886347.748943
+TIME BARRIER: 1963129.144846
+TIME BARRIER: 2039917.642612
+TIME BARRIER: 2116560.824848
+TIME BARRIER: 2193822.029668
+TIME BARRIER: 2270714.788702
+TIME BARRIER: 2347463.095336
+TIME BARRIER: 2424334.062246
+TIME BARRIER: 2500936.273246
+TIME BARRIER: 2578471.626261
+TIME BARRIER: 2655174.724886
+TIME BARRIER: 2732422.291793
+TIME BARRIER: 2808948.637246
+TIME BARRIER: 2885505.387053
+TIME BARRIER: 2961217.097208
+TIME BARRIER: 3037746.278542
+TIME BARRIER: 3113936.993129
+TIME BARRIER: 3190877.725645
+TIME BARRIER: 3266658.098630
+TIME BARRIER: 3342990.414800
+TIME BARRIER: 3419155.955921
+TIME BARRIER: 3495526.385442
+TIME BARRIER: 3571926.842790
+TIME BARRIER: 3649027.681764
+TIME BARRIER: 3725467.277857
+TIME BARRIER: 3802639.848268
+TIME BARRIER: 3879371.358430
+TIME BARRIER: 3955861.081961
+TIME BARRIER: 4032217.530483
+TIME BARRIER: 4108724.210913
+TIME BARRIER: 4186042.319821
+TIME BARRIER: 4263054.410607
+TIME BARRIER: 4339962.832831
+TIME BARRIER: 4416843.203780
+TIME BARRIER: 4493923.253217
+TIME BARRIER: 4569996.256920
+TIME BARRIER: 4646722.009020
+TIME BARRIER: 4724035.471604
+TIME BARRIER: 4800847.509665
+TIME BARRIER: 4877664.072724
+TIME BARRIER: 4955137.868692
+TIME BARRIER: 5031635.393411
+TIME BARRIER: 5107623.201563
+TIME BARRIER: 5184657.343427
+TIME BARRIER: 5261346.570691
+TIME BARRIER: 5337665.057119
+TIME BARRIER: 5414747.612611
+TIME BARRIER: 5492676.056884
+TIME BARRIER: 5569082.109705
+TIME BARRIER: 5645616.709236
+TIME BARRIER: 5722034.625727
+TIME BARRIER: 5798752.212103
+TIME BARRIER: 5874767.401587
+TIME BARRIER: 5951541.185855
+TIME BARRIER: 6028998.627174
+TIME BARRIER: 6105810.168391
+TIME BARRIER: 6182743.020092
+TIME BARRIER: 6259758.403030
+TIME BARRIER: 6337480.103841
+TIME BARRIER: 6413524.019555
+TIME BARRIER: 6490212.773219
+TIME BARRIER: 6566770.219759
+TIME BARRIER: 6643495.036735
+TIME BARRIER: 6720349.879846
+TIME BARRIER: 6797680.319984
+TIME BARRIER: 6874873.636740
+TIME BARRIER: 6952240.138897
+TIME BARRIER: 7029157.471250
+TIME BARRIER: 7105773.734906
+TIME BARRIER: 7182674.771402
+TIME BARRIER: 7259364.315357
+TIME BARRIER: 7336193.949062
+TIME BARRIER: 7413232.800166
+TIME BARRIER: 7493744.624559
+TIME BARRIER: 7573880.236530
+TIME BARRIER: 7654554.060887
+TIME BARRIER: 7734344.790860
+TIME BARRIER: 7814067.260520
+TIME BARRIER: 7894376.032261
+TIME BARRIER: 7974016.504811
+TIME BARRIER: 8054398.586727
+TIME BARRIER: 8135317.841858
+TIME BARRIER: 8215747.811141
+TIME BARRIER: 8296471.757835
+TIME BARRIER: 8375801.931828
+TIME BARRIER: 8455715.671443
+TIME BARRIER: 8536351.056302
+TIME BARRIER: 8616174.373906
+TIME BARRIER: 8696496.125959
+TIME BARRIER: 8778279.143643
+TIME BARRIER: 8859215.644275
+TIME BARRIER: 8939188.534962
+TIME BARRIER: 9019706.842709
+TIME BARRIER: 9100336.289456
+TIME BARRIER: 9180544.489179
+TIME BARRIER: 9261120.626346
+TIME BARRIER: 9341238.983684
+TIME BARRIER: 9420985.868415
+TIME BARRIER: 9500911.600908
+TIME BARRIER: 9581368.152441
+TIME BARRIER: 9662528.424286
+TIME BARRIER: 9742951.563153
+TIME BARRIER: 9823952.455793
+TIME BARRIER: 9903845.788998
+TIME BARRIER: 9984586.267539
+TIME BARRIER: 10065429.882320
+TIME BARRIER: 10145684.556010
+TIME BARRIER: 10226181.438097
+TIME BARRIER: 10307139.601354
+TIME BARRIER: 10388397.912870
+TIME BARRIER: 10468999.702306
+TIME BARRIER: 10549439.722222
+TIME BARRIER: 10629368.466065
+TIME BARRIER: 10710586.028413
+TIME BARRIER: 10791836.498704
+TIME BARRIER: 10872714.901802
+TIME BARRIER: 10953238.970471
+TIME BARRIER: 11032715.131722
+TIME BARRIER: 11112962.405742
+TIME BARRIER: 11193826.144216
+TIME BARRIER: 11273517.212561
+TIME BARRIER: 11354522.219749
+TIME BARRIER: 11435526.069291
+TIME BARRIER: 11515953.906264
+TIME BARRIER: 11596368.990596
+TIME BARRIER: 11677127.907958
+TIME BARRIER: 11758369.819612
+TIME BARRIER: 11838669.854480
+TIME BARRIER: 11918987.120757
+TIME BARRIER: 12000268.508666
+TIME BARRIER: 12081626.786531
+TIME BARRIER: 12162387.935225
+TIME BARRIER: 12243268.365115
+TIME BARRIER: 12324293.577166
+TIME BARRIER: 12404332.710982
+TIME BARRIER: 12484942.236613
+TIME BARRIER: 12565316.993664
+TIME BARRIER: 12646597.955971
+TIME BARRIER: 12727689.193661
+TIME BARRIER: 12808674.831138
+TIME BARRIER: 12889775.716157
+TIME BARRIER: 12971317.087426
+TIME BARRIER: 13051775.176428
+TIME BARRIER: 13132909.031649
+TIME BARRIER: 13213752.686100
+TIME BARRIER: 13295301.260397
+TIME BARRIER: 13375964.407734
+TIME BARRIER: 13456820.233708
+TIME BARRIER: 13536569.078913
+TIME BARRIER: 13617358.822869
+TIME BARRIER: 13698360.264710
+TIME BARRIER: 13779285.348734
+TIME BARRIER: 13859354.676582
+TIME BARRIER: 13940211.371539
+TIME BARRIER: 14020878.248976
+TIME BARRIER: 14101009.587491
+TIME BARRIER: 14181532.883744
+TIME BARRIER: 14262190.492608
+TIME BARRIER: 14343003.874039
+TIME BARRIER: 14422901.268439
+TIME BARRIER: 14502877.774414
+TIME BARRIER: 14583386.571612
+TIME BARRIER: 14663481.676430
+TIME BARRIER: 14742985.759313
+TIME BARRIER: 14824095.637555
+TIME BARRIER: 14904387.662094
+TIME BARRIER: 14984673.065937
+TIME BARRIER: 15065390.789976
+TIME BARRIER: 15146710.874007
+TIME BARRIER: 15227541.273252
+TIME BARRIER: 15307873.049521
+TIME BARRIER: 15389350.522545
+TIME BARRIER: 15470018.692840
+TIME BARRIER: 15550778.648488
+TIME BARRIER: 15631603.128409
+TIME BARRIER: 15712000.451169
+TIME BARRIER: 15793128.820847
+TIME BARRIER: 15873442.271798
+TIME BARRIER: 15953860.975009
+TIME BARRIER: 16034244.431629
+TIME BARRIER: 16114401.008259
+TIME BARRIER: 16195579.062844
+TIME BARRIER: 16276109.072922
+TIME BARRIER: 16357292.796744
+TIME BARRIER: 16437723.215316
+TIME BARRIER: 16517085.443214
+TIME BARRIER: 16597883.487178
+TIME BARRIER: 16678205.408314
+TIME BARRIER: 16758442.674456
+TIME BARRIER: 16839296.186048
+TIME BARRIER: 16920192.695991
+TIME BARRIER: 17001115.752314
+TIME BARRIER: 17081588.881514
+TIME BARRIER: 17162923.920071
+TIME BARRIER: 17243051.479815
+TIME BARRIER: 17322695.097333
+TIME BARRIER: 17402927.853679
+TIME BARRIER: 17484010.358983
+TIME BARRIER: 17564618.889691
+TIME BARRIER: 17646100.482391
+TIME BARRIER: 17725686.473921
+TIME BARRIER: 17806626.113945
+TIME BARRIER: 17886824.211966
+TIME BARRIER: 17966996.176001
+TIME BARRIER: 18047342.551726
+TIME BARRIER: 18127797.241028
+TIME BARRIER: 18208240.750595
+TIME BARRIER: 18288433.283327
+TIME BARRIER: 18368453.903850
+TIME BARRIER: 18448448.224583
+TIME BARRIER: 18529161.855777
+TIME BARRIER: 18609194.216419
+TIME BARRIER: 18688920.644464
+TIME BARRIER: 18769518.407033
+TIME BARRIER: 18849873.928857
+TIME BARRIER: 18929936.570118
+TIME BARRIER: 19010544.424440
+TIME BARRIER: 19091467.843944
+TIME BARRIER: 19172037.818481
+TIME BARRIER: 19252706.522043
+TIME BARRIER: 19332743.962553
+TIME BARRIER: 19412592.075312
+TIME BARRIER: 19492532.691231
+TIME BARRIER: 19572969.733987
+TIME BARRIER: 19653436.110208
+TIME BARRIER: 19734368.166446
+TIME BARRIER: 19814972.139210
+TIME BARRIER: 19896258.189948
+TIME BARRIER: 19976971.012291
+TIME BARRIER: 20057991.338628
+TIME BARRIER: 20139747.001635
+TIME BARRIER: 20220400.249671
+TIME BARRIER: 20300985.354123
+TIME BARRIER: 20382197.340890
+TIME BARRIER: 20462643.816535
+TIME BARRIER: 20542412.315535
+TIME BARRIER: 20623377.966315
+TIME BARRIER: 20704084.478837
+TIME BARRIER: 20784968.899063
+TIME BARRIER: 20866279.488939
+TIME BARRIER: 20946709.100492
+TIME BARRIER: 21027712.914948
+TIME BARRIER: 21109050.877458
+TIME BARRIER: 21191242.556370
+TIME BARRIER: 21272963.879419
+TIME BARRIER: 21354255.283783
+TIME BARRIER: 21436331.149166
+TIME BARRIER: 21517188.576314
+TIME BARRIER: 21598455.886985
+TIME BARRIER: 21680323.974656
+TIME BARRIER: 21760789.827895
+TIME BARRIER: 21841163.964633
+TIME BARRIER: 21921342.054190
+TIME BARRIER: 22002901.734663
+TIME BARRIER: 22083843.449840
+TIME BARRIER: 22163792.325684
+TIME BARRIER: 22244332.295277
+TIME BARRIER: 22324179.641588
+TIME BARRIER: 22405435.560808
+TIME BARRIER: 22485918.466502
+TIME BARRIER: 22566579.963525
+TIME BARRIER: 22647255.071253
+TIME BARRIER: 22726958.126477
+TIME BARRIER: 22807852.481091
+TIME BARRIER: 22888136.286247
+TIME BARRIER: 22968688.018984
+TIME BARRIER: 23049173.195725
+TIME BARRIER: 23129727.245435
+TIME BARRIER: 23210466.975509
+TIME BARRIER: 23291144.935933
+TIME BARRIER: 23370060.244021
+TIME BARRIER: 23446752.946558
+TIME BARRIER: 23524174.795117
+TIME BARRIER: 23601379.595409
+TIME BARRIER: 23678050.319716
+TIME BARRIER: 23755144.422350
+TIME BARRIER: 23831552.031761
+TIME BARRIER: 23908592.682765
+TIME BARRIER: 23985440.359457
+TIME BARRIER: 24062604.482575
+TIME BARRIER: 24139168.918556
+TIME BARRIER: 24216408.576065
+TIME BARRIER: 24293317.388405
+TIME BARRIER: 24370395.627373
+TIME BARRIER: 24447197.677470
+TIME BARRIER: 24524173.016334
+TIME BARRIER: 24600911.967622
+TIME BARRIER: 24677219.472280
+TIME BARRIER: 24753574.718368
+TIME BARRIER: 24829408.247122
+TIME BARRIER: 24906460.634203
+TIME BARRIER: 24983003.912419
+TIME BARRIER: 25059888.091217
+TIME BARRIER: 25136409.182176
+TIME BARRIER: 25212660.559003
+TIME BARRIER: 25289041.712445
+TIME BARRIER: 25366492.744252
+TIME BARRIER: 25446678.392999
+TIME BARRIER: 25527457.979778
+TIME BARRIER: 25608164.506243
+TIME BARRIER: 25688332.108325
+TIME BARRIER: 25769376.498973
+TIME BARRIER: 25851129.985394
+TIME BARRIER: 25932663.292850
+TIME BARRIER: 26013661.600052
+TIME BARRIER: 26094738.785001
+TIME BARRIER: 26175664.639891
+TIME BARRIER: 26256571.844877
+TIME BARRIER: 26336336.935428
+TIME BARRIER: 26417376.479053
+TIME BARRIER: 26496691.997631
+TIME BARRIER: 26577143.922998
+TIME BARRIER: 26658040.071621
+TIME BARRIER: 26737448.306543
+TIME BARRIER: 26817903.427944
+TIME BARRIER: 26898038.700716
+TIME BARRIER: 26977893.573500
+TIME BARRIER: 27058229.971576
+TIME BARRIER: 27138117.815612
+TIME BARRIER: 27218909.799851
+TIME BARRIER: 27299231.309982
+TIME BARRIER: 27379452.686230
+TIME BARRIER: 27460358.229581
+TIME BARRIER: 27540715.740317
+TIME BARRIER: 27621127.165394
+TIME BARRIER: 27702102.317526
+TIME BARRIER: 27783694.514882
+TIME BARRIER: 27863956.990255
+TIME BARRIER: 27945180.268655
+TIME BARRIER: 28026260.717918
+TIME BARRIER: 28107990.196907
+TIME BARRIER: 28188689.949084
+TIME BARRIER: 28270048.148022
+TIME BARRIER: 28351007.396210
+TIME BARRIER: 28431136.559620
+TIME BARRIER: 28512170.808538
+TIME BARRIER: 28593004.144376
+TIME BARRIER: 28674037.398454
+TIME BARRIER: 28755036.190343
+TIME BARRIER: 28836129.150794
+TIME BARRIER: 28917918.814744
+TIME BARRIER: 28998921.947470
+TIME BARRIER: 29079932.335271
+TIME BARRIER: 29161166.579029
+TIME BARRIER: 29241666.901204
+TIME BARRIER: 29323035.679679
+TIME BARRIER: 29403656.183172
+TIME BARRIER: 29483528.934113
+TIME BARRIER: 29564963.364505
+TIME BARRIER: 29645903.589263
+TIME BARRIER: 29725585.602102
+TIME BARRIER: 29806225.077466
+TIME BARRIER: 29887266.258994
+TIME BARRIER: 29968573.483704
+TIME BARRIER: 30048964.404397
+TIME BARRIER: 30129934.990423
+TIME BARRIER: 30211206.707792
+TIME BARRIER: 30292501.363697
+TIME BARRIER: 30373238.311415
+TIME BARRIER: 30453439.091334
+TIME BARRIER: 30534731.578190
+TIME BARRIER: 30615354.619283
+TIME BARRIER: 30696754.378040
+TIME BARRIER: 30776951.098964
+TIME BARRIER: 30857551.399275
+TIME BARRIER: 30938372.271142
+TIME BARRIER: 31019443.312927
+TIME BARRIER: 31099799.960022
+TIME BARRIER: 31181595.108703
+TIME BARRIER: 31262854.522454
+TIME BARRIER: 31343988.055971
+TIME BARRIER: 31424383.335892
+TIME BARRIER: 31504959.663757
+TIME BARRIER: 31585196.977235
+TIME BARRIER: 31665911.291229
+TIME BARRIER: 31746339.452581
+TIME BARRIER: 31827092.591198
+TIME BARRIER: 31907300.789973
+TIME BARRIER: 31987966.175358
+TIME BARRIER: 32067616.998469
+TIME BARRIER: 32147288.511786
+TIME BARRIER: 32227279.479355
+TIME BARRIER: 32306688.814637
+TIME BARRIER: 32387578.341129
+TIME BARRIER: 32468131.893281
+TIME BARRIER: 32548266.101035
+TIME BARRIER: 32628562.732814
+TIME BARRIER: 32709349.059144
+TIME BARRIER: 32789771.160710
+TIME BARRIER: 32870685.545081
+TIME BARRIER: 32951200.939453
+TIME BARRIER: 33032139.605714
+TIME BARRIER: 33112403.053967
+TIME BARRIER: 33193926.022396
+TIME BARRIER: 33274727.230615
+TIME BARRIER: 33354950.323146
+TIME BARRIER: 33435751.791515
+TIME BARRIER: 33516295.991170
+TIME BARRIER: 33598043.288341
+TIME BARRIER: 33679495.797251
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 854.71 MEM 36684 MAXMEM 40667692 STALE 1 MAXMEM_RSS 38872976
+<time name="ALL">844940</time>
+
+Script done on 2021-01-04 17:47:14+01:00 [COMMAND_EXIT_CODE="0"]
+Test 80-400 COMPLETE at 04/01/2021 - 17:47:14
