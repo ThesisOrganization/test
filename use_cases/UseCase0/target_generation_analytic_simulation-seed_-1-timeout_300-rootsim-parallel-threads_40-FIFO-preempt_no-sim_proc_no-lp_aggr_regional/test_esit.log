@@ -1,0 +1,53 @@
+BEGIN test 2 of 2 with topology UseCase0:.............01/01/2021 - 18:47:18
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/UseCase0.txt rootsim parallel --wt=40 --sched=FIFO --timeout=300 --lp-aggregation=regional --threads-less-than-lps --redir-compilation-messages=/dev/null --no-central --out=/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-parallel-threads_40-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+results path: /home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-parallel-threads_40-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+Script started on 2021-01-01 18:47:18+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="50"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+EXECUTION ABORTED AS REQUESTED: more threads (40) than LPs (1).
+Error during model simulation, aborting.
+150
+FINISHED CPU 5.21 MEM 65748 MAXMEM 1680404 STALE 0 MAXMEM_RSS 31496
+<time name="ALL">4950</time>
+
+Script done on 2021-01-01 18:47:19+01:00 [COMMAND_EXIT_CODE="150"]
+test UseCase0 FAILED at 01/01/2021 - 18:47:19 with error code 150
+
+
+MAX RETRY (1) reached! SKIPPING

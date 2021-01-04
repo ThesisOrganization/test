@@ -1,0 +1,97 @@
+BEGIN test 1 of 2 with topology UseCase0:.............01/01/2021 - 18:46:55
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/UseCase0.txt rootsim serial --sched=FIFO --timeout=300 --lp-aggregation=regional --threads-less-than-lps --redir-compilation-messages=/dev/null --no-central --out=/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+results path: /home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_regional
+Script started on 2021-01-01 18:46:55+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="190" LINES="50"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_300-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_regional" folder.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 40 available, 0 used
+Number of Logical Processes: 1
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 0
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 169726.751021
+TIME BARRIER: 352367.235060
+TIME BARRIER: 534486.193091
+TIME BARRIER: 716413.692410
+TIME BARRIER: 898115.275684
+TIME BARRIER: 1079956.341610
+TIME BARRIER: 1261822.762089
+TIME BARRIER: 1443577.903454
+TIME BARRIER: 1624828.443923
+TIME BARRIER: 1806133.474059
+TIME BARRIER: 1987302.137000
+TIME BARRIER: 2169068.529677
+TIME BARRIER: 2349045.791858
+TIME BARRIER: 2529167.173387
+TIME BARRIER: 2709836.701067
+TIME BARRIER: 2889263.223424
+TIME BARRIER: 3069694.826697
+TIME BARRIER: 3250457.271802
+TIME BARRIER: 3431344.177703
+TIME BARRIER: 3612455.335077
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+FINISHED CPU 28.16 MEM 23404 MAXMEM 1707100 STALE 0 MAXMEM_RSS 53164
+<time name="ALL">21220</time>
+
+Script done on 2021-01-01 18:47:18+01:00 [COMMAND_EXIT_CODE="0"]
+Test UseCase0 COMPLETE at 01/01/2021 - 18:47:18
