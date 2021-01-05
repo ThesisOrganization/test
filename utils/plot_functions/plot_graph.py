@@ -23,11 +23,11 @@ def max_groupes(grouped_values):
 ######################################
 
 #altezza istogrammi, nomi istrogrammi, titolo png, label x, label y, valore minimo y, valore massimo y
-def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, PATH=None, ISLABEL=True, ISSCIE=True):
+def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM=None, YTOP=1, COLOR=None, PATH=None, ISLABEL=True, ISSCIE=True):
 
     ax = plt.subplot(111)
-    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
-    ax.yaxis.set_label_coords(-0.03, 1.1)
+    #ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    #ax.yaxis.set_label_coords(-0.03, 1.1)
 
     len_names = len(names)
     len_values = len(values)
@@ -36,25 +36,24 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
         print("ERROR: len_names != len_values")
         plt.close()
         return
-
     x_pos = np.arange(len_names)
     if COLOR != None:
         plt.bar(x_pos, values, width = 0.5, color=COLOR)
     else:
         plt.bar(x_pos, values, width = 0.5)
-    plt.xticks(x_pos, names, rotation= '45')
+    plt.xticks(x_pos, names) #, rotation= '45')
 
     if ISLABEL:
         for i, y in enumerate(values):
             if ISSCIE:
-                plt.text(i, y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
+                plt.text(i, y + 0.5*YTOP, f"{y:.3g}", ha='center', fontweight='bold')
             else:
-                plt.text(i, y + 0.02*YTOP, f"{y:.1f}", ha='center', fontweight='bold')
+                plt.text(i, y + 0.5*YTOP, f"{y:.3g}", ha='center', fontweight='bold')
 
 
     plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
-    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+    plt.ylabel(YLABEL, fontsize=12)#, rotation=0)
 
     #locs, labels = plt.yticks()
     #print(locs)
@@ -71,16 +70,19 @@ def draw_histograms(values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=N
     plt.close()
 
 
-def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, legend_labels, colors=None, PATH=None):
+def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTOM=None, YTOP=1, legend_labels=None, colors=None, PATH=None,hatches=None):
 
     WIDTH = 0.35
     DISTANCE_BETWEEN_GROUPS = 0.15
     START_DISTANCE = DISTANCE_BETWEEN_GROUPS
 
+    if hatches!=None and len(hatches) != len(grouped_values):
+      print(f"len(hatches)({len(hatches)}) != len(grouped_values) ({len(grouped_values)})")
+      return
 
     ax = plt.subplot(111)
     #ax.set_ylim(bottom=YBOTTOM, top=YTOP)
-    ax.yaxis.set_label_coords(-0.03, 1.02)
+    #ax.yaxis.set_label_coords(-0.03, 1.02)
 
 
     len_names = len(names)
@@ -105,30 +107,33 @@ def draw_grouped_histograms(grouped_values, names, TITLE, XLABEL, YLABEL, YBOTTO
             print("ERROR: grouped_values != len_names")
             plt.close()
             return
-
+        if hatches!=None:
+          chosen_hatch=hatches[i]
+        else:
+          chosen_hatch=""
         #width_list = [WIDTH]*len_names
         if colors != None:
-            plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i], color=colors[i])
+            plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i], color=colors[i],hatch=chosen_hatch)
         else:
-            plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i])
+            plt.bar(x_pos + WIDTH*i, grouped_values[i], width=WIDTH, label=legend_labels[i],hatch=chosen_hatch)
 
-        #for j, y in enumerate(grouped_values[i]):
-        #    positions = x_pos + WIDTH*i
-        #    plt.text(positions[j], y + 0.02*YTOP, f"{y:.1g}", ha='center', fontweight='bold')
+
+        for j, y in enumerate(grouped_values[i]):
+            positions = x_pos + WIDTH*i
+            plt.text(positions[j], y + 0.02*YTOP, f"{y:.3g}", ha='center', fontweight='bold')
 
     if num_histo_per_group % 2 == 0:
         number = num_histo_per_group/2 * WIDTH - WIDTH/2
-        plt.xticks(x_pos + number, names, rotation= '45')
+        plt.xticks(x_pos + number, names)#, rotation= '45')
     else:
         number = int(num_histo_per_group / 2) * WIDTH #+ WIDTH/2
-        plt.xticks(x_pos + number, names, rotation= '45')
+        plt.xticks(x_pos + number, names)#, rotation= '45')
 
-
-    ax.legend()
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.075), shadow=True, ncol=len(grouped_values[0]))
 
     plt.title(TITLE, fontsize=18, y=1.2)
     plt.xlabel(XLABEL, fontsize=12)
-    plt.ylabel(YLABEL, fontsize=12, rotation=0)
+    plt.ylabel(YLABEL, fontsize=12)#, rotation=0)
 
     if SAVE and PATH != None:
         plt.savefig(PATH, bbox_inches='tight')
@@ -143,7 +148,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
     if YBOTTOM != None and YTOP != None:
       ax.set_ylim(bottom=YBOTTOM, top=YTOP)
     ax.margins(0.05)
-    ax.yaxis.set_label_coords(0, 1.1)
+    #ax.yaxis.set_label_coords(0, 1.1)
 
     len_x = len(x_number_values)
 
@@ -204,7 +209,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
 
 
     if legend!=None:
-      plt.legend()
+      ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.075), shadow=True, ncol=len(y_grouped_number_values[0]))
 
     if x_tick_labels != None:
       plt.xticks(x_number_values,x_tick_labels)
@@ -213,7 +218,7 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
 
     plt.title(TITLE, fontsize=18, y=1.13)
     plt.xlabel(XLABEL, fontsize=12)
-    plt.ylabel(YLABEL, fontsize=12,rotation=0)
+    plt.ylabel(YLABEL, fontsize=12)#,rotation=0)
 
     plt.tick_params(axis='both', labelsize=12)
 
@@ -224,11 +229,11 @@ def draw_grouped_lines(y_grouped_number_values, x_number_values, TITLE, XLABEL, 
     plt.close()
 
 
-def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM, YTOP, COLOR=None, COLOR_POINT=None, PATH=None):
+def draw_lines(y_number_values, x_number_values, TITLE, XLABEL, YLABEL, YBOTTOM=None, YTOP=None, COLOR=None, COLOR_POINT=None, PATH=None):
 
     ax = plt.subplot(111)
-    ax.set_ylim(bottom=YBOTTOM, top=YTOP)
-    ax.yaxis.set_label_coords(-0.03, 1.02)
+    #ax.set_ylim(bottom=YBOTTOM, top=YTOP)
+    #ax.yaxis.set_label_coords(-0.03, 1.02)
 
 
     len_x = len(x_number_values)
