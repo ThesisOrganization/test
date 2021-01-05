@@ -1,0 +1,444 @@
+BEGIN test 1 of 1 with topology UseCase0:.............05/01/2021 - 14:03:23
+test command:	bash /home/mms/rootsim-models/start.sh -q -g -a -o -s --cat=/home/mms/test/catalog --top=/home/mms/test/topologies/UseCase0.txt use serial --sched=FIFO --sim-processing --lp-aggregation=regional --redir-compilation-messages=/dev/null --out=/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+results path: /home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional
+Script started on 2021-01-05 14:03:23+01:00 [TERM="screen.xterm-256color" TTY="/dev/pts/3" COLUMNS="190" LINES="51"]
+/home/mms/rootsim-models/start.sh: line 2: .venv/edgecomputing/bin/activate: No such file or directory
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting optimzation...
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/LP.txt': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/topology.txt': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp0.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp10.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp11.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp12.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp13.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp14.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp15.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp16.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp17.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp18.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp19.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp1.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp20.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp21.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp22.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp23.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp24.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp25.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp26.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp27.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp28.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp29.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp2.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp30.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp31.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp32.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp33.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp34.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp35.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp36.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp37.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp38.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp39.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp3.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp4.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp5.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp6.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp7.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp8.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lp9.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/lptop/lptopology.bin': File exists
+ln: failed to create hard link '/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces/bin/gentop/gentopology.bin': File exists
+Getting serial trace...
+Using USE as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces" folder.
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Serial execution.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: bae289b28ddc75cef31256cb2d09fc39fdf16f50
+***START SIMULATION***
+
+[36m
+Starting an execution with 1 THREADs, 40 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 0 set to CPU no 0
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095342042516841
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 5 seconds
+[32m[0] Execution ended correctly
+[0mSimulation final report:
+Thread: 1	LP: 40
+
+===== SYSTEM-WIDE STATISTICS =====
+[36mTotal events....................................:        62656
+Committed events................................:        62656 (100.00%)
+Events executed and committed tot...............:        62656
+Straggler events................................:            0 (0.00%)
+Anti events.....................................:            0 (0.00%)
+Useless events..................................:            0 (0.00%)
+Silent events...................................:            0 (0.00%)
+Silent events for GVT...........................:            0 (-nan%)
+
+Flushed events..................................:        63933 (102.04%)
+Fetched operations..............................:        62656 (100.00%)
+   Fetch succeed................................:        62656 (100.00%)
+   Fetch failed.................................:            0 (0.00%)
+   Avg node traversed during fetch..............:         1.00
+
+Average time to process any event...............:      6327.40 clocks
+   Average time spent in standard execution.....:      6327.40 clocks
+   Average time spent in silent execution.......:         -nan clocks (0.00%)
+Average time spent to fetch.....................:     10701.53 clocks (0.00%)
+   Average time in successfull fetch............:     10701.53 clocks (0.00%)
+   Average time in unsuccessfull fetch..........:         -nan clocks (0.00%)
+Average time spent to Enqueue...................:      9117.51 clocks (0.00%)
+
+Save Checkpoint operations.........................................:         6288
+Restore Checkpoint operations......................................:            0
+Rollback operations to resume LP state.............................:            0 (-nan%)
+Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (-nan%)
+Rollback ops to resume LP state and execute evt in future..........:            0 (-nan%)
+Rollback operations................................................:            0
+AVG Rollbacked Events per Rollback.................................:         -nan
+AVG Reprocessed Events per Rollback................................:         -nan
+CheckOnGVT invocations.............................................:            0
+
+Save Checkpoint time............................:   1444772.17 clocks (-nan%)
+Restore Checkpoint time.........................:         -nan clocks (-nan%)
+Rollback time...................................:         -nan clocks
+Checkpoint mem..................................:      1419638 B
+Checkpoint recalculations.......................:            0
+Checkpoint period...............................:            0
+
+Event not flushed tot...........................:            0
+Exposition forward Time tot.....................:    996110184 clocks
+Exposition forward Time per event...............:     15898.08 clocks
+Exposition silent Time tot......................:            0 clocks
+Exposition silent Time per event................:         -nan clocks
+
+Total resumable rollback executed...............:            0
+Avg events resume per rollback_resume...........:         -nan
+Avg clock resume per rollback resume............:         -nan clocks
+
+Total allocated space...........................: 3464 MB
+
+
+Total Clock.....................................:  11012409330 clocks
+Event Processing................................:    396449626 clocks (3.60%)
+Safe Processing.................................:    396449626 clocks (3.60%)
+Frame Processing................................:    396702722 clocks (3.60%)
+Rollback Processing.............................: 9223372036854775808 clocks (-nan%)
+Checkpoint Saving...............................:   9084727378 clocks (82.50%)
+Fetch Successful................................:    670515118 clocks (6.09%)
+[0m
+Simulation ended (seconds):         5.04
+Simulation ended  (clocks): 11062297796
+Last gvt: 296.993798
+EventsPerSec:     12431.75
+EventsPerThreadPerSec:     12431.75
+[32mExecution ended correctly
+[0mScript done, file is USE_output.txt
+Getting parallel trace...
+Using USE as the simulation platform.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional/perf_traces" folder.
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Executing model...
+Parallel execution with 40 threads.
+Script started, file is USE_output.txt
+taken 4 parameters
+commit hash: bae289b28ddc75cef31256cb2d09fc39fdf16f50
+***START SIMULATION***
+
+[36m
+Starting an execution with 40 THREADs, 40 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 10
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 5 set to CPU no 5
+Thread 6 set to CPU no 6
+Thread 7 set to CPU no 7
+Thread 8 set to CPU no 8
+Thread 9 set to CPU no 9
+Thread 10 set to CPU no 10
+Thread 11 set to CPU no 11
+Thread 12 set to CPU no 12
+Thread 13 set to CPU no 13
+Thread 14 set to CPU no 14
+Thread 15 set to CPU no 15
+Thread 16 set to CPU no 16
+Thread 17 set to CPU no 17
+Thread 18 set to CPU no 18
+Thread 19 set to CPU no 19
+Thread 20 set to CPU no 20
+Thread 21 set to CPU no 21
+Thread 22 set to CPU no 22
+Thread 23 set to CPU no 23
+Thread 24 set to CPU no 24
+Thread 25 set to CPU no 25
+Thread 26 set to CPU no 26
+Thread 27 set to CPU no 27
+Thread 28 set to CPU no 28
+Thread 29 set to CPU no 29
+Thread 30 set to CPU no 30
+Thread 31 set to CPU no 31
+Thread 32 set to CPU no 32
+Thread 33 set to CPU no 33
+Thread 34 set to CPU no 34
+Thread 35 set to CPU no 35
+Thread 36 set to CPU no 36
+Thread 37 set to CPU no 37
+Thread 38 set to CPU no 38
+Thread 0 set to CPU no 0
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095342042516841
+Numerical_init finished
+Nodes_init finished
+Thread 39 set to CPU no 39
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 5 seconds
+[32m[20] Execution ended correctly
+[0m[32m[22] Execution ended correctly
+[0m[32m[5] Execution ended correctly
+[0m[32m[35] Execution ended correctly
+[0m[32m[8] Execution ended correctly
+[0m[32m[14] Execution ended correctly
+[0m[32m[0] Execution ended correctly
+[0m[32m[13] Execution ended correctly
+[0m[32m[38] Execution ended correctly
+[0m[32m[32] Execution ended correctly
+[0m[32m[4] Execution ended correctly
+[0m[32m[24] Execution ended correctly
+[0m[32m[17] Execution ended correctly
+[0m[32m[2] Execution ended correctly
+[0m[32m[18] Execution ended correctly
+[0m[32m[34] Execution ended correctly
+[0m[32m[27] Execution ended correctly
+[0m[32m[23] Execution ended correctly
+[0m[32m[15] Execution ended correctly
+[0m[32m[12] Execution ended correctly
+[0m[32m[10] Execution ended correctly
+[0m[32m[30] Execution ended correctly
+[0m[32m[31] Execution ended correctly
+[0m[32m[29] Execution ended correctly
+[0m[32m[36] Execution ended correctly
+[0m[32m[37] Execution ended correctly
+[0m[32m[19] Execution ended correctly
+[0m[32m[26] Execution ended correctly
+[0m[32m[16] Execution ended correctly
+[0m[32m[3] Execution ended correctly
+[0m[32m[1] Execution ended correctly
+[0m[32m[21] Execution ended correctly
+[0m[32m[9] Execution ended correctly
+[0m[32m[11] Execution ended correctly
+[0m[32m[25] Execution ended correctly
+[0m[32m[33] Execution ended correctly
+[0m[32m[6] Execution ended correctly
+[0m[32m[39] Execution ended correctly
+[0m[32m[7] Execution ended correctly
+[0m[32m[28] Execution ended correctly
+[0mSimulation final report:
+Thread: 40	LP: 40
+
+===== SYSTEM-WIDE STATISTICS =====
+[36mTotal events....................................:       240814
+Committed events................................:       238525 (99.05%)
+Events executed and committed tot...............:        11780
+Straggler events................................:           11 (0.00%)
+Anti events.....................................:            0 (0.00%)
+Useless events..................................:          269 (0.11%)
+Silent events...................................:           41 (0.02%)
+Silent events for GVT...........................:            0 (0.00%)
+
+Flushed events..................................:       242070 (100.52%)
+Fetched operations..............................:       240780 (99.98%)
+   Fetch succeed................................:       240773 (100.00%)
+   Fetch failed.................................:            7 (0.00%)
+   Avg node traversed during fetch..............:      2312.12
+
+Average time to process any event...............:     17834.44 clocks
+   Average time spent in standard execution.....:     17802.89 clocks
+   Average time spent in silent execution.......:    203091.32 clocks (0.00%)
+Average time spent to fetch.....................:    649487.65 clocks (0.00%)
+   Average time in successfull fetch............:    649292.39 clocks (0.00%)
+   Average time in unsuccessfull fetch..........:   7365609.14 clocks (0.00%)
+Average time spent to Enqueue...................:     11297.07 clocks (0.00%)
+
+Save Checkpoint operations.........................................:        24108
+Restore Checkpoint operations......................................:           11
+Rollback operations to resume LP state.............................:            0 (0.00%)
+Rollback ops to resume LP state and re-execute evt interrupted.....:            0 (0.00%)
+Rollback ops to resume LP state and execute evt in future..........:            0 (0.00%)
+Rollback operations................................................:           11
+AVG Rollbacked Events per Rollback.................................:        24.45
+AVG Reprocessed Events per Rollback................................:         3.73
+CheckOnGVT invocations.............................................:            0
+
+Save Checkpoint time............................:  11388967.17 clocks (808.21%)
+Restore Checkpoint time.........................:    485742.18 clocks (34.47%)
+Rollback time...................................:   1409166.73 clocks
+Checkpoint mem..................................:      1426721 B
+Checkpoint recalculations.......................:            0
+Checkpoint period...............................:            0
+
+Event not flushed tot...........................:            0
+Exposition forward Time tot.....................:   7251990338 clocks
+Exposition forward Time per event...............:     30119.62 clocks
+Exposition silent Time tot......................:      8355208 clocks
+Exposition silent Time per event................:    203785.56 clocks
+
+Total resumable rollback executed...............:            0
+Avg events resume per rollback_resume...........:         -nan
+Avg clock resume per rollback resume............:         -nan clocks
+
+Total allocated space...........................: 31568 MB
+
+
+Total Clock.....................................: 439241593694 clocks
+Event Processing................................:   4294782610 clocks (0.98%)
+Safe Processing.................................:   4286455866 clocks (0.98%)
+Frame Processing................................:   4282379003 clocks (0.97%)
+Rollback Processing.............................:     15500834 clocks (0.00%)
+Checkpoint Saving...............................: 274565220454 clocks (62.51%)
+Fetch Successful................................: 156332077010 clocks (35.59%)
+[0m
+Simulation ended (seconds):         5.04
+Simulation ended  (clocks): 11062546298
+Last gvt: 574.690285
+EventsPerSec:     47326.39
+EventsPerThreadPerSec:      1183.16
+[32mExecution ended correctly
+[0mScript done, file is USE_output.txt
+Executing optimization...
+R 0.3447693008852837 checkpoint period 38 threads 11
+-q use --sched=FIFO --sim-processing --redir-compilation-messages=/dev/null --run-complete --out=/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional parallel --wt=11 --checkpoint-period=38
+Done.
+Starting simulation...
+Using USE as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_use" and can be found in the "/home/mms/test/use_cases/UseCase0/target_generation_analytic_simulation-seed_-1-timeout_none-use-serial-threads_0-FIFO-preempt_no-sim_proc_yes-lp_aggr_regional" folder.
+Executing model...
+Parallel execution with 11 threads.
+Script started, file is USE_output.txt
+taken 3 parameters
+commit hash: bae289b28ddc75cef31256cb2d09fc39fdf16f50
+***START SIMULATION***
+
+[36m
+Starting an execution with 11 THREADs, 40 LPs :
+	- DYMELOR enabled.
+	- CACHELINESIZE 64
+	- CHECKPOINT PERIOD 38
+	- EVTS/LP BEFORE CLEAN CKP 1000
+	- ON_GVT PERIOD 4294967295
+	- REPORT prints enabled.
+	- THR_POOL_SIZE 1024
+	- PREEMPT_COUNTER enabled.
+	- LONG_JMP enabled.
+	- HANDLE_INTERRUPT enabled.
+
+[0mThread 1 set to CPU no 1
+Thread 2 set to CPU no 2
+Thread 3 set to CPU no 3
+Thread 4 set to CPU no 4
+Thread 5 set to CPU no 5
+Thread 6 set to CPU no 6
+Thread 7 set to CPU no 7
+Thread 8 set to CPU no 8
+Thread 9 set to CPU no 9
+Thread 0 set to CPU no 0
+Thread 10 set to CPU no 10
+LP_metada init finished
+Dymelor_init finished
+Statistics_init finished
+Queue_init finished
+master seed is 3247095342042516841
+Numerical_init finished
+Nodes_init finished
+EXECUTED ALL INIT EVENTS
+CALLING SLEEPING THREAD
+The process will last 0 seconds
+
+Session terminated.
+MEM CPU 42407.70 MEM 60007844 MAXMEM 60007844 STALE 0 MAXMEM_RSS 58840176
+<time name="ALL">42399190</time>
+
+Script done on 2021-01-05 15:07:53+01:00 [COMMAND_EXIT_CODE="143"]
+test UseCase0 FAILED at 05/01/2021 - 15:07:53 with error code 143
+
+
+MAX RETRY (1) reached! SKIPPING
