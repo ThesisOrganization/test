@@ -1,0 +1,206 @@
+{
+    "REGIONALS": [
+        {
+            "id": 1,
+            "type": "Type-use_case-0",
+            "locals": {
+                "Type-use_case-0": "10"
+            }
+        }
+    ],
+    "LOCALS": [
+        {
+            "upper": 23,
+            "id": 2,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 3,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 4,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 5,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 6,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 7,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 8,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 9,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 10,
+            "type": "Type-use_case-0"
+        },
+        {
+            "upper": 23,
+            "id": 11,
+            "type": "Type-use_case-0"
+        }
+    ],
+    "LAN": [
+        {
+            "upper": 2,
+            "id": 24,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 3,
+            "id": 25,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 4,
+            "id": 26,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 5,
+            "id": 27,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 6,
+            "id": 28,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 7,
+            "id": 29,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 8,
+            "id": 30,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 9,
+            "id": 31,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 10,
+            "id": 32,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        },
+        {
+            "upper": 11,
+            "id": 33,
+            "type": "-use_case-0",
+            "son_list": {
+                "SENSOR": [
+                    {
+                        "type": "Type-use_case-0",
+                        "amount": 1
+                    }
+                ],
+                "ACTUATOR": []
+            }
+        }
+    ],
+    "ACTUATORS": []
+}
