@@ -19,10 +19,9 @@ def get_data(path_to_tests,scenarios,simulator_list,threads_list,sim_proc_list,l
 				scenario_dirs=[scenarios_path]
 			for dir in scenario_dirs:
 				for scenario in scenarios:
-					if scenario in dir:
+					if scenario in dir and "old" not in dir:
 						chosen_scenario=scenario
 						test_folder_list.append(dir)
-
 	for path in test_folder_list:
 		dirlist=os.listdir(path=path)
 
@@ -172,56 +171,37 @@ def get_data(path_to_tests,scenarios,simulator_list,threads_list,sim_proc_list,l
 	return data_dict
 
 
-def plot_opt_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list):
+def plot_opt_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list,folder):
 	markers_list=[8,10,9,11]
-	colors_list=['#e66101','#5e3c99','#fdb863','#b2abd2']
-	for conf in data_dict.keys():
-		for preempt in preempt_list:
-					for sim_proc in sim_proc_list:
-						for lp_aggr in lp_aggr_list:
-							for thread in thread_list:
-								for scenario in scenario_list:
-									if scenario+"-preempt_"+preempt+"-sim_proc_"+sim_proc+"-lp_aggr_"+lp_aggr in conf:
-										rootsim_opt=[]
-										use_opt=[]
-
-										for param in parameters_list:
-											grouped_data=[]
-											legend=[]
-											data_min=-1
-											data_max=-1
-											thread_list=[]
-											for sim in data_dict[conf].keys():
-												if "Optimized" in sim:
-													if "ROOT-Sim" in sim:
-														rootsim_opt.append(list(data_dict[conf][sim][param].values())[0])
-													if "USE" in sim:
-														use_opt.append(list(data_dict[conf][sim][param].values())[0])
-												for thread in data_dict[conf][sim][param].keys():
-														if thread not in thread_list:
-															thread_list.append(thread)
-												thread_list.sort()
-											for sim in data_dict[conf].keys():
-												legend.append(sim)
-												tmp_dict=data_dict[conf][sim][param]
-												data=[]
-												for thread in thread_list:
-													value=tmp_dict.get(thread)
-													if value == None:
-														data.append(None)
-													else:
-														if data_min==-1 or value<data_min:
-															data_min=value
-														if data_max==-1 or value>data_max:
-															data_max=value
-														data.append(value)
-												grouped_data.append(data)
-
-											plot_graph.draw_grouped_lines(grouped_data, range(len(thread_list)), "","Threads", param,colors=colors_list[0:len(grouped_data)],markers=markers_list[0:len(legend)],legend=legend,x_tick_labels=thread_list,PATH=charts_path+"/"+"/opt_comparison/"+conf+" "+param)
-
-def plot_central_no_central_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list):
 	colors_list=['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']
-	hatches_list=['-','|','\\','/','+','x','o','.']
+	for param in parameters_list:
+		grouped_data=[]
+		data_min=-1
+		data_max=-1
+		for preempt in preempt_list:
+			for sim_proc in sim_proc_list:
+				for lp_aggr in lp_aggr_list:
+					for scenario in scenario_list:
+						for conf in data_dict.keys():
+							if scenario+"-preempt_"+preempt+"-sim_proc_"+sim_proc+"-lp_aggr_"+lp_aggr in conf:
+								legend=[]
+								for sim in simulator_list:
+									legend.append(sim)
+									tmp_dict=data_dict[conf][sim][param]
+									data=[]
+									for thread in thread_list:
+										value=tmp_dict.get(thread)
+										if value!=None and (data_min==-1 or value<data_min):
+											data_min=value
+										if value!=None and (data_max==-1 or value>data_max):
+											data_max=value
+										data.append(value)
+									grouped_data.append(data)
+								plot_graph.draw_grouped_lines(grouped_data, range(len(thread_list)), "","Threads", param,colors=colors_list[0:len(grouped_data)],markers=markers_list[0:len(legend)],legend=legend,x_tick_labels=thread_list,PATH=os.path.join(folder,param))
+
+def plot_central_no_central_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list,folder):
+	colors_list=['#a6cee3','#1f78b4','#b2df8a','#33a02c']
+	hatches_list=['','x','|','\\','/','+','x','o','.','-']
 	conf_string=""
 	for param in parameters_list:
 		sims=[]
@@ -230,23 +210,23 @@ def plot_central_no_central_comparison(data_dict,parameters_list,scenario_list,p
 		for sim in simulator_list:
 			if sim not in sims:
 				sims.append(sim)
-			for conf in data_dict.keys():
-				for preempt in preempt_list:
-					for sim_proc in sim_proc_list:
-						for lp_aggr in lp_aggr_list:
-							for thread in thread_list:
-								for scenario in scenario_list:
+			for preempt in preempt_list:
+				for sim_proc in sim_proc_list:
+					for lp_aggr in lp_aggr_list:
+						for thread in thread_list:
+							for scenario in scenario_list:
+								for conf in data_dict.keys():
 									if scenario+"-preempt_"+preempt+"-sim_proc_"+sim_proc+"-lp_aggr_"+lp_aggr in conf:
 										confs.append(conf)
 										conf_string=conf
 										data.append(data_dict[conf][sim][param].get(thread))
-		plot_graph.draw_histograms(data,sims,"","",param,PATH="../performance_charts/central_no-central_comparison/"+param,COLOR=colors_list[:len(data)])
+		plot_graph.draw_histograms(data,sims,"","",param,PATH=os.path.join(folder,param),COLOR=colors_list[:len(data)])
 
-def plot_conf_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list,fname,varying_param):
+def plot_conf_comparison(data_dict,parameters_list,scenario_list,preempt_list,thread_list,sim_proc_list,lp_aggr_list,simulator_list,fname,varying_param,folder):
 
 	data=[]
 	markers_list=[8,10,9,11]
-	hatches_list=['-','|','\\','/','+','x','o','.']
+	hatches_list=['','+','-','|','\\','/','.','x','.',]
 	colors_list=['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']
 	for param in parameters_list:
 		sims=[]
@@ -254,25 +234,27 @@ def plot_conf_comparison(data_dict,parameters_list,scenario_list,preempt_list,th
 		for i in range(0,len(simulator_list)):
 			data_by_sim.append([])
 		grouped_data=[]
-		for conf in data_dict.keys():
-			for preempt in preempt_list:
-				for sim_proc in sim_proc_list:
-					for lp_aggr in lp_aggr_list:
-						for thread in thread_list:
-							for scenario in scenario_list:
-								if scenario+"-preempt_"+preempt+"-sim_proc_"+sim_proc+"-lp_aggr_"+lp_aggr in conf:
-									data=[]
-									for i in range(0,len(simulator_list)):
+		for preempt in preempt_list:
+			for sim_proc in sim_proc_list:
+				for lp_aggr in lp_aggr_list:
+					for thread in thread_list:
+						for scenario in scenario_list:
+							for i in range(0,len(simulator_list)):
+								for conf in data_dict.keys():
+									if fname=="combo" and preempt != sim_proc:
+										break
+									if scenario+"-preempt_"+preempt+"-sim_proc_"+sim_proc+"-lp_aggr_"+lp_aggr in conf:
+										data=[]
 										if simulator_list[i] not in sims:
 											sims.append(simulator_list[i])
-										if len(thread_list) == 1 and len(lp_aggr_list)==1:
-											data.append(data_dict[conf][simulator_list[i]][param].get(thread))
-										else:
-											data_by_sim[i].append(data_dict[conf][simulator_list[i]][param].get(thread))
+										#if len(thread_list) == 1 and len(lp_aggr_list)==1:
+										#	data.append(data_dict[conf][simulator_list[i]][param].get(thread))
+										#else:
+										data_by_sim[i].append(data_dict[conf][simulator_list[i]][param].get(thread))
 									if len(data)!=0:
 										grouped_data.append(data)
 		if len(thread_list) == 1 and len(lp_aggr_list)==1:
-			plot_graph.draw_grouped_histograms(grouped_data,varying_param,"","",param,legend_labels=sims,PATH="../performance_charts/conf_comparison/"+scenario+"-"+fname+"-"+param,colors=colors_list[:len(grouped_data)],hatches=hatches_list[:len(grouped_data)])
+			plot_graph.draw_grouped_histograms(data_by_sim,varying_param,"","",param,legend_labels=sims,PATH=os.path.join(folder,param),colors=colors_list[:len(data_by_sim)],hatches=hatches_list[:len(data_by_sim)])
 		else:
 			if len(thread_list)==1:
 				names=lp_aggr_list
@@ -280,7 +262,7 @@ def plot_conf_comparison(data_dict,parameters_list,scenario_list,preempt_list,th
 			else:
 				label="Threads"
 				names=thread_list
-			plot_graph.draw_grouped_lines(data_by_sim, range(len(names)), "",label, param,colors=colors_list[0:len(data_by_sim)],PATH=charts_path+"/"+"/conf_comparison/"+scenario+"- "+fname+"-"+param,markers=markers_list[:len(data_by_sim)],x_tick_labels=names,legend=sims)
+			plot_graph.draw_grouped_lines(data_by_sim, range(len(names)), "",label, param,colors=colors_list[0:len(data_by_sim)],PATH=os.path.join(folder,param),markers=markers_list[:len(data_by_sim)],x_tick_labels=names,legend=sims)
 
 
 
@@ -294,22 +276,24 @@ threads_list = [0,2,5,10,20,30,40]
 sim_proc_list = ["no", "yes"]
 lp_aggr_list = ["regional", "local", "lan"]
 preempt_list = ["no","yes"]
-parameters_list=["Number of executed rollback operations","Average Rollback length","Allocated memory (MB)","Number of processed events per second"]
+parameters_list=["Number of executed rollback operations","Average rollback length","Allocated memory (MB)","Number of processed events per second"]
 
 data_dict=get_data(path_to_tests,scenarios,simulator_list,threads_list,sim_proc_list,lp_aggr_list,preempt_list,parameters_list)
 
-plot_opt_comparison(data_dict,parameters_list,["80-400"],["no"],[0,2,5,10,20,30,40],["yes"],["regional"],["ROOT-Sim", "USE", "Optimized ROOT-Sim", "Optimized USE"])
+plot_opt_comparison(data_dict,parameters_list,["80-400"],["no"],[1,2,5,10,20,30,40],["yes"],["regional"],["ROOT-Sim", "USE", "Optimized ROOT-Sim", "Optimized USE"],charts_path+"/opt")
 
-plot_conf_comparison(data_dict,parameters_list,["80-400"],["no","yes"],[5],["no"],["regional"],["ROOT-Sim", "USE"],"preempt_no_yes",["no preemption","preemption"])
+plot_conf_comparison(data_dict,parameters_list,["80-400"],["no","yes"],[5],["no"],["regional"],["ROOT-Sim", "USE"],"preempt_no_yes",["no preemption","preemption"],charts_path+"/preemption")
 
-plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[5],["no","yes"],["regional"],["ROOT-Sim", "USE"],"sim_proc_no_yes",["no sim_proc","sim_proc"])
+plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[5],["no","yes"],["regional"],["ROOT-Sim", "USE"],"sim_proc_no_yes",["no sim_proc","sim_proc"],charts_path+"/sim_proc")
 
-plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[5],["no"],["regional","local","lan"],["ROOT-Sim", "USE"],"lp_aggr_regional_local_lan",["regional mapping","local mapping","lan mapping"])
+plot_conf_comparison(data_dict,parameters_list,["80-400"],["no","yes"],[5],["no","yes"],["regional"],["ROOT-Sim", "USE"],"combo",["no preemption + no sim_proc","preemption + sim_proc"],charts_path+"/combo")
 
-plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[1,2,5,10,20,30,40],["no"],["regional"],["ROOT-Sim", "USE"],"threads_1_2_5_10_20_30_40",[1,2,5,10,20,30,40])
+plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[5],["no"],["regional","local","lan"],["ROOT-Sim", "USE"],"lp_aggr_regional_local_lan",["regional mapping","local mapping","lan mapping"],charts_path+"/lp_aggr")
 
-plot_central_no_central_comparison(data_dict,parameters_list,scenarios,["no"],[5],["no"],["regional"],["ROOT-Sim","USE","ROOT-Sim no central","USE no central"])
-'''
+plot_conf_comparison(data_dict,parameters_list,["80-400"],["no"],[1,2,5,10,20,30,40],["no"],["regional"],["ROOT-Sim", "USE"],"threads_1_2_5_10_20_30_40",[1,2,5,10,20,30,40],charts_path+"/threads")
+
+plot_central_no_central_comparison(data_dict,parameters_list,scenarios,["no"],[5],["no"],["regional"],["ROOT-Sim","ROOT-Sim no central"],charts_path+"/no_central")
+
 for usecase0dir in os.listdir("../use_cases/UseCase0"):
 	usecase0_f=open("../use_cases/UseCase0/"+usecase0dir+"/simulation_results.json","r")
 	usecase0_json=json.load(usecase0_f)
@@ -321,6 +305,7 @@ for usecase0dir in os.listdir("../use_cases/UseCase0"):
 	message_classes=["telemetry","transition","command","batch"]
 	for message_class in range(0,len(message_classes)) :
 		usecase0_res_dict.update({ message_classes[message_class] : usecase0_data[message_class]})
+		print(f"{message_classes[message_class]} response time: {usecase0_data[message_class]} ")
 	json.dump(usecase0_res_dict,usecase0_res_f,indent=2)
 	usecase0_res_f.close()
-	'''
+
