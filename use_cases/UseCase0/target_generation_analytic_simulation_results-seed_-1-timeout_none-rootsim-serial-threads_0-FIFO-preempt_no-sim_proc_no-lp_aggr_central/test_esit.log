@@ -1,0 +1,85 @@
+BEGIN test 1 of 1 with topology UseCase0:.............05/01/2021 - 15:20:50
+test command:	bash /home/nick1296/Workspace/master-thesis/rootsim-models/start.sh -q -g -a -s -r --cat=/home/nick1296/Workspace/master-thesis/test/catalog --top=/home/nick1296/Workspace/master-thesis/test/topologies/UseCase0.txt rootsim serial --sched=FIFO --lp-aggregation=central --redir-compilation-messages=/dev/null --out=/home/nick1296/Workspace/master-thesis/test/use_cases/UseCase0/target_generation_analytic_simulation_results-seed_-1-timeout_none-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_central
+results path: /home/nick1296/Workspace/master-thesis/test/use_cases/UseCase0/target_generation_analytic_simulation_results-seed_-1-timeout_none-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_central
+Script started on 2021-01-05 15:20:50+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="190" LINES="50"]
+Starting generator...
+Done.
+Setting up folders for binary files...
+Done.
+Creating binary files...
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+creating LP.txt
+done LP.txt
+start lp top
+Done.
+Starting analytical model computation...
+Argument Usage: analytical_model_computation [path_to_topology.txt] [path_to_LP.txt] [output_path] by default current folder will be used if any of these arguments is missing
+Using current folder
+Start first recursion
+done layer LAN
+Done layer Local
+Done layer Wan Local-reg
+Done layer REGIONAL
+Done layer WAN-Reg-Centr
+Done layer CENT
+start actuator paths 
+done act paths
+done LP.txt
+start lp top
+Done.
+Starting simulation...
+Using ROOT-Sim as the simulation platform.
+Removing previous output files..
+Done.
+Compiling model...
+Done, executable is called "simulation_rootsim" and can be found in the "/home/nick1296/Workspace/master-thesis/test/use_cases/UseCase0/target_generation_analytic_simulation_results-seed_-1-timeout_none-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_central" folder.
+Executing model...
+Serial execution.
+****************************
+*  ROOT-Sim Configuration  *
+****************************
+Kernels: 1
+Cores: 8 available, 0 used
+Number of Logical Processes: 1
+Output Statistics Directory: outputs
+Scheduler: stf
+GVT Time Period: 1.00 seconds
+Checkpointing Type: periodic
+Checkpointing Period: 10
+Snapshot Reconstruction Type: full
+Halt Simulation After: 0
+LPs Distribution Mode across Kernels: block
+Check Termination Mode: normal
+Set Seed: 0
+TIME BARRIER: 196763.145865
+TIME BARRIER: 396239.011306
+
+--------- SIMULATION CORRECTLY COMPLETED ----------
+Done.
+Parsing statistics...
+Done.
+Exporting simulation statistics to simulation_stats.json...
+Done.
+Merging jsons in lp_data...
+Done, results are in simulation_results.json.
+Done.
+Parsing jsons and merging them...
+...standard.
+Done.
+Creating pdf...
+Done.
+Moving and renaming pdf...
+Done, results are in file 15_20_58-ROOT-Sim-serial-complete_results.pdf located in the "/home/nick1296/Workspace/master-thesis/test/use_cases/UseCase0/target_generation_analytic_simulation_results-seed_-1-timeout_none-rootsim-serial-threads_0-FIFO-preempt_no-sim_proc_no-lp_aggr_central" folder.
+FINISHED CPU 9.56 MEM 0 MAXMEM 398672 STALE 0 MAXMEM_RSS 63128
+<time name="ALL">4410</time>
+
+Script done on 2021-01-05 15:20:59+01:00 [COMMAND_EXIT_CODE="0"]
+Test UseCase0 COMPLETE at 05/01/2021 - 15:20:59
